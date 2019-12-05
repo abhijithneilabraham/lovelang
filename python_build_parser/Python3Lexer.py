@@ -1,8 +1,19 @@
-# Generated from pythongrammar.g4 by ANTLR 4.7.2
+# Generated from Python3.g4 by ANTLR 4.7.2
 from antlr4 import *
 from io import StringIO
 from typing.io import TextIO
 import sys
+
+
+from antlr4.Token import CommonToken
+import re
+import importlib
+
+# Allow languages to extend the lexer and parser, by loading the parser dynamically
+module_path = __name__[:-5]
+language_name = __name__.split('.')[-1]
+language_name = language_name[:-5]  # Remove Lexer from name
+LanguageParser = getattr(importlib.import_module('{}Parser'.format(module_path)), '{}Parser'.format(language_name))
 
 
 
@@ -678,7 +689,7 @@ class Python3Lexer(Lexer):
                   "BYTES_ESCAPE_SEQ", "SPACES", "COMMENT", "LINE_JOINING", 
                   "ID_START", "ID_CONTINUE" ]
 
-    grammarFileName = "pythongrammar.g4"
+    grammarFileName = "Python3.g4"
 
     def __init__(self, input=None, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -688,93 +699,96 @@ class Python3Lexer(Lexer):
         self._predicates = None
 
 
-      // A queue where extra tokens are pushed on (see the NEWLINE lexer rule).
-      private java.util.LinkedList<Token> tokens = new java.util.LinkedList<>();
-      // The stack that keeps track of the indentation level.
-      private java.util.Stack<Integer> indents = new java.util.Stack<>();
-      // The amount of opened braces, brackets and parenthesis.
-      private int opened = 0;
-      // The most recently produced token.
-      private Token lastToken = null;
-      @Override
-      public void emit(Token t) {
-        super.setToken(t);
-        tokens.offer(t);
-      }
+    @property
+    def tokens(self):
+        try:
+            return self._tokens
+        except AttributeError:
+            self._tokens = []
+            return self._tokens
 
-      @Override
-      public Token nextToken() {
-        // Check if the end-of-file is ahead and there are still some DEDENTS expected.
-        if (_input.LA(1) == EOF && !this.indents.isEmpty()) {
-          // Remove any trailing EOF tokens from our buffer.
-          for (int i = tokens.size() - 1; i >= 0; i--) {
-            if (tokens.get(i).getType() == EOF) {
-              tokens.remove(i);
-            }
-          }
+    @property
+    def indents(self):
+        try:
+            return self._indents
+        except AttributeError:
+            self._indents = []
+            return self._indents
 
-          // First emit an extra line break that serves as the end of the statement.
-          this.emit(commonToken(Python3Parser.NEWLINE, "\n"));
+    @property
+    def opened(self):
+        try:
+            return self._opened
+        except AttributeError:
+            self._opened = 0
+            return self._opened
 
-          // Now emit as much DEDENT tokens as needed.
-          while (!indents.isEmpty()) {
-            this.emit(createDedent());
-            indents.pop();
-          }
+    @opened.setter
+    def opened(self, value):
+        self._opened = value
 
-          // Put the EOF back on the token stream.
-          this.emit(commonToken(Python3Parser.EOF, "<EOF>"));
-        }
+    @property
+    def lastToken(self):
+        try:
+            return self._lastToken
+        except AttributeError:
+            self._lastToken = None
+            return self._lastToken
 
-        Token next = super.nextToken();
+    @lastToken.setter
+    def lastToken(self, value):
+        self._lastToken = value
 
-        if (next.getChannel() == Token.DEFAULT_CHANNEL) {
-          // Keep track of the last token on the default channel.
-          this.lastToken = next;
-        }
+    def reset(self):
+        super().reset()
+        self.tokens = []
+        self.indents = []
+        self.opened = 0
+        self.lastToken = None
 
-        return tokens.isEmpty() ? next : tokens.poll();
-      }
+    def emitToken(self, t):
+        super().emitToken(t)
+        self.tokens.append(t)
 
-      private Token createDedent() {
-        CommonToken dedent = commonToken(Python3Parser.DEDENT, "");
-        dedent.setLine(this.lastToken.getLine());
-        return dedent;
-      }
+    def nextToken(self):
+        if self._input.LA(1) == Token.EOF and self.indents:
+            for i in range(len(self.tokens)-1,-1,-1):
+                if self.tokens[i].type == Token.EOF:
+                    self.tokens.pop(i)
 
-      private CommonToken commonToken(int type, String text) {
-        int stop = this.getCharIndex() - 1;
-        int start = text.isEmpty() ? stop : stop - text.length() + 1;
-        return new CommonToken(this._tokenFactorySourcePair, type, DEFAULT_TOKEN_CHANNEL, start, stop);
-      }
+            self.emitToken(self.commonToken(LanguageParser.NEWLINE, '\n'))
+            while self.indents:
+                self.emitToken(self.createDedent())
+                self.indents.pop()
 
-      // Calculates the indentation of the provided spaces, taking the
-      // following rules into account:
-      //
-      // "Tabs are replaced (from left to right) by one to eight spaces
-      //  such that the total number of characters up to and including
-      //  the replacement is a multiple of eight [...]"
-      //
-      //  -- https://docs.python.org/3.1/reference/lexical_analysis.html#indentation
-      static int getIndentationCount(String spaces) {
-        int count = 0;
-        for (char ch : spaces.toCharArray()) {
-          switch (ch) {
-            case '\t':
-              count += 8 - (count % 8);
-              break;
-            default:
-              // A normal space char.
-              count++;
-          }
-        }
+            self.emitToken(self.commonToken(LanguageParser.EOF, "<EOF>"))
+        next = super().nextToken()
+        if next.channel == Token.DEFAULT_CHANNEL:
+            self.lastToken = next
+        return next if not self.tokens else self.tokens.pop(0)
 
-        return count;
-      }
+    def createDedent(self):
+        dedent = self.commonToken(LanguageParser.DEDENT, "")
+        dedent.line = self.lastToken.line
+        return dedent
 
-      boolean atStartOfInput() {
-        return super.getCharPositionInLine() == 0 && super.getLine() == 1;
-      }
+    def commonToken(self, type, text, indent=0):
+        stop = self.getCharIndex()-1-indent
+        start = (stop - len(text) + 1) if text else stop
+        return CommonToken(self._tokenFactorySourcePair, type, super().DEFAULT_TOKEN_CHANNEL, start, stop)
+
+    @staticmethod
+    def getIndentationCount(spaces):
+        count = 0
+        for ch in spaces:
+            if ch == '\t':
+                count += 8 - (count % 8)
+            else:
+                count += 1
+        return count
+
+    def atStartOfInput(self):
+        return Lexer.column.fget(self) == 0 and Lexer.line.fget(self) == 1
 
 
     def action(self, localctx:RuleContext, ruleIndex:int, actionIndex:int):
@@ -798,65 +812,62 @@ class Python3Lexer(Lexer):
     def NEWLINE_action(self, localctx:RuleContext , actionIndex:int):
         if actionIndex == 0:
 
-                 String newLine = getText().replaceAll("[^\r\n\f]+", "");
-                 String spaces = getText().replaceAll("[\r\n\f]+", "");
-                 int next = _input.LA(1);
-                 if (opened > 0 || next == '\r' || next == '\n' || next == '\f' || next == '#') {
-                   // If we're inside a list or on a blank line, ignore all indents,
-                   // dedents and line breaks.
-                   skip();
-                 }
-                 else {
-                   emit(commonToken(NEWLINE, newLine));
-                   int indent = getIndentationCount(spaces);
-                   int previous = indents.isEmpty() ? 0 : indents.peek();
-                   if (indent == previous) {
-                     // skip indents of the same size as the present indent-size
-                     skip();
-                   }
-                   else if (indent > previous) {
-                     indents.push(indent);
-                     emit(commonToken(Python3Parser.INDENT, spaces));
-                   }
-                   else {
-                     // Possibly emit more than 1 DEDENT token.
-                     while(!indents.isEmpty() && indents.peek() > indent) {
-                       this.emit(createDedent());
-                       indents.pop();
-                     }
-                   }
-                 }
-               
+            tempt = Lexer.text.fget(self)
+            newLine = re.sub("[^\r\n\f]+", "", tempt)
+            spaces = re.sub("[\r\n\f]+", "", tempt)
+            la_char = ""
+            try:
+                la = self._input.LA(1)
+                la_char = chr(la)       # Python does not compare char to ints directly
+            except ValueError:          # End of file
+                pass
+
+            if self.opened > 0 or la_char == '\r' or la_char == '\n' or la_char == '\f' or la_char == '#':
+                self.skip()
+            else:
+                indent = self.getIndentationCount(spaces)
+                previous = self.indents[-1] if self.indents else 0
+                self.emitToken(self.commonToken(self.NEWLINE, newLine, indent=indent))      # NEWLINE is actually the '\n' char
+                if indent == previous:
+                    self.skip()
+                elif indent > previous:
+                    self.indents.append(indent)
+                    self.emitToken(self.commonToken(LanguageParser.INDENT, spaces))
+                else:
+                    while self.indents and self.indents[-1] > indent:
+                        self.emitToken(self.createDedent())
+                        self.indents.pop()
+                
      
 
     def OPEN_PAREN_action(self, localctx:RuleContext , actionIndex:int):
         if actionIndex == 1:
-            opened++;
+            self.opened += 1
      
 
     def CLOSE_PAREN_action(self, localctx:RuleContext , actionIndex:int):
         if actionIndex == 2:
-            opened--;
+            self.opened -= 1
      
 
     def OPEN_BRACK_action(self, localctx:RuleContext , actionIndex:int):
         if actionIndex == 3:
-            opened++;
+            self.opened += 1
      
 
     def CLOSE_BRACK_action(self, localctx:RuleContext , actionIndex:int):
         if actionIndex == 4:
-            opened--;
+            self.opened -= 1
      
 
     def OPEN_BRACE_action(self, localctx:RuleContext , actionIndex:int):
         if actionIndex == 5:
-            opened++;
+            self.opened += 1
      
 
     def CLOSE_BRACE_action(self, localctx:RuleContext , actionIndex:int):
         if actionIndex == 6:
-            opened--;
+            self.opened -= 1
      
 
     def sempred(self, localctx:RuleContext, ruleIndex:int, predIndex:int):
@@ -872,7 +883,7 @@ class Python3Lexer(Lexer):
 
     def NEWLINE_sempred(self, localctx:RuleContext, predIndex:int):
             if predIndex == 0:
-                return atStartOfInput()
+                return self.atStartOfInput()
          
 
 

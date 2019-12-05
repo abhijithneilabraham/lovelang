@@ -1,4 +1,4 @@
-# Generated from pythongrammar.g4 by ANTLR 4.7.2
+# Generated from Python3.g4 by ANTLR 4.7.2
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -577,9 +577,9 @@ def serializedATN():
         return buf.getvalue()
 
 
-class pythongrammarParser ( Parser ):
+class Python3Parser ( Parser ):
 
-    grammarFileName = "pythongrammar.g4"
+    grammarFileName = "Python3.g4"
 
     atn = ATNDeserializer().deserialize(serializedATN())
 
@@ -852,18 +852,18 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def NEWLINE(self):
-            return self.getToken(pythongrammarParser.NEWLINE, 0)
+            return self.getToken(Python3Parser.NEWLINE, 0)
 
         def simple_stmt(self):
-            return self.getTypedRuleContext(pythongrammarParser.Simple_stmtContext,0)
+            return self.getTypedRuleContext(Python3Parser.Simple_stmtContext,0)
 
 
         def compound_stmt(self):
-            return self.getTypedRuleContext(pythongrammarParser.Compound_stmtContext,0)
+            return self.getTypedRuleContext(Python3Parser.Compound_stmtContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_single_input
+            return Python3Parser.RULE_single_input
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterSingle_input" ):
@@ -878,28 +878,28 @@ class pythongrammarParser ( Parser ):
 
     def single_input(self):
 
-        localctx = pythongrammarParser.Single_inputContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Single_inputContext(self, self._ctx, self.state)
         self.enterRule(localctx, 0, self.RULE_single_input)
         try:
             self.state = 177
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [pythongrammarParser.NEWLINE]:
+            if token in [Python3Parser.NEWLINE]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 172
-                self.match(pythongrammarParser.NEWLINE)
+                self.match(Python3Parser.NEWLINE)
                 pass
-            elif token in [pythongrammarParser.STRING, pythongrammarParser.NUMBER, pythongrammarParser.RETURN, pythongrammarParser.RAISE, pythongrammarParser.FROM, pythongrammarParser.IMPORT, pythongrammarParser.GLOBAL, pythongrammarParser.NONLOCAL, pythongrammarParser.ASSERT, pythongrammarParser.LAMBDA, pythongrammarParser.NOT, pythongrammarParser.NONE, pythongrammarParser.TRUE, pythongrammarParser.FALSE, pythongrammarParser.YIELD, pythongrammarParser.DEL, pythongrammarParser.PASS, pythongrammarParser.CONTINUE, pythongrammarParser.BREAK, pythongrammarParser.AWAIT, pythongrammarParser.NAME, pythongrammarParser.ELLIPSIS, pythongrammarParser.STAR, pythongrammarParser.OPEN_PAREN, pythongrammarParser.OPEN_BRACK, pythongrammarParser.ADD, pythongrammarParser.MINUS, pythongrammarParser.NOT_OP, pythongrammarParser.OPEN_BRACE]:
+            elif token in [Python3Parser.STRING, Python3Parser.NUMBER, Python3Parser.RETURN, Python3Parser.RAISE, Python3Parser.FROM, Python3Parser.IMPORT, Python3Parser.GLOBAL, Python3Parser.NONLOCAL, Python3Parser.ASSERT, Python3Parser.LAMBDA, Python3Parser.NOT, Python3Parser.NONE, Python3Parser.TRUE, Python3Parser.FALSE, Python3Parser.YIELD, Python3Parser.DEL, Python3Parser.PASS, Python3Parser.CONTINUE, Python3Parser.BREAK, Python3Parser.AWAIT, Python3Parser.NAME, Python3Parser.ELLIPSIS, Python3Parser.STAR, Python3Parser.OPEN_PAREN, Python3Parser.OPEN_BRACK, Python3Parser.ADD, Python3Parser.MINUS, Python3Parser.NOT_OP, Python3Parser.OPEN_BRACE]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 173
                 self.simple_stmt()
                 pass
-            elif token in [pythongrammarParser.DEF, pythongrammarParser.IF, pythongrammarParser.WHILE, pythongrammarParser.FOR, pythongrammarParser.TRY, pythongrammarParser.WITH, pythongrammarParser.CLASS, pythongrammarParser.ASYNC, pythongrammarParser.AT]:
+            elif token in [Python3Parser.DEF, Python3Parser.IF, Python3Parser.WHILE, Python3Parser.FOR, Python3Parser.TRY, Python3Parser.WITH, Python3Parser.CLASS, Python3Parser.ASYNC, Python3Parser.AT]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 174
                 self.compound_stmt()
                 self.state = 175
-                self.match(pythongrammarParser.NEWLINE)
+                self.match(Python3Parser.NEWLINE)
                 pass
             else:
                 raise NoViableAltException(self)
@@ -920,23 +920,23 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def EOF(self):
-            return self.getToken(pythongrammarParser.EOF, 0)
+            return self.getToken(Python3Parser.EOF, 0)
 
         def NEWLINE(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.NEWLINE)
+                return self.getTokens(Python3Parser.NEWLINE)
             else:
-                return self.getToken(pythongrammarParser.NEWLINE, i)
+                return self.getToken(Python3Parser.NEWLINE, i)
 
         def stmt(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.StmtContext)
+                return self.getTypedRuleContexts(Python3Parser.StmtContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.StmtContext,i)
+                return self.getTypedRuleContext(Python3Parser.StmtContext,i)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_file_input
+            return Python3Parser.RULE_file_input
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterFile_input" ):
@@ -951,7 +951,7 @@ class pythongrammarParser ( Parser ):
 
     def file_input(self):
 
-        localctx = pythongrammarParser.File_inputContext(self, self._ctx, self.state)
+        localctx = Python3Parser.File_inputContext(self, self._ctx, self.state)
         self.enterRule(localctx, 2, self.RULE_file_input)
         self._la = 0 # Token type
         try:
@@ -959,15 +959,15 @@ class pythongrammarParser ( Parser ):
             self.state = 183
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << pythongrammarParser.STRING) | (1 << pythongrammarParser.NUMBER) | (1 << pythongrammarParser.DEF) | (1 << pythongrammarParser.RETURN) | (1 << pythongrammarParser.RAISE) | (1 << pythongrammarParser.FROM) | (1 << pythongrammarParser.IMPORT) | (1 << pythongrammarParser.GLOBAL) | (1 << pythongrammarParser.NONLOCAL) | (1 << pythongrammarParser.ASSERT) | (1 << pythongrammarParser.IF) | (1 << pythongrammarParser.WHILE) | (1 << pythongrammarParser.FOR) | (1 << pythongrammarParser.TRY) | (1 << pythongrammarParser.WITH) | (1 << pythongrammarParser.LAMBDA) | (1 << pythongrammarParser.NOT) | (1 << pythongrammarParser.NONE) | (1 << pythongrammarParser.TRUE) | (1 << pythongrammarParser.FALSE) | (1 << pythongrammarParser.CLASS) | (1 << pythongrammarParser.YIELD) | (1 << pythongrammarParser.DEL) | (1 << pythongrammarParser.PASS) | (1 << pythongrammarParser.CONTINUE) | (1 << pythongrammarParser.BREAK) | (1 << pythongrammarParser.ASYNC) | (1 << pythongrammarParser.AWAIT) | (1 << pythongrammarParser.NEWLINE) | (1 << pythongrammarParser.NAME) | (1 << pythongrammarParser.ELLIPSIS) | (1 << pythongrammarParser.STAR) | (1 << pythongrammarParser.OPEN_PAREN) | (1 << pythongrammarParser.OPEN_BRACK))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (pythongrammarParser.ADD - 66)) | (1 << (pythongrammarParser.MINUS - 66)) | (1 << (pythongrammarParser.NOT_OP - 66)) | (1 << (pythongrammarParser.OPEN_BRACE - 66)) | (1 << (pythongrammarParser.AT - 66)))) != 0):
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Python3Parser.STRING) | (1 << Python3Parser.NUMBER) | (1 << Python3Parser.DEF) | (1 << Python3Parser.RETURN) | (1 << Python3Parser.RAISE) | (1 << Python3Parser.FROM) | (1 << Python3Parser.IMPORT) | (1 << Python3Parser.GLOBAL) | (1 << Python3Parser.NONLOCAL) | (1 << Python3Parser.ASSERT) | (1 << Python3Parser.IF) | (1 << Python3Parser.WHILE) | (1 << Python3Parser.FOR) | (1 << Python3Parser.TRY) | (1 << Python3Parser.WITH) | (1 << Python3Parser.LAMBDA) | (1 << Python3Parser.NOT) | (1 << Python3Parser.NONE) | (1 << Python3Parser.TRUE) | (1 << Python3Parser.FALSE) | (1 << Python3Parser.CLASS) | (1 << Python3Parser.YIELD) | (1 << Python3Parser.DEL) | (1 << Python3Parser.PASS) | (1 << Python3Parser.CONTINUE) | (1 << Python3Parser.BREAK) | (1 << Python3Parser.ASYNC) | (1 << Python3Parser.AWAIT) | (1 << Python3Parser.NEWLINE) | (1 << Python3Parser.NAME) | (1 << Python3Parser.ELLIPSIS) | (1 << Python3Parser.STAR) | (1 << Python3Parser.OPEN_PAREN) | (1 << Python3Parser.OPEN_BRACK))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (Python3Parser.ADD - 66)) | (1 << (Python3Parser.MINUS - 66)) | (1 << (Python3Parser.NOT_OP - 66)) | (1 << (Python3Parser.OPEN_BRACE - 66)) | (1 << (Python3Parser.AT - 66)))) != 0):
                 self.state = 181
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
-                if token in [pythongrammarParser.NEWLINE]:
+                if token in [Python3Parser.NEWLINE]:
                     self.state = 179
-                    self.match(pythongrammarParser.NEWLINE)
+                    self.match(Python3Parser.NEWLINE)
                     pass
-                elif token in [pythongrammarParser.STRING, pythongrammarParser.NUMBER, pythongrammarParser.DEF, pythongrammarParser.RETURN, pythongrammarParser.RAISE, pythongrammarParser.FROM, pythongrammarParser.IMPORT, pythongrammarParser.GLOBAL, pythongrammarParser.NONLOCAL, pythongrammarParser.ASSERT, pythongrammarParser.IF, pythongrammarParser.WHILE, pythongrammarParser.FOR, pythongrammarParser.TRY, pythongrammarParser.WITH, pythongrammarParser.LAMBDA, pythongrammarParser.NOT, pythongrammarParser.NONE, pythongrammarParser.TRUE, pythongrammarParser.FALSE, pythongrammarParser.CLASS, pythongrammarParser.YIELD, pythongrammarParser.DEL, pythongrammarParser.PASS, pythongrammarParser.CONTINUE, pythongrammarParser.BREAK, pythongrammarParser.ASYNC, pythongrammarParser.AWAIT, pythongrammarParser.NAME, pythongrammarParser.ELLIPSIS, pythongrammarParser.STAR, pythongrammarParser.OPEN_PAREN, pythongrammarParser.OPEN_BRACK, pythongrammarParser.ADD, pythongrammarParser.MINUS, pythongrammarParser.NOT_OP, pythongrammarParser.OPEN_BRACE, pythongrammarParser.AT]:
+                elif token in [Python3Parser.STRING, Python3Parser.NUMBER, Python3Parser.DEF, Python3Parser.RETURN, Python3Parser.RAISE, Python3Parser.FROM, Python3Parser.IMPORT, Python3Parser.GLOBAL, Python3Parser.NONLOCAL, Python3Parser.ASSERT, Python3Parser.IF, Python3Parser.WHILE, Python3Parser.FOR, Python3Parser.TRY, Python3Parser.WITH, Python3Parser.LAMBDA, Python3Parser.NOT, Python3Parser.NONE, Python3Parser.TRUE, Python3Parser.FALSE, Python3Parser.CLASS, Python3Parser.YIELD, Python3Parser.DEL, Python3Parser.PASS, Python3Parser.CONTINUE, Python3Parser.BREAK, Python3Parser.ASYNC, Python3Parser.AWAIT, Python3Parser.NAME, Python3Parser.ELLIPSIS, Python3Parser.STAR, Python3Parser.OPEN_PAREN, Python3Parser.OPEN_BRACK, Python3Parser.ADD, Python3Parser.MINUS, Python3Parser.NOT_OP, Python3Parser.OPEN_BRACE, Python3Parser.AT]:
                     self.state = 180
                     self.stmt()
                     pass
@@ -979,7 +979,7 @@ class pythongrammarParser ( Parser ):
                 _la = self._input.LA(1)
 
             self.state = 186
-            self.match(pythongrammarParser.EOF)
+            self.match(Python3Parser.EOF)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -996,20 +996,20 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def testlist(self):
-            return self.getTypedRuleContext(pythongrammarParser.TestlistContext,0)
+            return self.getTypedRuleContext(Python3Parser.TestlistContext,0)
 
 
         def EOF(self):
-            return self.getToken(pythongrammarParser.EOF, 0)
+            return self.getToken(Python3Parser.EOF, 0)
 
         def NEWLINE(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.NEWLINE)
+                return self.getTokens(Python3Parser.NEWLINE)
             else:
-                return self.getToken(pythongrammarParser.NEWLINE, i)
+                return self.getToken(Python3Parser.NEWLINE, i)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_eval_input
+            return Python3Parser.RULE_eval_input
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterEval_input" ):
@@ -1024,7 +1024,7 @@ class pythongrammarParser ( Parser ):
 
     def eval_input(self):
 
-        localctx = pythongrammarParser.Eval_inputContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Eval_inputContext(self, self._ctx, self.state)
         self.enterRule(localctx, 4, self.RULE_eval_input)
         self._la = 0 # Token type
         try:
@@ -1034,15 +1034,15 @@ class pythongrammarParser ( Parser ):
             self.state = 192
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==pythongrammarParser.NEWLINE:
+            while _la==Python3Parser.NEWLINE:
                 self.state = 189
-                self.match(pythongrammarParser.NEWLINE)
+                self.match(Python3Parser.NEWLINE)
                 self.state = 194
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
             self.state = 195
-            self.match(pythongrammarParser.EOF)
+            self.match(Python3Parser.EOF)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1059,27 +1059,27 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def AT(self):
-            return self.getToken(pythongrammarParser.AT, 0)
+            return self.getToken(Python3Parser.AT, 0)
 
         def dotted_name(self):
-            return self.getTypedRuleContext(pythongrammarParser.Dotted_nameContext,0)
+            return self.getTypedRuleContext(Python3Parser.Dotted_nameContext,0)
 
 
         def NEWLINE(self):
-            return self.getToken(pythongrammarParser.NEWLINE, 0)
+            return self.getToken(Python3Parser.NEWLINE, 0)
 
         def OPEN_PAREN(self):
-            return self.getToken(pythongrammarParser.OPEN_PAREN, 0)
+            return self.getToken(Python3Parser.OPEN_PAREN, 0)
 
         def CLOSE_PAREN(self):
-            return self.getToken(pythongrammarParser.CLOSE_PAREN, 0)
+            return self.getToken(Python3Parser.CLOSE_PAREN, 0)
 
         def arglist(self):
-            return self.getTypedRuleContext(pythongrammarParser.ArglistContext,0)
+            return self.getTypedRuleContext(Python3Parser.ArglistContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_decorator
+            return Python3Parser.RULE_decorator
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterDecorator" ):
@@ -1094,35 +1094,35 @@ class pythongrammarParser ( Parser ):
 
     def decorator(self):
 
-        localctx = pythongrammarParser.DecoratorContext(self, self._ctx, self.state)
+        localctx = Python3Parser.DecoratorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 6, self.RULE_decorator)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 197
-            self.match(pythongrammarParser.AT)
+            self.match(Python3Parser.AT)
             self.state = 198
             self.dotted_name()
             self.state = 204
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==pythongrammarParser.OPEN_PAREN:
+            if _la==Python3Parser.OPEN_PAREN:
                 self.state = 199
-                self.match(pythongrammarParser.OPEN_PAREN)
+                self.match(Python3Parser.OPEN_PAREN)
                 self.state = 201
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << pythongrammarParser.STRING) | (1 << pythongrammarParser.NUMBER) | (1 << pythongrammarParser.LAMBDA) | (1 << pythongrammarParser.NOT) | (1 << pythongrammarParser.NONE) | (1 << pythongrammarParser.TRUE) | (1 << pythongrammarParser.FALSE) | (1 << pythongrammarParser.AWAIT) | (1 << pythongrammarParser.NAME) | (1 << pythongrammarParser.ELLIPSIS) | (1 << pythongrammarParser.STAR) | (1 << pythongrammarParser.OPEN_PAREN) | (1 << pythongrammarParser.POWER) | (1 << pythongrammarParser.OPEN_BRACK))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (pythongrammarParser.ADD - 66)) | (1 << (pythongrammarParser.MINUS - 66)) | (1 << (pythongrammarParser.NOT_OP - 66)) | (1 << (pythongrammarParser.OPEN_BRACE - 66)))) != 0):
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Python3Parser.STRING) | (1 << Python3Parser.NUMBER) | (1 << Python3Parser.LAMBDA) | (1 << Python3Parser.NOT) | (1 << Python3Parser.NONE) | (1 << Python3Parser.TRUE) | (1 << Python3Parser.FALSE) | (1 << Python3Parser.AWAIT) | (1 << Python3Parser.NAME) | (1 << Python3Parser.ELLIPSIS) | (1 << Python3Parser.STAR) | (1 << Python3Parser.OPEN_PAREN) | (1 << Python3Parser.POWER) | (1 << Python3Parser.OPEN_BRACK))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (Python3Parser.ADD - 66)) | (1 << (Python3Parser.MINUS - 66)) | (1 << (Python3Parser.NOT_OP - 66)) | (1 << (Python3Parser.OPEN_BRACE - 66)))) != 0):
                     self.state = 200
                     self.arglist()
 
 
                 self.state = 203
-                self.match(pythongrammarParser.CLOSE_PAREN)
+                self.match(Python3Parser.CLOSE_PAREN)
 
 
             self.state = 206
-            self.match(pythongrammarParser.NEWLINE)
+            self.match(Python3Parser.NEWLINE)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1140,13 +1140,13 @@ class pythongrammarParser ( Parser ):
 
         def decorator(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.DecoratorContext)
+                return self.getTypedRuleContexts(Python3Parser.DecoratorContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.DecoratorContext,i)
+                return self.getTypedRuleContext(Python3Parser.DecoratorContext,i)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_decorators
+            return Python3Parser.RULE_decorators
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterDecorators" ):
@@ -1161,7 +1161,7 @@ class pythongrammarParser ( Parser ):
 
     def decorators(self):
 
-        localctx = pythongrammarParser.DecoratorsContext(self, self._ctx, self.state)
+        localctx = Python3Parser.DecoratorsContext(self, self._ctx, self.state)
         self.enterRule(localctx, 8, self.RULE_decorators)
         self._la = 0 # Token type
         try:
@@ -1175,7 +1175,7 @@ class pythongrammarParser ( Parser ):
                 self.state = 211 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not (_la==pythongrammarParser.AT):
+                if not (_la==Python3Parser.AT):
                     break
 
         except RecognitionException as re:
@@ -1194,23 +1194,23 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def decorators(self):
-            return self.getTypedRuleContext(pythongrammarParser.DecoratorsContext,0)
+            return self.getTypedRuleContext(Python3Parser.DecoratorsContext,0)
 
 
         def classdef(self):
-            return self.getTypedRuleContext(pythongrammarParser.ClassdefContext,0)
+            return self.getTypedRuleContext(Python3Parser.ClassdefContext,0)
 
 
         def funcdef(self):
-            return self.getTypedRuleContext(pythongrammarParser.FuncdefContext,0)
+            return self.getTypedRuleContext(Python3Parser.FuncdefContext,0)
 
 
         def async_funcdef(self):
-            return self.getTypedRuleContext(pythongrammarParser.Async_funcdefContext,0)
+            return self.getTypedRuleContext(Python3Parser.Async_funcdefContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_decorated
+            return Python3Parser.RULE_decorated
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterDecorated" ):
@@ -1225,7 +1225,7 @@ class pythongrammarParser ( Parser ):
 
     def decorated(self):
 
-        localctx = pythongrammarParser.DecoratedContext(self, self._ctx, self.state)
+        localctx = Python3Parser.DecoratedContext(self, self._ctx, self.state)
         self.enterRule(localctx, 10, self.RULE_decorated)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -1234,15 +1234,15 @@ class pythongrammarParser ( Parser ):
             self.state = 217
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [pythongrammarParser.CLASS]:
+            if token in [Python3Parser.CLASS]:
                 self.state = 214
                 self.classdef()
                 pass
-            elif token in [pythongrammarParser.DEF]:
+            elif token in [Python3Parser.DEF]:
                 self.state = 215
                 self.funcdef()
                 pass
-            elif token in [pythongrammarParser.ASYNC]:
+            elif token in [Python3Parser.ASYNC]:
                 self.state = 216
                 self.async_funcdef()
                 pass
@@ -1265,14 +1265,14 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def ASYNC(self):
-            return self.getToken(pythongrammarParser.ASYNC, 0)
+            return self.getToken(Python3Parser.ASYNC, 0)
 
         def funcdef(self):
-            return self.getTypedRuleContext(pythongrammarParser.FuncdefContext,0)
+            return self.getTypedRuleContext(Python3Parser.FuncdefContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_async_funcdef
+            return Python3Parser.RULE_async_funcdef
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterAsync_funcdef" ):
@@ -1287,12 +1287,12 @@ class pythongrammarParser ( Parser ):
 
     def async_funcdef(self):
 
-        localctx = pythongrammarParser.Async_funcdefContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Async_funcdefContext(self, self._ctx, self.state)
         self.enterRule(localctx, 12, self.RULE_async_funcdef)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 219
-            self.match(pythongrammarParser.ASYNC)
+            self.match(Python3Parser.ASYNC)
             self.state = 220
             self.funcdef()
         except RecognitionException as re:
@@ -1311,31 +1311,31 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def DEF(self):
-            return self.getToken(pythongrammarParser.DEF, 0)
+            return self.getToken(Python3Parser.DEF, 0)
 
         def NAME(self):
-            return self.getToken(pythongrammarParser.NAME, 0)
+            return self.getToken(Python3Parser.NAME, 0)
 
         def parameters(self):
-            return self.getTypedRuleContext(pythongrammarParser.ParametersContext,0)
+            return self.getTypedRuleContext(Python3Parser.ParametersContext,0)
 
 
         def COLON(self):
-            return self.getToken(pythongrammarParser.COLON, 0)
+            return self.getToken(Python3Parser.COLON, 0)
 
         def suite(self):
-            return self.getTypedRuleContext(pythongrammarParser.SuiteContext,0)
+            return self.getTypedRuleContext(Python3Parser.SuiteContext,0)
 
 
         def ARROW(self):
-            return self.getToken(pythongrammarParser.ARROW, 0)
+            return self.getToken(Python3Parser.ARROW, 0)
 
         def test(self):
-            return self.getTypedRuleContext(pythongrammarParser.TestContext,0)
+            return self.getTypedRuleContext(Python3Parser.TestContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_funcdef
+            return Python3Parser.RULE_funcdef
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterFuncdef" ):
@@ -1350,29 +1350,29 @@ class pythongrammarParser ( Parser ):
 
     def funcdef(self):
 
-        localctx = pythongrammarParser.FuncdefContext(self, self._ctx, self.state)
+        localctx = Python3Parser.FuncdefContext(self, self._ctx, self.state)
         self.enterRule(localctx, 14, self.RULE_funcdef)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 222
-            self.match(pythongrammarParser.DEF)
+            self.match(Python3Parser.DEF)
             self.state = 223
-            self.match(pythongrammarParser.NAME)
+            self.match(Python3Parser.NAME)
             self.state = 224
             self.parameters()
             self.state = 227
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==pythongrammarParser.ARROW:
+            if _la==Python3Parser.ARROW:
                 self.state = 225
-                self.match(pythongrammarParser.ARROW)
+                self.match(Python3Parser.ARROW)
                 self.state = 226
                 self.test()
 
 
             self.state = 229
-            self.match(pythongrammarParser.COLON)
+            self.match(Python3Parser.COLON)
             self.state = 230
             self.suite()
         except RecognitionException as re:
@@ -1391,17 +1391,17 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def OPEN_PAREN(self):
-            return self.getToken(pythongrammarParser.OPEN_PAREN, 0)
+            return self.getToken(Python3Parser.OPEN_PAREN, 0)
 
         def CLOSE_PAREN(self):
-            return self.getToken(pythongrammarParser.CLOSE_PAREN, 0)
+            return self.getToken(Python3Parser.CLOSE_PAREN, 0)
 
         def typedargslist(self):
-            return self.getTypedRuleContext(pythongrammarParser.TypedargslistContext,0)
+            return self.getTypedRuleContext(Python3Parser.TypedargslistContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_parameters
+            return Python3Parser.RULE_parameters
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterParameters" ):
@@ -1416,23 +1416,23 @@ class pythongrammarParser ( Parser ):
 
     def parameters(self):
 
-        localctx = pythongrammarParser.ParametersContext(self, self._ctx, self.state)
+        localctx = Python3Parser.ParametersContext(self, self._ctx, self.state)
         self.enterRule(localctx, 16, self.RULE_parameters)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 232
-            self.match(pythongrammarParser.OPEN_PAREN)
+            self.match(Python3Parser.OPEN_PAREN)
             self.state = 234
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << pythongrammarParser.NAME) | (1 << pythongrammarParser.STAR) | (1 << pythongrammarParser.POWER))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Python3Parser.NAME) | (1 << Python3Parser.STAR) | (1 << Python3Parser.POWER))) != 0):
                 self.state = 233
                 self.typedargslist()
 
 
             self.state = 236
-            self.match(pythongrammarParser.CLOSE_PAREN)
+            self.match(Python3Parser.CLOSE_PAREN)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1450,38 +1450,38 @@ class pythongrammarParser ( Parser ):
 
         def tfpdef(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.TfpdefContext)
+                return self.getTypedRuleContexts(Python3Parser.TfpdefContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.TfpdefContext,i)
+                return self.getTypedRuleContext(Python3Parser.TfpdefContext,i)
 
 
         def STAR(self):
-            return self.getToken(pythongrammarParser.STAR, 0)
+            return self.getToken(Python3Parser.STAR, 0)
 
         def POWER(self):
-            return self.getToken(pythongrammarParser.POWER, 0)
+            return self.getToken(Python3Parser.POWER, 0)
 
         def ASSIGN(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.ASSIGN)
+                return self.getTokens(Python3Parser.ASSIGN)
             else:
-                return self.getToken(pythongrammarParser.ASSIGN, i)
+                return self.getToken(Python3Parser.ASSIGN, i)
 
         def test(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.TestContext)
+                return self.getTypedRuleContexts(Python3Parser.TestContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.TestContext,i)
+                return self.getTypedRuleContext(Python3Parser.TestContext,i)
 
 
         def COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.COMMA)
+                return self.getTokens(Python3Parser.COMMA)
             else:
-                return self.getToken(pythongrammarParser.COMMA, i)
+                return self.getToken(Python3Parser.COMMA, i)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_typedargslist
+            return Python3Parser.RULE_typedargslist
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTypedargslist" ):
@@ -1496,7 +1496,7 @@ class pythongrammarParser ( Parser ):
 
     def typedargslist(self):
 
-        localctx = pythongrammarParser.TypedargslistContext(self, self._ctx, self.state)
+        localctx = Python3Parser.TypedargslistContext(self, self._ctx, self.state)
         self.enterRule(localctx, 18, self.RULE_typedargslist)
         self._la = 0 # Token type
         try:
@@ -1504,15 +1504,15 @@ class pythongrammarParser ( Parser ):
             self.state = 319
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [pythongrammarParser.NAME]:
+            if token in [Python3Parser.NAME]:
                 self.state = 238
                 self.tfpdef()
                 self.state = 241
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==pythongrammarParser.ASSIGN:
+                if _la==Python3Parser.ASSIGN:
                     self.state = 239
-                    self.match(pythongrammarParser.ASSIGN)
+                    self.match(Python3Parser.ASSIGN)
                     self.state = 240
                     self.test()
 
@@ -1523,15 +1523,15 @@ class pythongrammarParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 243
-                        self.match(pythongrammarParser.COMMA)
+                        self.match(Python3Parser.COMMA)
                         self.state = 244
                         self.tfpdef()
                         self.state = 247
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==pythongrammarParser.ASSIGN:
+                        if _la==Python3Parser.ASSIGN:
                             self.state = 245
-                            self.match(pythongrammarParser.ASSIGN)
+                            self.match(Python3Parser.ASSIGN)
                             self.state = 246
                             self.test()
 
@@ -1543,19 +1543,19 @@ class pythongrammarParser ( Parser ):
                 self.state = 287
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==pythongrammarParser.COMMA:
+                if _la==Python3Parser.COMMA:
                     self.state = 254
-                    self.match(pythongrammarParser.COMMA)
+                    self.match(Python3Parser.COMMA)
                     self.state = 285
                     self._errHandler.sync(self)
                     token = self._input.LA(1)
-                    if token in [pythongrammarParser.STAR]:
+                    if token in [Python3Parser.STAR]:
                         self.state = 255
-                        self.match(pythongrammarParser.STAR)
+                        self.match(Python3Parser.STAR)
                         self.state = 257
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==pythongrammarParser.NAME:
+                        if _la==Python3Parser.NAME:
                             self.state = 256
                             self.tfpdef()
 
@@ -1566,15 +1566,15 @@ class pythongrammarParser ( Parser ):
                         while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                             if _alt==1:
                                 self.state = 259
-                                self.match(pythongrammarParser.COMMA)
+                                self.match(Python3Parser.COMMA)
                                 self.state = 260
                                 self.tfpdef()
                                 self.state = 263
                                 self._errHandler.sync(self)
                                 _la = self._input.LA(1)
-                                if _la==pythongrammarParser.ASSIGN:
+                                if _la==Python3Parser.ASSIGN:
                                     self.state = 261
-                                    self.match(pythongrammarParser.ASSIGN)
+                                    self.match(Python3Parser.ASSIGN)
                                     self.state = 262
                                     self.test()
 
@@ -1586,23 +1586,23 @@ class pythongrammarParser ( Parser ):
                         self.state = 278
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==pythongrammarParser.COMMA:
+                        if _la==Python3Parser.COMMA:
                             self.state = 270
-                            self.match(pythongrammarParser.COMMA)
+                            self.match(Python3Parser.COMMA)
                             self.state = 276
                             self._errHandler.sync(self)
                             _la = self._input.LA(1)
-                            if _la==pythongrammarParser.POWER:
+                            if _la==Python3Parser.POWER:
                                 self.state = 271
-                                self.match(pythongrammarParser.POWER)
+                                self.match(Python3Parser.POWER)
                                 self.state = 272
                                 self.tfpdef()
                                 self.state = 274
                                 self._errHandler.sync(self)
                                 _la = self._input.LA(1)
-                                if _la==pythongrammarParser.COMMA:
+                                if _la==Python3Parser.COMMA:
                                     self.state = 273
-                                    self.match(pythongrammarParser.COMMA)
+                                    self.match(Python3Parser.COMMA)
 
 
 
@@ -1610,34 +1610,34 @@ class pythongrammarParser ( Parser ):
 
 
                         pass
-                    elif token in [pythongrammarParser.POWER]:
+                    elif token in [Python3Parser.POWER]:
                         self.state = 280
-                        self.match(pythongrammarParser.POWER)
+                        self.match(Python3Parser.POWER)
                         self.state = 281
                         self.tfpdef()
                         self.state = 283
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==pythongrammarParser.COMMA:
+                        if _la==Python3Parser.COMMA:
                             self.state = 282
-                            self.match(pythongrammarParser.COMMA)
+                            self.match(Python3Parser.COMMA)
 
 
                         pass
-                    elif token in [pythongrammarParser.CLOSE_PAREN]:
+                    elif token in [Python3Parser.CLOSE_PAREN]:
                         pass
                     else:
                         pass
 
 
                 pass
-            elif token in [pythongrammarParser.STAR]:
+            elif token in [Python3Parser.STAR]:
                 self.state = 289
-                self.match(pythongrammarParser.STAR)
+                self.match(Python3Parser.STAR)
                 self.state = 291
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==pythongrammarParser.NAME:
+                if _la==Python3Parser.NAME:
                     self.state = 290
                     self.tfpdef()
 
@@ -1648,15 +1648,15 @@ class pythongrammarParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 293
-                        self.match(pythongrammarParser.COMMA)
+                        self.match(Python3Parser.COMMA)
                         self.state = 294
                         self.tfpdef()
                         self.state = 297
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==pythongrammarParser.ASSIGN:
+                        if _la==Python3Parser.ASSIGN:
                             self.state = 295
-                            self.match(pythongrammarParser.ASSIGN)
+                            self.match(Python3Parser.ASSIGN)
                             self.state = 296
                             self.test()
 
@@ -1668,23 +1668,23 @@ class pythongrammarParser ( Parser ):
                 self.state = 312
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==pythongrammarParser.COMMA:
+                if _la==Python3Parser.COMMA:
                     self.state = 304
-                    self.match(pythongrammarParser.COMMA)
+                    self.match(Python3Parser.COMMA)
                     self.state = 310
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==pythongrammarParser.POWER:
+                    if _la==Python3Parser.POWER:
                         self.state = 305
-                        self.match(pythongrammarParser.POWER)
+                        self.match(Python3Parser.POWER)
                         self.state = 306
                         self.tfpdef()
                         self.state = 308
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==pythongrammarParser.COMMA:
+                        if _la==Python3Parser.COMMA:
                             self.state = 307
-                            self.match(pythongrammarParser.COMMA)
+                            self.match(Python3Parser.COMMA)
 
 
 
@@ -1692,17 +1692,17 @@ class pythongrammarParser ( Parser ):
 
 
                 pass
-            elif token in [pythongrammarParser.POWER]:
+            elif token in [Python3Parser.POWER]:
                 self.state = 314
-                self.match(pythongrammarParser.POWER)
+                self.match(Python3Parser.POWER)
                 self.state = 315
                 self.tfpdef()
                 self.state = 317
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==pythongrammarParser.COMMA:
+                if _la==Python3Parser.COMMA:
                     self.state = 316
-                    self.match(pythongrammarParser.COMMA)
+                    self.match(Python3Parser.COMMA)
 
 
                 pass
@@ -1725,17 +1725,17 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def NAME(self):
-            return self.getToken(pythongrammarParser.NAME, 0)
+            return self.getToken(Python3Parser.NAME, 0)
 
         def COLON(self):
-            return self.getToken(pythongrammarParser.COLON, 0)
+            return self.getToken(Python3Parser.COLON, 0)
 
         def test(self):
-            return self.getTypedRuleContext(pythongrammarParser.TestContext,0)
+            return self.getTypedRuleContext(Python3Parser.TestContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_tfpdef
+            return Python3Parser.RULE_tfpdef
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTfpdef" ):
@@ -1750,19 +1750,19 @@ class pythongrammarParser ( Parser ):
 
     def tfpdef(self):
 
-        localctx = pythongrammarParser.TfpdefContext(self, self._ctx, self.state)
+        localctx = Python3Parser.TfpdefContext(self, self._ctx, self.state)
         self.enterRule(localctx, 20, self.RULE_tfpdef)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 321
-            self.match(pythongrammarParser.NAME)
+            self.match(Python3Parser.NAME)
             self.state = 324
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==pythongrammarParser.COLON:
+            if _la==Python3Parser.COLON:
                 self.state = 322
-                self.match(pythongrammarParser.COLON)
+                self.match(Python3Parser.COLON)
                 self.state = 323
                 self.test()
 
@@ -1784,38 +1784,38 @@ class pythongrammarParser ( Parser ):
 
         def vfpdef(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.VfpdefContext)
+                return self.getTypedRuleContexts(Python3Parser.VfpdefContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.VfpdefContext,i)
+                return self.getTypedRuleContext(Python3Parser.VfpdefContext,i)
 
 
         def STAR(self):
-            return self.getToken(pythongrammarParser.STAR, 0)
+            return self.getToken(Python3Parser.STAR, 0)
 
         def POWER(self):
-            return self.getToken(pythongrammarParser.POWER, 0)
+            return self.getToken(Python3Parser.POWER, 0)
 
         def ASSIGN(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.ASSIGN)
+                return self.getTokens(Python3Parser.ASSIGN)
             else:
-                return self.getToken(pythongrammarParser.ASSIGN, i)
+                return self.getToken(Python3Parser.ASSIGN, i)
 
         def test(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.TestContext)
+                return self.getTypedRuleContexts(Python3Parser.TestContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.TestContext,i)
+                return self.getTypedRuleContext(Python3Parser.TestContext,i)
 
 
         def COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.COMMA)
+                return self.getTokens(Python3Parser.COMMA)
             else:
-                return self.getToken(pythongrammarParser.COMMA, i)
+                return self.getToken(Python3Parser.COMMA, i)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_varargslist
+            return Python3Parser.RULE_varargslist
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterVarargslist" ):
@@ -1830,7 +1830,7 @@ class pythongrammarParser ( Parser ):
 
     def varargslist(self):
 
-        localctx = pythongrammarParser.VarargslistContext(self, self._ctx, self.state)
+        localctx = Python3Parser.VarargslistContext(self, self._ctx, self.state)
         self.enterRule(localctx, 22, self.RULE_varargslist)
         self._la = 0 # Token type
         try:
@@ -1838,15 +1838,15 @@ class pythongrammarParser ( Parser ):
             self.state = 407
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [pythongrammarParser.NAME]:
+            if token in [Python3Parser.NAME]:
                 self.state = 326
                 self.vfpdef()
                 self.state = 329
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==pythongrammarParser.ASSIGN:
+                if _la==Python3Parser.ASSIGN:
                     self.state = 327
-                    self.match(pythongrammarParser.ASSIGN)
+                    self.match(Python3Parser.ASSIGN)
                     self.state = 328
                     self.test()
 
@@ -1857,15 +1857,15 @@ class pythongrammarParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 331
-                        self.match(pythongrammarParser.COMMA)
+                        self.match(Python3Parser.COMMA)
                         self.state = 332
                         self.vfpdef()
                         self.state = 335
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==pythongrammarParser.ASSIGN:
+                        if _la==Python3Parser.ASSIGN:
                             self.state = 333
-                            self.match(pythongrammarParser.ASSIGN)
+                            self.match(Python3Parser.ASSIGN)
                             self.state = 334
                             self.test()
 
@@ -1877,19 +1877,19 @@ class pythongrammarParser ( Parser ):
                 self.state = 375
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==pythongrammarParser.COMMA:
+                if _la==Python3Parser.COMMA:
                     self.state = 342
-                    self.match(pythongrammarParser.COMMA)
+                    self.match(Python3Parser.COMMA)
                     self.state = 373
                     self._errHandler.sync(self)
                     token = self._input.LA(1)
-                    if token in [pythongrammarParser.STAR]:
+                    if token in [Python3Parser.STAR]:
                         self.state = 343
-                        self.match(pythongrammarParser.STAR)
+                        self.match(Python3Parser.STAR)
                         self.state = 345
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==pythongrammarParser.NAME:
+                        if _la==Python3Parser.NAME:
                             self.state = 344
                             self.vfpdef()
 
@@ -1900,15 +1900,15 @@ class pythongrammarParser ( Parser ):
                         while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                             if _alt==1:
                                 self.state = 347
-                                self.match(pythongrammarParser.COMMA)
+                                self.match(Python3Parser.COMMA)
                                 self.state = 348
                                 self.vfpdef()
                                 self.state = 351
                                 self._errHandler.sync(self)
                                 _la = self._input.LA(1)
-                                if _la==pythongrammarParser.ASSIGN:
+                                if _la==Python3Parser.ASSIGN:
                                     self.state = 349
-                                    self.match(pythongrammarParser.ASSIGN)
+                                    self.match(Python3Parser.ASSIGN)
                                     self.state = 350
                                     self.test()
 
@@ -1920,23 +1920,23 @@ class pythongrammarParser ( Parser ):
                         self.state = 366
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==pythongrammarParser.COMMA:
+                        if _la==Python3Parser.COMMA:
                             self.state = 358
-                            self.match(pythongrammarParser.COMMA)
+                            self.match(Python3Parser.COMMA)
                             self.state = 364
                             self._errHandler.sync(self)
                             _la = self._input.LA(1)
-                            if _la==pythongrammarParser.POWER:
+                            if _la==Python3Parser.POWER:
                                 self.state = 359
-                                self.match(pythongrammarParser.POWER)
+                                self.match(Python3Parser.POWER)
                                 self.state = 360
                                 self.vfpdef()
                                 self.state = 362
                                 self._errHandler.sync(self)
                                 _la = self._input.LA(1)
-                                if _la==pythongrammarParser.COMMA:
+                                if _la==Python3Parser.COMMA:
                                     self.state = 361
-                                    self.match(pythongrammarParser.COMMA)
+                                    self.match(Python3Parser.COMMA)
 
 
 
@@ -1944,34 +1944,34 @@ class pythongrammarParser ( Parser ):
 
 
                         pass
-                    elif token in [pythongrammarParser.POWER]:
+                    elif token in [Python3Parser.POWER]:
                         self.state = 368
-                        self.match(pythongrammarParser.POWER)
+                        self.match(Python3Parser.POWER)
                         self.state = 369
                         self.vfpdef()
                         self.state = 371
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==pythongrammarParser.COMMA:
+                        if _la==Python3Parser.COMMA:
                             self.state = 370
-                            self.match(pythongrammarParser.COMMA)
+                            self.match(Python3Parser.COMMA)
 
 
                         pass
-                    elif token in [pythongrammarParser.COLON]:
+                    elif token in [Python3Parser.COLON]:
                         pass
                     else:
                         pass
 
 
                 pass
-            elif token in [pythongrammarParser.STAR]:
+            elif token in [Python3Parser.STAR]:
                 self.state = 377
-                self.match(pythongrammarParser.STAR)
+                self.match(Python3Parser.STAR)
                 self.state = 379
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==pythongrammarParser.NAME:
+                if _la==Python3Parser.NAME:
                     self.state = 378
                     self.vfpdef()
 
@@ -1982,15 +1982,15 @@ class pythongrammarParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 381
-                        self.match(pythongrammarParser.COMMA)
+                        self.match(Python3Parser.COMMA)
                         self.state = 382
                         self.vfpdef()
                         self.state = 385
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==pythongrammarParser.ASSIGN:
+                        if _la==Python3Parser.ASSIGN:
                             self.state = 383
-                            self.match(pythongrammarParser.ASSIGN)
+                            self.match(Python3Parser.ASSIGN)
                             self.state = 384
                             self.test()
 
@@ -2002,23 +2002,23 @@ class pythongrammarParser ( Parser ):
                 self.state = 400
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==pythongrammarParser.COMMA:
+                if _la==Python3Parser.COMMA:
                     self.state = 392
-                    self.match(pythongrammarParser.COMMA)
+                    self.match(Python3Parser.COMMA)
                     self.state = 398
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==pythongrammarParser.POWER:
+                    if _la==Python3Parser.POWER:
                         self.state = 393
-                        self.match(pythongrammarParser.POWER)
+                        self.match(Python3Parser.POWER)
                         self.state = 394
                         self.vfpdef()
                         self.state = 396
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==pythongrammarParser.COMMA:
+                        if _la==Python3Parser.COMMA:
                             self.state = 395
-                            self.match(pythongrammarParser.COMMA)
+                            self.match(Python3Parser.COMMA)
 
 
 
@@ -2026,17 +2026,17 @@ class pythongrammarParser ( Parser ):
 
 
                 pass
-            elif token in [pythongrammarParser.POWER]:
+            elif token in [Python3Parser.POWER]:
                 self.state = 402
-                self.match(pythongrammarParser.POWER)
+                self.match(Python3Parser.POWER)
                 self.state = 403
                 self.vfpdef()
                 self.state = 405
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==pythongrammarParser.COMMA:
+                if _la==Python3Parser.COMMA:
                     self.state = 404
-                    self.match(pythongrammarParser.COMMA)
+                    self.match(Python3Parser.COMMA)
 
 
                 pass
@@ -2059,10 +2059,10 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def NAME(self):
-            return self.getToken(pythongrammarParser.NAME, 0)
+            return self.getToken(Python3Parser.NAME, 0)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_vfpdef
+            return Python3Parser.RULE_vfpdef
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterVfpdef" ):
@@ -2077,12 +2077,12 @@ class pythongrammarParser ( Parser ):
 
     def vfpdef(self):
 
-        localctx = pythongrammarParser.VfpdefContext(self, self._ctx, self.state)
+        localctx = Python3Parser.VfpdefContext(self, self._ctx, self.state)
         self.enterRule(localctx, 24, self.RULE_vfpdef)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 409
-            self.match(pythongrammarParser.NAME)
+            self.match(Python3Parser.NAME)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -2099,15 +2099,15 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def simple_stmt(self):
-            return self.getTypedRuleContext(pythongrammarParser.Simple_stmtContext,0)
+            return self.getTypedRuleContext(Python3Parser.Simple_stmtContext,0)
 
 
         def compound_stmt(self):
-            return self.getTypedRuleContext(pythongrammarParser.Compound_stmtContext,0)
+            return self.getTypedRuleContext(Python3Parser.Compound_stmtContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_stmt
+            return Python3Parser.RULE_stmt
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterStmt" ):
@@ -2122,18 +2122,18 @@ class pythongrammarParser ( Parser ):
 
     def stmt(self):
 
-        localctx = pythongrammarParser.StmtContext(self, self._ctx, self.state)
+        localctx = Python3Parser.StmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 26, self.RULE_stmt)
         try:
             self.state = 413
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [pythongrammarParser.STRING, pythongrammarParser.NUMBER, pythongrammarParser.RETURN, pythongrammarParser.RAISE, pythongrammarParser.FROM, pythongrammarParser.IMPORT, pythongrammarParser.GLOBAL, pythongrammarParser.NONLOCAL, pythongrammarParser.ASSERT, pythongrammarParser.LAMBDA, pythongrammarParser.NOT, pythongrammarParser.NONE, pythongrammarParser.TRUE, pythongrammarParser.FALSE, pythongrammarParser.YIELD, pythongrammarParser.DEL, pythongrammarParser.PASS, pythongrammarParser.CONTINUE, pythongrammarParser.BREAK, pythongrammarParser.AWAIT, pythongrammarParser.NAME, pythongrammarParser.ELLIPSIS, pythongrammarParser.STAR, pythongrammarParser.OPEN_PAREN, pythongrammarParser.OPEN_BRACK, pythongrammarParser.ADD, pythongrammarParser.MINUS, pythongrammarParser.NOT_OP, pythongrammarParser.OPEN_BRACE]:
+            if token in [Python3Parser.STRING, Python3Parser.NUMBER, Python3Parser.RETURN, Python3Parser.RAISE, Python3Parser.FROM, Python3Parser.IMPORT, Python3Parser.GLOBAL, Python3Parser.NONLOCAL, Python3Parser.ASSERT, Python3Parser.LAMBDA, Python3Parser.NOT, Python3Parser.NONE, Python3Parser.TRUE, Python3Parser.FALSE, Python3Parser.YIELD, Python3Parser.DEL, Python3Parser.PASS, Python3Parser.CONTINUE, Python3Parser.BREAK, Python3Parser.AWAIT, Python3Parser.NAME, Python3Parser.ELLIPSIS, Python3Parser.STAR, Python3Parser.OPEN_PAREN, Python3Parser.OPEN_BRACK, Python3Parser.ADD, Python3Parser.MINUS, Python3Parser.NOT_OP, Python3Parser.OPEN_BRACE]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 411
                 self.simple_stmt()
                 pass
-            elif token in [pythongrammarParser.DEF, pythongrammarParser.IF, pythongrammarParser.WHILE, pythongrammarParser.FOR, pythongrammarParser.TRY, pythongrammarParser.WITH, pythongrammarParser.CLASS, pythongrammarParser.ASYNC, pythongrammarParser.AT]:
+            elif token in [Python3Parser.DEF, Python3Parser.IF, Python3Parser.WHILE, Python3Parser.FOR, Python3Parser.TRY, Python3Parser.WITH, Python3Parser.CLASS, Python3Parser.ASYNC, Python3Parser.AT]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 412
                 self.compound_stmt()
@@ -2158,22 +2158,22 @@ class pythongrammarParser ( Parser ):
 
         def small_stmt(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.Small_stmtContext)
+                return self.getTypedRuleContexts(Python3Parser.Small_stmtContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.Small_stmtContext,i)
+                return self.getTypedRuleContext(Python3Parser.Small_stmtContext,i)
 
 
         def NEWLINE(self):
-            return self.getToken(pythongrammarParser.NEWLINE, 0)
+            return self.getToken(Python3Parser.NEWLINE, 0)
 
         def SEMI_COLON(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.SEMI_COLON)
+                return self.getTokens(Python3Parser.SEMI_COLON)
             else:
-                return self.getToken(pythongrammarParser.SEMI_COLON, i)
+                return self.getToken(Python3Parser.SEMI_COLON, i)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_simple_stmt
+            return Python3Parser.RULE_simple_stmt
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterSimple_stmt" ):
@@ -2188,7 +2188,7 @@ class pythongrammarParser ( Parser ):
 
     def simple_stmt(self):
 
-        localctx = pythongrammarParser.Simple_stmtContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Simple_stmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 28, self.RULE_simple_stmt)
         self._la = 0 # Token type
         try:
@@ -2201,7 +2201,7 @@ class pythongrammarParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 416
-                    self.match(pythongrammarParser.SEMI_COLON)
+                    self.match(Python3Parser.SEMI_COLON)
                     self.state = 417
                     self.small_stmt() 
                 self.state = 422
@@ -2211,13 +2211,13 @@ class pythongrammarParser ( Parser ):
             self.state = 424
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==pythongrammarParser.SEMI_COLON:
+            if _la==Python3Parser.SEMI_COLON:
                 self.state = 423
-                self.match(pythongrammarParser.SEMI_COLON)
+                self.match(Python3Parser.SEMI_COLON)
 
 
             self.state = 426
-            self.match(pythongrammarParser.NEWLINE)
+            self.match(Python3Parser.NEWLINE)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -2234,39 +2234,39 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def expr_stmt(self):
-            return self.getTypedRuleContext(pythongrammarParser.Expr_stmtContext,0)
+            return self.getTypedRuleContext(Python3Parser.Expr_stmtContext,0)
 
 
         def del_stmt(self):
-            return self.getTypedRuleContext(pythongrammarParser.Del_stmtContext,0)
+            return self.getTypedRuleContext(Python3Parser.Del_stmtContext,0)
 
 
         def pass_stmt(self):
-            return self.getTypedRuleContext(pythongrammarParser.Pass_stmtContext,0)
+            return self.getTypedRuleContext(Python3Parser.Pass_stmtContext,0)
 
 
         def flow_stmt(self):
-            return self.getTypedRuleContext(pythongrammarParser.Flow_stmtContext,0)
+            return self.getTypedRuleContext(Python3Parser.Flow_stmtContext,0)
 
 
         def import_stmt(self):
-            return self.getTypedRuleContext(pythongrammarParser.Import_stmtContext,0)
+            return self.getTypedRuleContext(Python3Parser.Import_stmtContext,0)
 
 
         def global_stmt(self):
-            return self.getTypedRuleContext(pythongrammarParser.Global_stmtContext,0)
+            return self.getTypedRuleContext(Python3Parser.Global_stmtContext,0)
 
 
         def nonlocal_stmt(self):
-            return self.getTypedRuleContext(pythongrammarParser.Nonlocal_stmtContext,0)
+            return self.getTypedRuleContext(Python3Parser.Nonlocal_stmtContext,0)
 
 
         def assert_stmt(self):
-            return self.getTypedRuleContext(pythongrammarParser.Assert_stmtContext,0)
+            return self.getTypedRuleContext(Python3Parser.Assert_stmtContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_small_stmt
+            return Python3Parser.RULE_small_stmt
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterSmall_stmt" ):
@@ -2281,42 +2281,42 @@ class pythongrammarParser ( Parser ):
 
     def small_stmt(self):
 
-        localctx = pythongrammarParser.Small_stmtContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Small_stmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 30, self.RULE_small_stmt)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 436
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [pythongrammarParser.STRING, pythongrammarParser.NUMBER, pythongrammarParser.LAMBDA, pythongrammarParser.NOT, pythongrammarParser.NONE, pythongrammarParser.TRUE, pythongrammarParser.FALSE, pythongrammarParser.AWAIT, pythongrammarParser.NAME, pythongrammarParser.ELLIPSIS, pythongrammarParser.STAR, pythongrammarParser.OPEN_PAREN, pythongrammarParser.OPEN_BRACK, pythongrammarParser.ADD, pythongrammarParser.MINUS, pythongrammarParser.NOT_OP, pythongrammarParser.OPEN_BRACE]:
+            if token in [Python3Parser.STRING, Python3Parser.NUMBER, Python3Parser.LAMBDA, Python3Parser.NOT, Python3Parser.NONE, Python3Parser.TRUE, Python3Parser.FALSE, Python3Parser.AWAIT, Python3Parser.NAME, Python3Parser.ELLIPSIS, Python3Parser.STAR, Python3Parser.OPEN_PAREN, Python3Parser.OPEN_BRACK, Python3Parser.ADD, Python3Parser.MINUS, Python3Parser.NOT_OP, Python3Parser.OPEN_BRACE]:
                 self.state = 428
                 self.expr_stmt()
                 pass
-            elif token in [pythongrammarParser.DEL]:
+            elif token in [Python3Parser.DEL]:
                 self.state = 429
                 self.del_stmt()
                 pass
-            elif token in [pythongrammarParser.PASS]:
+            elif token in [Python3Parser.PASS]:
                 self.state = 430
                 self.pass_stmt()
                 pass
-            elif token in [pythongrammarParser.RETURN, pythongrammarParser.RAISE, pythongrammarParser.YIELD, pythongrammarParser.CONTINUE, pythongrammarParser.BREAK]:
+            elif token in [Python3Parser.RETURN, Python3Parser.RAISE, Python3Parser.YIELD, Python3Parser.CONTINUE, Python3Parser.BREAK]:
                 self.state = 431
                 self.flow_stmt()
                 pass
-            elif token in [pythongrammarParser.FROM, pythongrammarParser.IMPORT]:
+            elif token in [Python3Parser.FROM, Python3Parser.IMPORT]:
                 self.state = 432
                 self.import_stmt()
                 pass
-            elif token in [pythongrammarParser.GLOBAL]:
+            elif token in [Python3Parser.GLOBAL]:
                 self.state = 433
                 self.global_stmt()
                 pass
-            elif token in [pythongrammarParser.NONLOCAL]:
+            elif token in [Python3Parser.NONLOCAL]:
                 self.state = 434
                 self.nonlocal_stmt()
                 pass
-            elif token in [pythongrammarParser.ASSERT]:
+            elif token in [Python3Parser.ASSERT]:
                 self.state = 435
                 self.assert_stmt()
                 pass
@@ -2340,38 +2340,38 @@ class pythongrammarParser ( Parser ):
 
         def testlist_star_expr(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.Testlist_star_exprContext)
+                return self.getTypedRuleContexts(Python3Parser.Testlist_star_exprContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.Testlist_star_exprContext,i)
+                return self.getTypedRuleContext(Python3Parser.Testlist_star_exprContext,i)
 
 
         def annassign(self):
-            return self.getTypedRuleContext(pythongrammarParser.AnnassignContext,0)
+            return self.getTypedRuleContext(Python3Parser.AnnassignContext,0)
 
 
         def augassign(self):
-            return self.getTypedRuleContext(pythongrammarParser.AugassignContext,0)
+            return self.getTypedRuleContext(Python3Parser.AugassignContext,0)
 
 
         def yield_expr(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.Yield_exprContext)
+                return self.getTypedRuleContexts(Python3Parser.Yield_exprContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.Yield_exprContext,i)
+                return self.getTypedRuleContext(Python3Parser.Yield_exprContext,i)
 
 
         def testlist(self):
-            return self.getTypedRuleContext(pythongrammarParser.TestlistContext,0)
+            return self.getTypedRuleContext(Python3Parser.TestlistContext,0)
 
 
         def ASSIGN(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.ASSIGN)
+                return self.getTokens(Python3Parser.ASSIGN)
             else:
-                return self.getToken(pythongrammarParser.ASSIGN, i)
+                return self.getToken(Python3Parser.ASSIGN, i)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_expr_stmt
+            return Python3Parser.RULE_expr_stmt
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterExpr_stmt" ):
@@ -2386,7 +2386,7 @@ class pythongrammarParser ( Parser ):
 
     def expr_stmt(self):
 
-        localctx = pythongrammarParser.Expr_stmtContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Expr_stmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 32, self.RULE_expr_stmt)
         self._la = 0 # Token type
         try:
@@ -2396,21 +2396,21 @@ class pythongrammarParser ( Parser ):
             self.state = 455
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [pythongrammarParser.COLON]:
+            if token in [Python3Parser.COLON]:
                 self.state = 439
                 self.annassign()
                 pass
-            elif token in [pythongrammarParser.ADD_ASSIGN, pythongrammarParser.SUB_ASSIGN, pythongrammarParser.MULT_ASSIGN, pythongrammarParser.AT_ASSIGN, pythongrammarParser.DIV_ASSIGN, pythongrammarParser.MOD_ASSIGN, pythongrammarParser.AND_ASSIGN, pythongrammarParser.OR_ASSIGN, pythongrammarParser.XOR_ASSIGN, pythongrammarParser.LEFT_SHIFT_ASSIGN, pythongrammarParser.RIGHT_SHIFT_ASSIGN, pythongrammarParser.POWER_ASSIGN, pythongrammarParser.IDIV_ASSIGN]:
+            elif token in [Python3Parser.ADD_ASSIGN, Python3Parser.SUB_ASSIGN, Python3Parser.MULT_ASSIGN, Python3Parser.AT_ASSIGN, Python3Parser.DIV_ASSIGN, Python3Parser.MOD_ASSIGN, Python3Parser.AND_ASSIGN, Python3Parser.OR_ASSIGN, Python3Parser.XOR_ASSIGN, Python3Parser.LEFT_SHIFT_ASSIGN, Python3Parser.RIGHT_SHIFT_ASSIGN, Python3Parser.POWER_ASSIGN, Python3Parser.IDIV_ASSIGN]:
                 self.state = 440
                 self.augassign()
                 self.state = 443
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
-                if token in [pythongrammarParser.YIELD]:
+                if token in [Python3Parser.YIELD]:
                     self.state = 441
                     self.yield_expr()
                     pass
-                elif token in [pythongrammarParser.STRING, pythongrammarParser.NUMBER, pythongrammarParser.LAMBDA, pythongrammarParser.NOT, pythongrammarParser.NONE, pythongrammarParser.TRUE, pythongrammarParser.FALSE, pythongrammarParser.AWAIT, pythongrammarParser.NAME, pythongrammarParser.ELLIPSIS, pythongrammarParser.OPEN_PAREN, pythongrammarParser.OPEN_BRACK, pythongrammarParser.ADD, pythongrammarParser.MINUS, pythongrammarParser.NOT_OP, pythongrammarParser.OPEN_BRACE]:
+                elif token in [Python3Parser.STRING, Python3Parser.NUMBER, Python3Parser.LAMBDA, Python3Parser.NOT, Python3Parser.NONE, Python3Parser.TRUE, Python3Parser.FALSE, Python3Parser.AWAIT, Python3Parser.NAME, Python3Parser.ELLIPSIS, Python3Parser.OPEN_PAREN, Python3Parser.OPEN_BRACK, Python3Parser.ADD, Python3Parser.MINUS, Python3Parser.NOT_OP, Python3Parser.OPEN_BRACE]:
                     self.state = 442
                     self.testlist()
                     pass
@@ -2418,21 +2418,21 @@ class pythongrammarParser ( Parser ):
                     raise NoViableAltException(self)
 
                 pass
-            elif token in [pythongrammarParser.NEWLINE, pythongrammarParser.SEMI_COLON, pythongrammarParser.ASSIGN]:
+            elif token in [Python3Parser.NEWLINE, Python3Parser.SEMI_COLON, Python3Parser.ASSIGN]:
                 self.state = 452
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==pythongrammarParser.ASSIGN:
+                while _la==Python3Parser.ASSIGN:
                     self.state = 445
-                    self.match(pythongrammarParser.ASSIGN)
+                    self.match(Python3Parser.ASSIGN)
                     self.state = 448
                     self._errHandler.sync(self)
                     token = self._input.LA(1)
-                    if token in [pythongrammarParser.YIELD]:
+                    if token in [Python3Parser.YIELD]:
                         self.state = 446
                         self.yield_expr()
                         pass
-                    elif token in [pythongrammarParser.STRING, pythongrammarParser.NUMBER, pythongrammarParser.LAMBDA, pythongrammarParser.NOT, pythongrammarParser.NONE, pythongrammarParser.TRUE, pythongrammarParser.FALSE, pythongrammarParser.AWAIT, pythongrammarParser.NAME, pythongrammarParser.ELLIPSIS, pythongrammarParser.STAR, pythongrammarParser.OPEN_PAREN, pythongrammarParser.OPEN_BRACK, pythongrammarParser.ADD, pythongrammarParser.MINUS, pythongrammarParser.NOT_OP, pythongrammarParser.OPEN_BRACE]:
+                    elif token in [Python3Parser.STRING, Python3Parser.NUMBER, Python3Parser.LAMBDA, Python3Parser.NOT, Python3Parser.NONE, Python3Parser.TRUE, Python3Parser.FALSE, Python3Parser.AWAIT, Python3Parser.NAME, Python3Parser.ELLIPSIS, Python3Parser.STAR, Python3Parser.OPEN_PAREN, Python3Parser.OPEN_BRACK, Python3Parser.ADD, Python3Parser.MINUS, Python3Parser.NOT_OP, Python3Parser.OPEN_BRACE]:
                         self.state = 447
                         self.testlist_star_expr()
                         pass
@@ -2463,20 +2463,20 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def COLON(self):
-            return self.getToken(pythongrammarParser.COLON, 0)
+            return self.getToken(Python3Parser.COLON, 0)
 
         def test(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.TestContext)
+                return self.getTypedRuleContexts(Python3Parser.TestContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.TestContext,i)
+                return self.getTypedRuleContext(Python3Parser.TestContext,i)
 
 
         def ASSIGN(self):
-            return self.getToken(pythongrammarParser.ASSIGN, 0)
+            return self.getToken(Python3Parser.ASSIGN, 0)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_annassign
+            return Python3Parser.RULE_annassign
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterAnnassign" ):
@@ -2491,21 +2491,21 @@ class pythongrammarParser ( Parser ):
 
     def annassign(self):
 
-        localctx = pythongrammarParser.AnnassignContext(self, self._ctx, self.state)
+        localctx = Python3Parser.AnnassignContext(self, self._ctx, self.state)
         self.enterRule(localctx, 34, self.RULE_annassign)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 457
-            self.match(pythongrammarParser.COLON)
+            self.match(Python3Parser.COLON)
             self.state = 458
             self.test()
             self.state = 461
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==pythongrammarParser.ASSIGN:
+            if _la==Python3Parser.ASSIGN:
                 self.state = 459
-                self.match(pythongrammarParser.ASSIGN)
+                self.match(Python3Parser.ASSIGN)
                 self.state = 460
                 self.test()
 
@@ -2527,26 +2527,26 @@ class pythongrammarParser ( Parser ):
 
         def test(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.TestContext)
+                return self.getTypedRuleContexts(Python3Parser.TestContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.TestContext,i)
+                return self.getTypedRuleContext(Python3Parser.TestContext,i)
 
 
         def star_expr(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.Star_exprContext)
+                return self.getTypedRuleContexts(Python3Parser.Star_exprContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.Star_exprContext,i)
+                return self.getTypedRuleContext(Python3Parser.Star_exprContext,i)
 
 
         def COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.COMMA)
+                return self.getTokens(Python3Parser.COMMA)
             else:
-                return self.getToken(pythongrammarParser.COMMA, i)
+                return self.getToken(Python3Parser.COMMA, i)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_testlist_star_expr
+            return Python3Parser.RULE_testlist_star_expr
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTestlist_star_expr" ):
@@ -2561,7 +2561,7 @@ class pythongrammarParser ( Parser ):
 
     def testlist_star_expr(self):
 
-        localctx = pythongrammarParser.Testlist_star_exprContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Testlist_star_exprContext(self, self._ctx, self.state)
         self.enterRule(localctx, 36, self.RULE_testlist_star_expr)
         self._la = 0 # Token type
         try:
@@ -2569,11 +2569,11 @@ class pythongrammarParser ( Parser ):
             self.state = 465
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [pythongrammarParser.STRING, pythongrammarParser.NUMBER, pythongrammarParser.LAMBDA, pythongrammarParser.NOT, pythongrammarParser.NONE, pythongrammarParser.TRUE, pythongrammarParser.FALSE, pythongrammarParser.AWAIT, pythongrammarParser.NAME, pythongrammarParser.ELLIPSIS, pythongrammarParser.OPEN_PAREN, pythongrammarParser.OPEN_BRACK, pythongrammarParser.ADD, pythongrammarParser.MINUS, pythongrammarParser.NOT_OP, pythongrammarParser.OPEN_BRACE]:
+            if token in [Python3Parser.STRING, Python3Parser.NUMBER, Python3Parser.LAMBDA, Python3Parser.NOT, Python3Parser.NONE, Python3Parser.TRUE, Python3Parser.FALSE, Python3Parser.AWAIT, Python3Parser.NAME, Python3Parser.ELLIPSIS, Python3Parser.OPEN_PAREN, Python3Parser.OPEN_BRACK, Python3Parser.ADD, Python3Parser.MINUS, Python3Parser.NOT_OP, Python3Parser.OPEN_BRACE]:
                 self.state = 463
                 self.test()
                 pass
-            elif token in [pythongrammarParser.STAR]:
+            elif token in [Python3Parser.STAR]:
                 self.state = 464
                 self.star_expr()
                 pass
@@ -2586,15 +2586,15 @@ class pythongrammarParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 467
-                    self.match(pythongrammarParser.COMMA)
+                    self.match(Python3Parser.COMMA)
                     self.state = 470
                     self._errHandler.sync(self)
                     token = self._input.LA(1)
-                    if token in [pythongrammarParser.STRING, pythongrammarParser.NUMBER, pythongrammarParser.LAMBDA, pythongrammarParser.NOT, pythongrammarParser.NONE, pythongrammarParser.TRUE, pythongrammarParser.FALSE, pythongrammarParser.AWAIT, pythongrammarParser.NAME, pythongrammarParser.ELLIPSIS, pythongrammarParser.OPEN_PAREN, pythongrammarParser.OPEN_BRACK, pythongrammarParser.ADD, pythongrammarParser.MINUS, pythongrammarParser.NOT_OP, pythongrammarParser.OPEN_BRACE]:
+                    if token in [Python3Parser.STRING, Python3Parser.NUMBER, Python3Parser.LAMBDA, Python3Parser.NOT, Python3Parser.NONE, Python3Parser.TRUE, Python3Parser.FALSE, Python3Parser.AWAIT, Python3Parser.NAME, Python3Parser.ELLIPSIS, Python3Parser.OPEN_PAREN, Python3Parser.OPEN_BRACK, Python3Parser.ADD, Python3Parser.MINUS, Python3Parser.NOT_OP, Python3Parser.OPEN_BRACE]:
                         self.state = 468
                         self.test()
                         pass
-                    elif token in [pythongrammarParser.STAR]:
+                    elif token in [Python3Parser.STAR]:
                         self.state = 469
                         self.star_expr()
                         pass
@@ -2608,9 +2608,9 @@ class pythongrammarParser ( Parser ):
             self.state = 478
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==pythongrammarParser.COMMA:
+            if _la==Python3Parser.COMMA:
                 self.state = 477
-                self.match(pythongrammarParser.COMMA)
+                self.match(Python3Parser.COMMA)
 
 
         except RecognitionException as re:
@@ -2629,46 +2629,46 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def ADD_ASSIGN(self):
-            return self.getToken(pythongrammarParser.ADD_ASSIGN, 0)
+            return self.getToken(Python3Parser.ADD_ASSIGN, 0)
 
         def SUB_ASSIGN(self):
-            return self.getToken(pythongrammarParser.SUB_ASSIGN, 0)
+            return self.getToken(Python3Parser.SUB_ASSIGN, 0)
 
         def MULT_ASSIGN(self):
-            return self.getToken(pythongrammarParser.MULT_ASSIGN, 0)
+            return self.getToken(Python3Parser.MULT_ASSIGN, 0)
 
         def AT_ASSIGN(self):
-            return self.getToken(pythongrammarParser.AT_ASSIGN, 0)
+            return self.getToken(Python3Parser.AT_ASSIGN, 0)
 
         def DIV_ASSIGN(self):
-            return self.getToken(pythongrammarParser.DIV_ASSIGN, 0)
+            return self.getToken(Python3Parser.DIV_ASSIGN, 0)
 
         def MOD_ASSIGN(self):
-            return self.getToken(pythongrammarParser.MOD_ASSIGN, 0)
+            return self.getToken(Python3Parser.MOD_ASSIGN, 0)
 
         def AND_ASSIGN(self):
-            return self.getToken(pythongrammarParser.AND_ASSIGN, 0)
+            return self.getToken(Python3Parser.AND_ASSIGN, 0)
 
         def OR_ASSIGN(self):
-            return self.getToken(pythongrammarParser.OR_ASSIGN, 0)
+            return self.getToken(Python3Parser.OR_ASSIGN, 0)
 
         def XOR_ASSIGN(self):
-            return self.getToken(pythongrammarParser.XOR_ASSIGN, 0)
+            return self.getToken(Python3Parser.XOR_ASSIGN, 0)
 
         def LEFT_SHIFT_ASSIGN(self):
-            return self.getToken(pythongrammarParser.LEFT_SHIFT_ASSIGN, 0)
+            return self.getToken(Python3Parser.LEFT_SHIFT_ASSIGN, 0)
 
         def RIGHT_SHIFT_ASSIGN(self):
-            return self.getToken(pythongrammarParser.RIGHT_SHIFT_ASSIGN, 0)
+            return self.getToken(Python3Parser.RIGHT_SHIFT_ASSIGN, 0)
 
         def POWER_ASSIGN(self):
-            return self.getToken(pythongrammarParser.POWER_ASSIGN, 0)
+            return self.getToken(Python3Parser.POWER_ASSIGN, 0)
 
         def IDIV_ASSIGN(self):
-            return self.getToken(pythongrammarParser.IDIV_ASSIGN, 0)
+            return self.getToken(Python3Parser.IDIV_ASSIGN, 0)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_augassign
+            return Python3Parser.RULE_augassign
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterAugassign" ):
@@ -2683,14 +2683,14 @@ class pythongrammarParser ( Parser ):
 
     def augassign(self):
 
-        localctx = pythongrammarParser.AugassignContext(self, self._ctx, self.state)
+        localctx = Python3Parser.AugassignContext(self, self._ctx, self.state)
         self.enterRule(localctx, 38, self.RULE_augassign)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 480
             _la = self._input.LA(1)
-            if not(((((_la - 83)) & ~0x3f) == 0 and ((1 << (_la - 83)) & ((1 << (pythongrammarParser.ADD_ASSIGN - 83)) | (1 << (pythongrammarParser.SUB_ASSIGN - 83)) | (1 << (pythongrammarParser.MULT_ASSIGN - 83)) | (1 << (pythongrammarParser.AT_ASSIGN - 83)) | (1 << (pythongrammarParser.DIV_ASSIGN - 83)) | (1 << (pythongrammarParser.MOD_ASSIGN - 83)) | (1 << (pythongrammarParser.AND_ASSIGN - 83)) | (1 << (pythongrammarParser.OR_ASSIGN - 83)) | (1 << (pythongrammarParser.XOR_ASSIGN - 83)) | (1 << (pythongrammarParser.LEFT_SHIFT_ASSIGN - 83)) | (1 << (pythongrammarParser.RIGHT_SHIFT_ASSIGN - 83)) | (1 << (pythongrammarParser.POWER_ASSIGN - 83)) | (1 << (pythongrammarParser.IDIV_ASSIGN - 83)))) != 0)):
+            if not(((((_la - 83)) & ~0x3f) == 0 and ((1 << (_la - 83)) & ((1 << (Python3Parser.ADD_ASSIGN - 83)) | (1 << (Python3Parser.SUB_ASSIGN - 83)) | (1 << (Python3Parser.MULT_ASSIGN - 83)) | (1 << (Python3Parser.AT_ASSIGN - 83)) | (1 << (Python3Parser.DIV_ASSIGN - 83)) | (1 << (Python3Parser.MOD_ASSIGN - 83)) | (1 << (Python3Parser.AND_ASSIGN - 83)) | (1 << (Python3Parser.OR_ASSIGN - 83)) | (1 << (Python3Parser.XOR_ASSIGN - 83)) | (1 << (Python3Parser.LEFT_SHIFT_ASSIGN - 83)) | (1 << (Python3Parser.RIGHT_SHIFT_ASSIGN - 83)) | (1 << (Python3Parser.POWER_ASSIGN - 83)) | (1 << (Python3Parser.IDIV_ASSIGN - 83)))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -2711,14 +2711,14 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def DEL(self):
-            return self.getToken(pythongrammarParser.DEL, 0)
+            return self.getToken(Python3Parser.DEL, 0)
 
         def exprlist(self):
-            return self.getTypedRuleContext(pythongrammarParser.ExprlistContext,0)
+            return self.getTypedRuleContext(Python3Parser.ExprlistContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_del_stmt
+            return Python3Parser.RULE_del_stmt
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterDel_stmt" ):
@@ -2733,12 +2733,12 @@ class pythongrammarParser ( Parser ):
 
     def del_stmt(self):
 
-        localctx = pythongrammarParser.Del_stmtContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Del_stmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 40, self.RULE_del_stmt)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 482
-            self.match(pythongrammarParser.DEL)
+            self.match(Python3Parser.DEL)
             self.state = 483
             self.exprlist()
         except RecognitionException as re:
@@ -2757,10 +2757,10 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def PASS(self):
-            return self.getToken(pythongrammarParser.PASS, 0)
+            return self.getToken(Python3Parser.PASS, 0)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_pass_stmt
+            return Python3Parser.RULE_pass_stmt
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterPass_stmt" ):
@@ -2775,12 +2775,12 @@ class pythongrammarParser ( Parser ):
 
     def pass_stmt(self):
 
-        localctx = pythongrammarParser.Pass_stmtContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Pass_stmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 42, self.RULE_pass_stmt)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 485
-            self.match(pythongrammarParser.PASS)
+            self.match(Python3Parser.PASS)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -2797,27 +2797,27 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def break_stmt(self):
-            return self.getTypedRuleContext(pythongrammarParser.Break_stmtContext,0)
+            return self.getTypedRuleContext(Python3Parser.Break_stmtContext,0)
 
 
         def continue_stmt(self):
-            return self.getTypedRuleContext(pythongrammarParser.Continue_stmtContext,0)
+            return self.getTypedRuleContext(Python3Parser.Continue_stmtContext,0)
 
 
         def return_stmt(self):
-            return self.getTypedRuleContext(pythongrammarParser.Return_stmtContext,0)
+            return self.getTypedRuleContext(Python3Parser.Return_stmtContext,0)
 
 
         def raise_stmt(self):
-            return self.getTypedRuleContext(pythongrammarParser.Raise_stmtContext,0)
+            return self.getTypedRuleContext(Python3Parser.Raise_stmtContext,0)
 
 
         def yield_stmt(self):
-            return self.getTypedRuleContext(pythongrammarParser.Yield_stmtContext,0)
+            return self.getTypedRuleContext(Python3Parser.Yield_stmtContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_flow_stmt
+            return Python3Parser.RULE_flow_stmt
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterFlow_stmt" ):
@@ -2832,33 +2832,33 @@ class pythongrammarParser ( Parser ):
 
     def flow_stmt(self):
 
-        localctx = pythongrammarParser.Flow_stmtContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Flow_stmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 44, self.RULE_flow_stmt)
         try:
             self.state = 492
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [pythongrammarParser.BREAK]:
+            if token in [Python3Parser.BREAK]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 487
                 self.break_stmt()
                 pass
-            elif token in [pythongrammarParser.CONTINUE]:
+            elif token in [Python3Parser.CONTINUE]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 488
                 self.continue_stmt()
                 pass
-            elif token in [pythongrammarParser.RETURN]:
+            elif token in [Python3Parser.RETURN]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 489
                 self.return_stmt()
                 pass
-            elif token in [pythongrammarParser.RAISE]:
+            elif token in [Python3Parser.RAISE]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 490
                 self.raise_stmt()
                 pass
-            elif token in [pythongrammarParser.YIELD]:
+            elif token in [Python3Parser.YIELD]:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 491
                 self.yield_stmt()
@@ -2882,10 +2882,10 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def BREAK(self):
-            return self.getToken(pythongrammarParser.BREAK, 0)
+            return self.getToken(Python3Parser.BREAK, 0)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_break_stmt
+            return Python3Parser.RULE_break_stmt
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterBreak_stmt" ):
@@ -2900,12 +2900,12 @@ class pythongrammarParser ( Parser ):
 
     def break_stmt(self):
 
-        localctx = pythongrammarParser.Break_stmtContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Break_stmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 46, self.RULE_break_stmt)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 494
-            self.match(pythongrammarParser.BREAK)
+            self.match(Python3Parser.BREAK)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -2922,10 +2922,10 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def CONTINUE(self):
-            return self.getToken(pythongrammarParser.CONTINUE, 0)
+            return self.getToken(Python3Parser.CONTINUE, 0)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_continue_stmt
+            return Python3Parser.RULE_continue_stmt
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterContinue_stmt" ):
@@ -2940,12 +2940,12 @@ class pythongrammarParser ( Parser ):
 
     def continue_stmt(self):
 
-        localctx = pythongrammarParser.Continue_stmtContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Continue_stmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 48, self.RULE_continue_stmt)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 496
-            self.match(pythongrammarParser.CONTINUE)
+            self.match(Python3Parser.CONTINUE)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -2962,14 +2962,14 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def RETURN(self):
-            return self.getToken(pythongrammarParser.RETURN, 0)
+            return self.getToken(Python3Parser.RETURN, 0)
 
         def testlist(self):
-            return self.getTypedRuleContext(pythongrammarParser.TestlistContext,0)
+            return self.getTypedRuleContext(Python3Parser.TestlistContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_return_stmt
+            return Python3Parser.RULE_return_stmt
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterReturn_stmt" ):
@@ -2984,17 +2984,17 @@ class pythongrammarParser ( Parser ):
 
     def return_stmt(self):
 
-        localctx = pythongrammarParser.Return_stmtContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Return_stmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 50, self.RULE_return_stmt)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 498
-            self.match(pythongrammarParser.RETURN)
+            self.match(Python3Parser.RETURN)
             self.state = 500
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << pythongrammarParser.STRING) | (1 << pythongrammarParser.NUMBER) | (1 << pythongrammarParser.LAMBDA) | (1 << pythongrammarParser.NOT) | (1 << pythongrammarParser.NONE) | (1 << pythongrammarParser.TRUE) | (1 << pythongrammarParser.FALSE) | (1 << pythongrammarParser.AWAIT) | (1 << pythongrammarParser.NAME) | (1 << pythongrammarParser.ELLIPSIS) | (1 << pythongrammarParser.OPEN_PAREN) | (1 << pythongrammarParser.OPEN_BRACK))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (pythongrammarParser.ADD - 66)) | (1 << (pythongrammarParser.MINUS - 66)) | (1 << (pythongrammarParser.NOT_OP - 66)) | (1 << (pythongrammarParser.OPEN_BRACE - 66)))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Python3Parser.STRING) | (1 << Python3Parser.NUMBER) | (1 << Python3Parser.LAMBDA) | (1 << Python3Parser.NOT) | (1 << Python3Parser.NONE) | (1 << Python3Parser.TRUE) | (1 << Python3Parser.FALSE) | (1 << Python3Parser.AWAIT) | (1 << Python3Parser.NAME) | (1 << Python3Parser.ELLIPSIS) | (1 << Python3Parser.OPEN_PAREN) | (1 << Python3Parser.OPEN_BRACK))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (Python3Parser.ADD - 66)) | (1 << (Python3Parser.MINUS - 66)) | (1 << (Python3Parser.NOT_OP - 66)) | (1 << (Python3Parser.OPEN_BRACE - 66)))) != 0):
                 self.state = 499
                 self.testlist()
 
@@ -3015,11 +3015,11 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def yield_expr(self):
-            return self.getTypedRuleContext(pythongrammarParser.Yield_exprContext,0)
+            return self.getTypedRuleContext(Python3Parser.Yield_exprContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_yield_stmt
+            return Python3Parser.RULE_yield_stmt
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterYield_stmt" ):
@@ -3034,7 +3034,7 @@ class pythongrammarParser ( Parser ):
 
     def yield_stmt(self):
 
-        localctx = pythongrammarParser.Yield_stmtContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Yield_stmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 52, self.RULE_yield_stmt)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -3056,20 +3056,20 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def RAISE(self):
-            return self.getToken(pythongrammarParser.RAISE, 0)
+            return self.getToken(Python3Parser.RAISE, 0)
 
         def test(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.TestContext)
+                return self.getTypedRuleContexts(Python3Parser.TestContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.TestContext,i)
+                return self.getTypedRuleContext(Python3Parser.TestContext,i)
 
 
         def FROM(self):
-            return self.getToken(pythongrammarParser.FROM, 0)
+            return self.getToken(Python3Parser.FROM, 0)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_raise_stmt
+            return Python3Parser.RULE_raise_stmt
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterRaise_stmt" ):
@@ -3084,25 +3084,25 @@ class pythongrammarParser ( Parser ):
 
     def raise_stmt(self):
 
-        localctx = pythongrammarParser.Raise_stmtContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Raise_stmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 54, self.RULE_raise_stmt)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 504
-            self.match(pythongrammarParser.RAISE)
+            self.match(Python3Parser.RAISE)
             self.state = 510
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << pythongrammarParser.STRING) | (1 << pythongrammarParser.NUMBER) | (1 << pythongrammarParser.LAMBDA) | (1 << pythongrammarParser.NOT) | (1 << pythongrammarParser.NONE) | (1 << pythongrammarParser.TRUE) | (1 << pythongrammarParser.FALSE) | (1 << pythongrammarParser.AWAIT) | (1 << pythongrammarParser.NAME) | (1 << pythongrammarParser.ELLIPSIS) | (1 << pythongrammarParser.OPEN_PAREN) | (1 << pythongrammarParser.OPEN_BRACK))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (pythongrammarParser.ADD - 66)) | (1 << (pythongrammarParser.MINUS - 66)) | (1 << (pythongrammarParser.NOT_OP - 66)) | (1 << (pythongrammarParser.OPEN_BRACE - 66)))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Python3Parser.STRING) | (1 << Python3Parser.NUMBER) | (1 << Python3Parser.LAMBDA) | (1 << Python3Parser.NOT) | (1 << Python3Parser.NONE) | (1 << Python3Parser.TRUE) | (1 << Python3Parser.FALSE) | (1 << Python3Parser.AWAIT) | (1 << Python3Parser.NAME) | (1 << Python3Parser.ELLIPSIS) | (1 << Python3Parser.OPEN_PAREN) | (1 << Python3Parser.OPEN_BRACK))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (Python3Parser.ADD - 66)) | (1 << (Python3Parser.MINUS - 66)) | (1 << (Python3Parser.NOT_OP - 66)) | (1 << (Python3Parser.OPEN_BRACE - 66)))) != 0):
                 self.state = 505
                 self.test()
                 self.state = 508
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==pythongrammarParser.FROM:
+                if _la==Python3Parser.FROM:
                     self.state = 506
-                    self.match(pythongrammarParser.FROM)
+                    self.match(Python3Parser.FROM)
                     self.state = 507
                     self.test()
 
@@ -3125,15 +3125,15 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def import_name(self):
-            return self.getTypedRuleContext(pythongrammarParser.Import_nameContext,0)
+            return self.getTypedRuleContext(Python3Parser.Import_nameContext,0)
 
 
         def import_from(self):
-            return self.getTypedRuleContext(pythongrammarParser.Import_fromContext,0)
+            return self.getTypedRuleContext(Python3Parser.Import_fromContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_import_stmt
+            return Python3Parser.RULE_import_stmt
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterImport_stmt" ):
@@ -3148,18 +3148,18 @@ class pythongrammarParser ( Parser ):
 
     def import_stmt(self):
 
-        localctx = pythongrammarParser.Import_stmtContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Import_stmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 56, self.RULE_import_stmt)
         try:
             self.state = 514
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [pythongrammarParser.IMPORT]:
+            if token in [Python3Parser.IMPORT]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 512
                 self.import_name()
                 pass
-            elif token in [pythongrammarParser.FROM]:
+            elif token in [Python3Parser.FROM]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 513
                 self.import_from()
@@ -3183,14 +3183,14 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def IMPORT(self):
-            return self.getToken(pythongrammarParser.IMPORT, 0)
+            return self.getToken(Python3Parser.IMPORT, 0)
 
         def dotted_as_names(self):
-            return self.getTypedRuleContext(pythongrammarParser.Dotted_as_namesContext,0)
+            return self.getTypedRuleContext(Python3Parser.Dotted_as_namesContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_import_name
+            return Python3Parser.RULE_import_name
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterImport_name" ):
@@ -3205,12 +3205,12 @@ class pythongrammarParser ( Parser ):
 
     def import_name(self):
 
-        localctx = pythongrammarParser.Import_nameContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Import_nameContext(self, self._ctx, self.state)
         self.enterRule(localctx, 58, self.RULE_import_name)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 516
-            self.match(pythongrammarParser.IMPORT)
+            self.match(Python3Parser.IMPORT)
             self.state = 517
             self.dotted_as_names()
         except RecognitionException as re:
@@ -3229,42 +3229,42 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def FROM(self):
-            return self.getToken(pythongrammarParser.FROM, 0)
+            return self.getToken(Python3Parser.FROM, 0)
 
         def IMPORT(self):
-            return self.getToken(pythongrammarParser.IMPORT, 0)
+            return self.getToken(Python3Parser.IMPORT, 0)
 
         def dotted_name(self):
-            return self.getTypedRuleContext(pythongrammarParser.Dotted_nameContext,0)
+            return self.getTypedRuleContext(Python3Parser.Dotted_nameContext,0)
 
 
         def STAR(self):
-            return self.getToken(pythongrammarParser.STAR, 0)
+            return self.getToken(Python3Parser.STAR, 0)
 
         def OPEN_PAREN(self):
-            return self.getToken(pythongrammarParser.OPEN_PAREN, 0)
+            return self.getToken(Python3Parser.OPEN_PAREN, 0)
 
         def import_as_names(self):
-            return self.getTypedRuleContext(pythongrammarParser.Import_as_namesContext,0)
+            return self.getTypedRuleContext(Python3Parser.Import_as_namesContext,0)
 
 
         def CLOSE_PAREN(self):
-            return self.getToken(pythongrammarParser.CLOSE_PAREN, 0)
+            return self.getToken(Python3Parser.CLOSE_PAREN, 0)
 
         def DOT(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.DOT)
+                return self.getTokens(Python3Parser.DOT)
             else:
-                return self.getToken(pythongrammarParser.DOT, i)
+                return self.getToken(Python3Parser.DOT, i)
 
         def ELLIPSIS(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.ELLIPSIS)
+                return self.getTokens(Python3Parser.ELLIPSIS)
             else:
-                return self.getToken(pythongrammarParser.ELLIPSIS, i)
+                return self.getToken(Python3Parser.ELLIPSIS, i)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_import_from
+            return Python3Parser.RULE_import_from
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterImport_from" ):
@@ -3279,13 +3279,13 @@ class pythongrammarParser ( Parser ):
 
     def import_from(self):
 
-        localctx = pythongrammarParser.Import_fromContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Import_fromContext(self, self._ctx, self.state)
         self.enterRule(localctx, 60, self.RULE_import_from)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 519
-            self.match(pythongrammarParser.FROM)
+            self.match(Python3Parser.FROM)
             self.state = 532
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,71,self._ctx)
@@ -3293,10 +3293,10 @@ class pythongrammarParser ( Parser ):
                 self.state = 523
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==pythongrammarParser.DOT or _la==pythongrammarParser.ELLIPSIS:
+                while _la==Python3Parser.DOT or _la==Python3Parser.ELLIPSIS:
                     self.state = 520
                     _la = self._input.LA(1)
-                    if not(_la==pythongrammarParser.DOT or _la==pythongrammarParser.ELLIPSIS):
+                    if not(_la==Python3Parser.DOT or _la==Python3Parser.ELLIPSIS):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
@@ -3316,7 +3316,7 @@ class pythongrammarParser ( Parser ):
                 while True:
                     self.state = 527
                     _la = self._input.LA(1)
-                    if not(_la==pythongrammarParser.DOT or _la==pythongrammarParser.ELLIPSIS):
+                    if not(_la==Python3Parser.DOT or _la==Python3Parser.ELLIPSIS):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
@@ -3324,30 +3324,30 @@ class pythongrammarParser ( Parser ):
                     self.state = 530 
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if not (_la==pythongrammarParser.DOT or _la==pythongrammarParser.ELLIPSIS):
+                    if not (_la==Python3Parser.DOT or _la==Python3Parser.ELLIPSIS):
                         break
 
                 pass
 
 
             self.state = 534
-            self.match(pythongrammarParser.IMPORT)
+            self.match(Python3Parser.IMPORT)
             self.state = 541
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [pythongrammarParser.STAR]:
+            if token in [Python3Parser.STAR]:
                 self.state = 535
-                self.match(pythongrammarParser.STAR)
+                self.match(Python3Parser.STAR)
                 pass
-            elif token in [pythongrammarParser.OPEN_PAREN]:
+            elif token in [Python3Parser.OPEN_PAREN]:
                 self.state = 536
-                self.match(pythongrammarParser.OPEN_PAREN)
+                self.match(Python3Parser.OPEN_PAREN)
                 self.state = 537
                 self.import_as_names()
                 self.state = 538
-                self.match(pythongrammarParser.CLOSE_PAREN)
+                self.match(Python3Parser.CLOSE_PAREN)
                 pass
-            elif token in [pythongrammarParser.NAME]:
+            elif token in [Python3Parser.NAME]:
                 self.state = 540
                 self.import_as_names()
                 pass
@@ -3371,15 +3371,15 @@ class pythongrammarParser ( Parser ):
 
         def NAME(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.NAME)
+                return self.getTokens(Python3Parser.NAME)
             else:
-                return self.getToken(pythongrammarParser.NAME, i)
+                return self.getToken(Python3Parser.NAME, i)
 
         def AS(self):
-            return self.getToken(pythongrammarParser.AS, 0)
+            return self.getToken(Python3Parser.AS, 0)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_import_as_name
+            return Python3Parser.RULE_import_as_name
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterImport_as_name" ):
@@ -3394,21 +3394,21 @@ class pythongrammarParser ( Parser ):
 
     def import_as_name(self):
 
-        localctx = pythongrammarParser.Import_as_nameContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Import_as_nameContext(self, self._ctx, self.state)
         self.enterRule(localctx, 62, self.RULE_import_as_name)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 543
-            self.match(pythongrammarParser.NAME)
+            self.match(Python3Parser.NAME)
             self.state = 546
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==pythongrammarParser.AS:
+            if _la==Python3Parser.AS:
                 self.state = 544
-                self.match(pythongrammarParser.AS)
+                self.match(Python3Parser.AS)
                 self.state = 545
-                self.match(pythongrammarParser.NAME)
+                self.match(Python3Parser.NAME)
 
 
         except RecognitionException as re:
@@ -3427,17 +3427,17 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def dotted_name(self):
-            return self.getTypedRuleContext(pythongrammarParser.Dotted_nameContext,0)
+            return self.getTypedRuleContext(Python3Parser.Dotted_nameContext,0)
 
 
         def AS(self):
-            return self.getToken(pythongrammarParser.AS, 0)
+            return self.getToken(Python3Parser.AS, 0)
 
         def NAME(self):
-            return self.getToken(pythongrammarParser.NAME, 0)
+            return self.getToken(Python3Parser.NAME, 0)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_dotted_as_name
+            return Python3Parser.RULE_dotted_as_name
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterDotted_as_name" ):
@@ -3452,7 +3452,7 @@ class pythongrammarParser ( Parser ):
 
     def dotted_as_name(self):
 
-        localctx = pythongrammarParser.Dotted_as_nameContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Dotted_as_nameContext(self, self._ctx, self.state)
         self.enterRule(localctx, 64, self.RULE_dotted_as_name)
         self._la = 0 # Token type
         try:
@@ -3462,11 +3462,11 @@ class pythongrammarParser ( Parser ):
             self.state = 551
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==pythongrammarParser.AS:
+            if _la==Python3Parser.AS:
                 self.state = 549
-                self.match(pythongrammarParser.AS)
+                self.match(Python3Parser.AS)
                 self.state = 550
-                self.match(pythongrammarParser.NAME)
+                self.match(Python3Parser.NAME)
 
 
         except RecognitionException as re:
@@ -3486,19 +3486,19 @@ class pythongrammarParser ( Parser ):
 
         def import_as_name(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.Import_as_nameContext)
+                return self.getTypedRuleContexts(Python3Parser.Import_as_nameContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.Import_as_nameContext,i)
+                return self.getTypedRuleContext(Python3Parser.Import_as_nameContext,i)
 
 
         def COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.COMMA)
+                return self.getTokens(Python3Parser.COMMA)
             else:
-                return self.getToken(pythongrammarParser.COMMA, i)
+                return self.getToken(Python3Parser.COMMA, i)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_import_as_names
+            return Python3Parser.RULE_import_as_names
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterImport_as_names" ):
@@ -3513,7 +3513,7 @@ class pythongrammarParser ( Parser ):
 
     def import_as_names(self):
 
-        localctx = pythongrammarParser.Import_as_namesContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Import_as_namesContext(self, self._ctx, self.state)
         self.enterRule(localctx, 66, self.RULE_import_as_names)
         self._la = 0 # Token type
         try:
@@ -3526,7 +3526,7 @@ class pythongrammarParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 554
-                    self.match(pythongrammarParser.COMMA)
+                    self.match(Python3Parser.COMMA)
                     self.state = 555
                     self.import_as_name() 
                 self.state = 560
@@ -3536,9 +3536,9 @@ class pythongrammarParser ( Parser ):
             self.state = 562
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==pythongrammarParser.COMMA:
+            if _la==Python3Parser.COMMA:
                 self.state = 561
-                self.match(pythongrammarParser.COMMA)
+                self.match(Python3Parser.COMMA)
 
 
         except RecognitionException as re:
@@ -3558,19 +3558,19 @@ class pythongrammarParser ( Parser ):
 
         def dotted_as_name(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.Dotted_as_nameContext)
+                return self.getTypedRuleContexts(Python3Parser.Dotted_as_nameContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.Dotted_as_nameContext,i)
+                return self.getTypedRuleContext(Python3Parser.Dotted_as_nameContext,i)
 
 
         def COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.COMMA)
+                return self.getTokens(Python3Parser.COMMA)
             else:
-                return self.getToken(pythongrammarParser.COMMA, i)
+                return self.getToken(Python3Parser.COMMA, i)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_dotted_as_names
+            return Python3Parser.RULE_dotted_as_names
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterDotted_as_names" ):
@@ -3585,7 +3585,7 @@ class pythongrammarParser ( Parser ):
 
     def dotted_as_names(self):
 
-        localctx = pythongrammarParser.Dotted_as_namesContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Dotted_as_namesContext(self, self._ctx, self.state)
         self.enterRule(localctx, 68, self.RULE_dotted_as_names)
         self._la = 0 # Token type
         try:
@@ -3595,9 +3595,9 @@ class pythongrammarParser ( Parser ):
             self.state = 569
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==pythongrammarParser.COMMA:
+            while _la==Python3Parser.COMMA:
                 self.state = 565
-                self.match(pythongrammarParser.COMMA)
+                self.match(Python3Parser.COMMA)
                 self.state = 566
                 self.dotted_as_name()
                 self.state = 571
@@ -3621,18 +3621,18 @@ class pythongrammarParser ( Parser ):
 
         def NAME(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.NAME)
+                return self.getTokens(Python3Parser.NAME)
             else:
-                return self.getToken(pythongrammarParser.NAME, i)
+                return self.getToken(Python3Parser.NAME, i)
 
         def DOT(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.DOT)
+                return self.getTokens(Python3Parser.DOT)
             else:
-                return self.getToken(pythongrammarParser.DOT, i)
+                return self.getToken(Python3Parser.DOT, i)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_dotted_name
+            return Python3Parser.RULE_dotted_name
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterDotted_name" ):
@@ -3647,21 +3647,21 @@ class pythongrammarParser ( Parser ):
 
     def dotted_name(self):
 
-        localctx = pythongrammarParser.Dotted_nameContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Dotted_nameContext(self, self._ctx, self.state)
         self.enterRule(localctx, 70, self.RULE_dotted_name)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 572
-            self.match(pythongrammarParser.NAME)
+            self.match(Python3Parser.NAME)
             self.state = 577
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==pythongrammarParser.DOT:
+            while _la==Python3Parser.DOT:
                 self.state = 573
-                self.match(pythongrammarParser.DOT)
+                self.match(Python3Parser.DOT)
                 self.state = 574
-                self.match(pythongrammarParser.NAME)
+                self.match(Python3Parser.NAME)
                 self.state = 579
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -3682,22 +3682,22 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def GLOBAL(self):
-            return self.getToken(pythongrammarParser.GLOBAL, 0)
+            return self.getToken(Python3Parser.GLOBAL, 0)
 
         def NAME(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.NAME)
+                return self.getTokens(Python3Parser.NAME)
             else:
-                return self.getToken(pythongrammarParser.NAME, i)
+                return self.getToken(Python3Parser.NAME, i)
 
         def COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.COMMA)
+                return self.getTokens(Python3Parser.COMMA)
             else:
-                return self.getToken(pythongrammarParser.COMMA, i)
+                return self.getToken(Python3Parser.COMMA, i)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_global_stmt
+            return Python3Parser.RULE_global_stmt
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterGlobal_stmt" ):
@@ -3712,23 +3712,23 @@ class pythongrammarParser ( Parser ):
 
     def global_stmt(self):
 
-        localctx = pythongrammarParser.Global_stmtContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Global_stmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 72, self.RULE_global_stmt)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 580
-            self.match(pythongrammarParser.GLOBAL)
+            self.match(Python3Parser.GLOBAL)
             self.state = 581
-            self.match(pythongrammarParser.NAME)
+            self.match(Python3Parser.NAME)
             self.state = 586
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==pythongrammarParser.COMMA:
+            while _la==Python3Parser.COMMA:
                 self.state = 582
-                self.match(pythongrammarParser.COMMA)
+                self.match(Python3Parser.COMMA)
                 self.state = 583
-                self.match(pythongrammarParser.NAME)
+                self.match(Python3Parser.NAME)
                 self.state = 588
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -3749,22 +3749,22 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def NONLOCAL(self):
-            return self.getToken(pythongrammarParser.NONLOCAL, 0)
+            return self.getToken(Python3Parser.NONLOCAL, 0)
 
         def NAME(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.NAME)
+                return self.getTokens(Python3Parser.NAME)
             else:
-                return self.getToken(pythongrammarParser.NAME, i)
+                return self.getToken(Python3Parser.NAME, i)
 
         def COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.COMMA)
+                return self.getTokens(Python3Parser.COMMA)
             else:
-                return self.getToken(pythongrammarParser.COMMA, i)
+                return self.getToken(Python3Parser.COMMA, i)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_nonlocal_stmt
+            return Python3Parser.RULE_nonlocal_stmt
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterNonlocal_stmt" ):
@@ -3779,23 +3779,23 @@ class pythongrammarParser ( Parser ):
 
     def nonlocal_stmt(self):
 
-        localctx = pythongrammarParser.Nonlocal_stmtContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Nonlocal_stmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 74, self.RULE_nonlocal_stmt)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 589
-            self.match(pythongrammarParser.NONLOCAL)
+            self.match(Python3Parser.NONLOCAL)
             self.state = 590
-            self.match(pythongrammarParser.NAME)
+            self.match(Python3Parser.NAME)
             self.state = 595
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==pythongrammarParser.COMMA:
+            while _la==Python3Parser.COMMA:
                 self.state = 591
-                self.match(pythongrammarParser.COMMA)
+                self.match(Python3Parser.COMMA)
                 self.state = 592
-                self.match(pythongrammarParser.NAME)
+                self.match(Python3Parser.NAME)
                 self.state = 597
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -3816,20 +3816,20 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def ASSERT(self):
-            return self.getToken(pythongrammarParser.ASSERT, 0)
+            return self.getToken(Python3Parser.ASSERT, 0)
 
         def test(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.TestContext)
+                return self.getTypedRuleContexts(Python3Parser.TestContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.TestContext,i)
+                return self.getTypedRuleContext(Python3Parser.TestContext,i)
 
 
         def COMMA(self):
-            return self.getToken(pythongrammarParser.COMMA, 0)
+            return self.getToken(Python3Parser.COMMA, 0)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_assert_stmt
+            return Python3Parser.RULE_assert_stmt
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterAssert_stmt" ):
@@ -3844,21 +3844,21 @@ class pythongrammarParser ( Parser ):
 
     def assert_stmt(self):
 
-        localctx = pythongrammarParser.Assert_stmtContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Assert_stmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 76, self.RULE_assert_stmt)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 598
-            self.match(pythongrammarParser.ASSERT)
+            self.match(Python3Parser.ASSERT)
             self.state = 599
             self.test()
             self.state = 602
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==pythongrammarParser.COMMA:
+            if _la==Python3Parser.COMMA:
                 self.state = 600
-                self.match(pythongrammarParser.COMMA)
+                self.match(Python3Parser.COMMA)
                 self.state = 601
                 self.test()
 
@@ -3879,43 +3879,43 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def if_stmt(self):
-            return self.getTypedRuleContext(pythongrammarParser.If_stmtContext,0)
+            return self.getTypedRuleContext(Python3Parser.If_stmtContext,0)
 
 
         def while_stmt(self):
-            return self.getTypedRuleContext(pythongrammarParser.While_stmtContext,0)
+            return self.getTypedRuleContext(Python3Parser.While_stmtContext,0)
 
 
         def for_stmt(self):
-            return self.getTypedRuleContext(pythongrammarParser.For_stmtContext,0)
+            return self.getTypedRuleContext(Python3Parser.For_stmtContext,0)
 
 
         def try_stmt(self):
-            return self.getTypedRuleContext(pythongrammarParser.Try_stmtContext,0)
+            return self.getTypedRuleContext(Python3Parser.Try_stmtContext,0)
 
 
         def with_stmt(self):
-            return self.getTypedRuleContext(pythongrammarParser.With_stmtContext,0)
+            return self.getTypedRuleContext(Python3Parser.With_stmtContext,0)
 
 
         def funcdef(self):
-            return self.getTypedRuleContext(pythongrammarParser.FuncdefContext,0)
+            return self.getTypedRuleContext(Python3Parser.FuncdefContext,0)
 
 
         def classdef(self):
-            return self.getTypedRuleContext(pythongrammarParser.ClassdefContext,0)
+            return self.getTypedRuleContext(Python3Parser.ClassdefContext,0)
 
 
         def decorated(self):
-            return self.getTypedRuleContext(pythongrammarParser.DecoratedContext,0)
+            return self.getTypedRuleContext(Python3Parser.DecoratedContext,0)
 
 
         def async_stmt(self):
-            return self.getTypedRuleContext(pythongrammarParser.Async_stmtContext,0)
+            return self.getTypedRuleContext(Python3Parser.Async_stmtContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_compound_stmt
+            return Python3Parser.RULE_compound_stmt
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterCompound_stmt" ):
@@ -3930,53 +3930,53 @@ class pythongrammarParser ( Parser ):
 
     def compound_stmt(self):
 
-        localctx = pythongrammarParser.Compound_stmtContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Compound_stmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 78, self.RULE_compound_stmt)
         try:
             self.state = 613
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [pythongrammarParser.IF]:
+            if token in [Python3Parser.IF]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 604
                 self.if_stmt()
                 pass
-            elif token in [pythongrammarParser.WHILE]:
+            elif token in [Python3Parser.WHILE]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 605
                 self.while_stmt()
                 pass
-            elif token in [pythongrammarParser.FOR]:
+            elif token in [Python3Parser.FOR]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 606
                 self.for_stmt()
                 pass
-            elif token in [pythongrammarParser.TRY]:
+            elif token in [Python3Parser.TRY]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 607
                 self.try_stmt()
                 pass
-            elif token in [pythongrammarParser.WITH]:
+            elif token in [Python3Parser.WITH]:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 608
                 self.with_stmt()
                 pass
-            elif token in [pythongrammarParser.DEF]:
+            elif token in [Python3Parser.DEF]:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 609
                 self.funcdef()
                 pass
-            elif token in [pythongrammarParser.CLASS]:
+            elif token in [Python3Parser.CLASS]:
                 self.enterOuterAlt(localctx, 7)
                 self.state = 610
                 self.classdef()
                 pass
-            elif token in [pythongrammarParser.AT]:
+            elif token in [Python3Parser.AT]:
                 self.enterOuterAlt(localctx, 8)
                 self.state = 611
                 self.decorated()
                 pass
-            elif token in [pythongrammarParser.ASYNC]:
+            elif token in [Python3Parser.ASYNC]:
                 self.enterOuterAlt(localctx, 9)
                 self.state = 612
                 self.async_stmt()
@@ -4000,22 +4000,22 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def ASYNC(self):
-            return self.getToken(pythongrammarParser.ASYNC, 0)
+            return self.getToken(Python3Parser.ASYNC, 0)
 
         def funcdef(self):
-            return self.getTypedRuleContext(pythongrammarParser.FuncdefContext,0)
+            return self.getTypedRuleContext(Python3Parser.FuncdefContext,0)
 
 
         def with_stmt(self):
-            return self.getTypedRuleContext(pythongrammarParser.With_stmtContext,0)
+            return self.getTypedRuleContext(Python3Parser.With_stmtContext,0)
 
 
         def for_stmt(self):
-            return self.getTypedRuleContext(pythongrammarParser.For_stmtContext,0)
+            return self.getTypedRuleContext(Python3Parser.For_stmtContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_async_stmt
+            return Python3Parser.RULE_async_stmt
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterAsync_stmt" ):
@@ -4030,24 +4030,24 @@ class pythongrammarParser ( Parser ):
 
     def async_stmt(self):
 
-        localctx = pythongrammarParser.Async_stmtContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Async_stmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 80, self.RULE_async_stmt)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 615
-            self.match(pythongrammarParser.ASYNC)
+            self.match(Python3Parser.ASYNC)
             self.state = 619
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [pythongrammarParser.DEF]:
+            if token in [Python3Parser.DEF]:
                 self.state = 616
                 self.funcdef()
                 pass
-            elif token in [pythongrammarParser.WITH]:
+            elif token in [Python3Parser.WITH]:
                 self.state = 617
                 self.with_stmt()
                 pass
-            elif token in [pythongrammarParser.FOR]:
+            elif token in [Python3Parser.FOR]:
                 self.state = 618
                 self.for_stmt()
                 pass
@@ -4070,39 +4070,39 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def IF(self):
-            return self.getToken(pythongrammarParser.IF, 0)
+            return self.getToken(Python3Parser.IF, 0)
 
         def test(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.TestContext)
+                return self.getTypedRuleContexts(Python3Parser.TestContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.TestContext,i)
+                return self.getTypedRuleContext(Python3Parser.TestContext,i)
 
 
         def COLON(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.COLON)
+                return self.getTokens(Python3Parser.COLON)
             else:
-                return self.getToken(pythongrammarParser.COLON, i)
+                return self.getToken(Python3Parser.COLON, i)
 
         def suite(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.SuiteContext)
+                return self.getTypedRuleContexts(Python3Parser.SuiteContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.SuiteContext,i)
+                return self.getTypedRuleContext(Python3Parser.SuiteContext,i)
 
 
         def ELIF(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.ELIF)
+                return self.getTokens(Python3Parser.ELIF)
             else:
-                return self.getToken(pythongrammarParser.ELIF, i)
+                return self.getToken(Python3Parser.ELIF, i)
 
         def ELSE(self):
-            return self.getToken(pythongrammarParser.ELSE, 0)
+            return self.getToken(Python3Parser.ELSE, 0)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_if_stmt
+            return Python3Parser.RULE_if_stmt
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterIf_stmt" ):
@@ -4117,29 +4117,29 @@ class pythongrammarParser ( Parser ):
 
     def if_stmt(self):
 
-        localctx = pythongrammarParser.If_stmtContext(self, self._ctx, self.state)
+        localctx = Python3Parser.If_stmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 82, self.RULE_if_stmt)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 621
-            self.match(pythongrammarParser.IF)
+            self.match(Python3Parser.IF)
             self.state = 622
             self.test()
             self.state = 623
-            self.match(pythongrammarParser.COLON)
+            self.match(Python3Parser.COLON)
             self.state = 624
             self.suite()
             self.state = 632
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==pythongrammarParser.ELIF:
+            while _la==Python3Parser.ELIF:
                 self.state = 625
-                self.match(pythongrammarParser.ELIF)
+                self.match(Python3Parser.ELIF)
                 self.state = 626
                 self.test()
                 self.state = 627
-                self.match(pythongrammarParser.COLON)
+                self.match(Python3Parser.COLON)
                 self.state = 628
                 self.suite()
                 self.state = 634
@@ -4149,11 +4149,11 @@ class pythongrammarParser ( Parser ):
             self.state = 638
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==pythongrammarParser.ELSE:
+            if _la==Python3Parser.ELSE:
                 self.state = 635
-                self.match(pythongrammarParser.ELSE)
+                self.match(Python3Parser.ELSE)
                 self.state = 636
-                self.match(pythongrammarParser.COLON)
+                self.match(Python3Parser.COLON)
                 self.state = 637
                 self.suite()
 
@@ -4174,30 +4174,30 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def WHILE(self):
-            return self.getToken(pythongrammarParser.WHILE, 0)
+            return self.getToken(Python3Parser.WHILE, 0)
 
         def test(self):
-            return self.getTypedRuleContext(pythongrammarParser.TestContext,0)
+            return self.getTypedRuleContext(Python3Parser.TestContext,0)
 
 
         def COLON(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.COLON)
+                return self.getTokens(Python3Parser.COLON)
             else:
-                return self.getToken(pythongrammarParser.COLON, i)
+                return self.getToken(Python3Parser.COLON, i)
 
         def suite(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.SuiteContext)
+                return self.getTypedRuleContexts(Python3Parser.SuiteContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.SuiteContext,i)
+                return self.getTypedRuleContext(Python3Parser.SuiteContext,i)
 
 
         def ELSE(self):
-            return self.getToken(pythongrammarParser.ELSE, 0)
+            return self.getToken(Python3Parser.ELSE, 0)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_while_stmt
+            return Python3Parser.RULE_while_stmt
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterWhile_stmt" ):
@@ -4212,27 +4212,27 @@ class pythongrammarParser ( Parser ):
 
     def while_stmt(self):
 
-        localctx = pythongrammarParser.While_stmtContext(self, self._ctx, self.state)
+        localctx = Python3Parser.While_stmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 84, self.RULE_while_stmt)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 640
-            self.match(pythongrammarParser.WHILE)
+            self.match(Python3Parser.WHILE)
             self.state = 641
             self.test()
             self.state = 642
-            self.match(pythongrammarParser.COLON)
+            self.match(Python3Parser.COLON)
             self.state = 643
             self.suite()
             self.state = 647
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==pythongrammarParser.ELSE:
+            if _la==Python3Parser.ELSE:
                 self.state = 644
-                self.match(pythongrammarParser.ELSE)
+                self.match(Python3Parser.ELSE)
                 self.state = 645
-                self.match(pythongrammarParser.COLON)
+                self.match(Python3Parser.COLON)
                 self.state = 646
                 self.suite()
 
@@ -4253,37 +4253,37 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def FOR(self):
-            return self.getToken(pythongrammarParser.FOR, 0)
+            return self.getToken(Python3Parser.FOR, 0)
 
         def exprlist(self):
-            return self.getTypedRuleContext(pythongrammarParser.ExprlistContext,0)
+            return self.getTypedRuleContext(Python3Parser.ExprlistContext,0)
 
 
         def IN(self):
-            return self.getToken(pythongrammarParser.IN, 0)
+            return self.getToken(Python3Parser.IN, 0)
 
         def testlist(self):
-            return self.getTypedRuleContext(pythongrammarParser.TestlistContext,0)
+            return self.getTypedRuleContext(Python3Parser.TestlistContext,0)
 
 
         def COLON(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.COLON)
+                return self.getTokens(Python3Parser.COLON)
             else:
-                return self.getToken(pythongrammarParser.COLON, i)
+                return self.getToken(Python3Parser.COLON, i)
 
         def suite(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.SuiteContext)
+                return self.getTypedRuleContexts(Python3Parser.SuiteContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.SuiteContext,i)
+                return self.getTypedRuleContext(Python3Parser.SuiteContext,i)
 
 
         def ELSE(self):
-            return self.getToken(pythongrammarParser.ELSE, 0)
+            return self.getToken(Python3Parser.ELSE, 0)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_for_stmt
+            return Python3Parser.RULE_for_stmt
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterFor_stmt" ):
@@ -4298,31 +4298,31 @@ class pythongrammarParser ( Parser ):
 
     def for_stmt(self):
 
-        localctx = pythongrammarParser.For_stmtContext(self, self._ctx, self.state)
+        localctx = Python3Parser.For_stmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 86, self.RULE_for_stmt)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 649
-            self.match(pythongrammarParser.FOR)
+            self.match(Python3Parser.FOR)
             self.state = 650
             self.exprlist()
             self.state = 651
-            self.match(pythongrammarParser.IN)
+            self.match(Python3Parser.IN)
             self.state = 652
             self.testlist()
             self.state = 653
-            self.match(pythongrammarParser.COLON)
+            self.match(Python3Parser.COLON)
             self.state = 654
             self.suite()
             self.state = 658
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==pythongrammarParser.ELSE:
+            if _la==Python3Parser.ELSE:
                 self.state = 655
-                self.match(pythongrammarParser.ELSE)
+                self.match(Python3Parser.ELSE)
                 self.state = 656
-                self.match(pythongrammarParser.COLON)
+                self.match(Python3Parser.COLON)
                 self.state = 657
                 self.suite()
 
@@ -4343,36 +4343,36 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def TRY(self):
-            return self.getToken(pythongrammarParser.TRY, 0)
+            return self.getToken(Python3Parser.TRY, 0)
 
         def COLON(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.COLON)
+                return self.getTokens(Python3Parser.COLON)
             else:
-                return self.getToken(pythongrammarParser.COLON, i)
+                return self.getToken(Python3Parser.COLON, i)
 
         def suite(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.SuiteContext)
+                return self.getTypedRuleContexts(Python3Parser.SuiteContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.SuiteContext,i)
+                return self.getTypedRuleContext(Python3Parser.SuiteContext,i)
 
 
         def FINALLY(self):
-            return self.getToken(pythongrammarParser.FINALLY, 0)
+            return self.getToken(Python3Parser.FINALLY, 0)
 
         def except_clause(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.Except_clauseContext)
+                return self.getTypedRuleContexts(Python3Parser.Except_clauseContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.Except_clauseContext,i)
+                return self.getTypedRuleContext(Python3Parser.Except_clauseContext,i)
 
 
         def ELSE(self):
-            return self.getToken(pythongrammarParser.ELSE, 0)
+            return self.getToken(Python3Parser.ELSE, 0)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_try_stmt
+            return Python3Parser.RULE_try_stmt
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTry_stmt" ):
@@ -4387,21 +4387,21 @@ class pythongrammarParser ( Parser ):
 
     def try_stmt(self):
 
-        localctx = pythongrammarParser.Try_stmtContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Try_stmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 88, self.RULE_try_stmt)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 660
-            self.match(pythongrammarParser.TRY)
+            self.match(Python3Parser.TRY)
             self.state = 661
-            self.match(pythongrammarParser.COLON)
+            self.match(Python3Parser.COLON)
             self.state = 662
             self.suite()
             self.state = 684
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [pythongrammarParser.EXCEPT]:
+            if token in [Python3Parser.EXCEPT]:
                 self.state = 667 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -4409,23 +4409,23 @@ class pythongrammarParser ( Parser ):
                     self.state = 663
                     self.except_clause()
                     self.state = 664
-                    self.match(pythongrammarParser.COLON)
+                    self.match(Python3Parser.COLON)
                     self.state = 665
                     self.suite()
                     self.state = 669 
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if not (_la==pythongrammarParser.EXCEPT):
+                    if not (_la==Python3Parser.EXCEPT):
                         break
 
                 self.state = 674
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==pythongrammarParser.ELSE:
+                if _la==Python3Parser.ELSE:
                     self.state = 671
-                    self.match(pythongrammarParser.ELSE)
+                    self.match(Python3Parser.ELSE)
                     self.state = 672
-                    self.match(pythongrammarParser.COLON)
+                    self.match(Python3Parser.COLON)
                     self.state = 673
                     self.suite()
 
@@ -4433,21 +4433,21 @@ class pythongrammarParser ( Parser ):
                 self.state = 679
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==pythongrammarParser.FINALLY:
+                if _la==Python3Parser.FINALLY:
                     self.state = 676
-                    self.match(pythongrammarParser.FINALLY)
+                    self.match(Python3Parser.FINALLY)
                     self.state = 677
-                    self.match(pythongrammarParser.COLON)
+                    self.match(Python3Parser.COLON)
                     self.state = 678
                     self.suite()
 
 
                 pass
-            elif token in [pythongrammarParser.FINALLY]:
+            elif token in [Python3Parser.FINALLY]:
                 self.state = 681
-                self.match(pythongrammarParser.FINALLY)
+                self.match(Python3Parser.FINALLY)
                 self.state = 682
-                self.match(pythongrammarParser.COLON)
+                self.match(Python3Parser.COLON)
                 self.state = 683
                 self.suite()
                 pass
@@ -4470,30 +4470,30 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def WITH(self):
-            return self.getToken(pythongrammarParser.WITH, 0)
+            return self.getToken(Python3Parser.WITH, 0)
 
         def with_item(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.With_itemContext)
+                return self.getTypedRuleContexts(Python3Parser.With_itemContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.With_itemContext,i)
+                return self.getTypedRuleContext(Python3Parser.With_itemContext,i)
 
 
         def COLON(self):
-            return self.getToken(pythongrammarParser.COLON, 0)
+            return self.getToken(Python3Parser.COLON, 0)
 
         def suite(self):
-            return self.getTypedRuleContext(pythongrammarParser.SuiteContext,0)
+            return self.getTypedRuleContext(Python3Parser.SuiteContext,0)
 
 
         def COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.COMMA)
+                return self.getTokens(Python3Parser.COMMA)
             else:
-                return self.getToken(pythongrammarParser.COMMA, i)
+                return self.getToken(Python3Parser.COMMA, i)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_with_stmt
+            return Python3Parser.RULE_with_stmt
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterWith_stmt" ):
@@ -4508,21 +4508,21 @@ class pythongrammarParser ( Parser ):
 
     def with_stmt(self):
 
-        localctx = pythongrammarParser.With_stmtContext(self, self._ctx, self.state)
+        localctx = Python3Parser.With_stmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 90, self.RULE_with_stmt)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 686
-            self.match(pythongrammarParser.WITH)
+            self.match(Python3Parser.WITH)
             self.state = 687
             self.with_item()
             self.state = 692
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==pythongrammarParser.COMMA:
+            while _la==Python3Parser.COMMA:
                 self.state = 688
-                self.match(pythongrammarParser.COMMA)
+                self.match(Python3Parser.COMMA)
                 self.state = 689
                 self.with_item()
                 self.state = 694
@@ -4530,7 +4530,7 @@ class pythongrammarParser ( Parser ):
                 _la = self._input.LA(1)
 
             self.state = 695
-            self.match(pythongrammarParser.COLON)
+            self.match(Python3Parser.COLON)
             self.state = 696
             self.suite()
         except RecognitionException as re:
@@ -4549,18 +4549,18 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def test(self):
-            return self.getTypedRuleContext(pythongrammarParser.TestContext,0)
+            return self.getTypedRuleContext(Python3Parser.TestContext,0)
 
 
         def AS(self):
-            return self.getToken(pythongrammarParser.AS, 0)
+            return self.getToken(Python3Parser.AS, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(pythongrammarParser.ExprContext,0)
+            return self.getTypedRuleContext(Python3Parser.ExprContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_with_item
+            return Python3Parser.RULE_with_item
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterWith_item" ):
@@ -4575,7 +4575,7 @@ class pythongrammarParser ( Parser ):
 
     def with_item(self):
 
-        localctx = pythongrammarParser.With_itemContext(self, self._ctx, self.state)
+        localctx = Python3Parser.With_itemContext(self, self._ctx, self.state)
         self.enterRule(localctx, 92, self.RULE_with_item)
         self._la = 0 # Token type
         try:
@@ -4585,9 +4585,9 @@ class pythongrammarParser ( Parser ):
             self.state = 701
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==pythongrammarParser.AS:
+            if _la==Python3Parser.AS:
                 self.state = 699
-                self.match(pythongrammarParser.AS)
+                self.match(Python3Parser.AS)
                 self.state = 700
                 self.expr()
 
@@ -4608,20 +4608,20 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def EXCEPT(self):
-            return self.getToken(pythongrammarParser.EXCEPT, 0)
+            return self.getToken(Python3Parser.EXCEPT, 0)
 
         def test(self):
-            return self.getTypedRuleContext(pythongrammarParser.TestContext,0)
+            return self.getTypedRuleContext(Python3Parser.TestContext,0)
 
 
         def AS(self):
-            return self.getToken(pythongrammarParser.AS, 0)
+            return self.getToken(Python3Parser.AS, 0)
 
         def NAME(self):
-            return self.getToken(pythongrammarParser.NAME, 0)
+            return self.getToken(Python3Parser.NAME, 0)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_except_clause
+            return Python3Parser.RULE_except_clause
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterExcept_clause" ):
@@ -4636,27 +4636,27 @@ class pythongrammarParser ( Parser ):
 
     def except_clause(self):
 
-        localctx = pythongrammarParser.Except_clauseContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Except_clauseContext(self, self._ctx, self.state)
         self.enterRule(localctx, 94, self.RULE_except_clause)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 703
-            self.match(pythongrammarParser.EXCEPT)
+            self.match(Python3Parser.EXCEPT)
             self.state = 709
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << pythongrammarParser.STRING) | (1 << pythongrammarParser.NUMBER) | (1 << pythongrammarParser.LAMBDA) | (1 << pythongrammarParser.NOT) | (1 << pythongrammarParser.NONE) | (1 << pythongrammarParser.TRUE) | (1 << pythongrammarParser.FALSE) | (1 << pythongrammarParser.AWAIT) | (1 << pythongrammarParser.NAME) | (1 << pythongrammarParser.ELLIPSIS) | (1 << pythongrammarParser.OPEN_PAREN) | (1 << pythongrammarParser.OPEN_BRACK))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (pythongrammarParser.ADD - 66)) | (1 << (pythongrammarParser.MINUS - 66)) | (1 << (pythongrammarParser.NOT_OP - 66)) | (1 << (pythongrammarParser.OPEN_BRACE - 66)))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Python3Parser.STRING) | (1 << Python3Parser.NUMBER) | (1 << Python3Parser.LAMBDA) | (1 << Python3Parser.NOT) | (1 << Python3Parser.NONE) | (1 << Python3Parser.TRUE) | (1 << Python3Parser.FALSE) | (1 << Python3Parser.AWAIT) | (1 << Python3Parser.NAME) | (1 << Python3Parser.ELLIPSIS) | (1 << Python3Parser.OPEN_PAREN) | (1 << Python3Parser.OPEN_BRACK))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (Python3Parser.ADD - 66)) | (1 << (Python3Parser.MINUS - 66)) | (1 << (Python3Parser.NOT_OP - 66)) | (1 << (Python3Parser.OPEN_BRACE - 66)))) != 0):
                 self.state = 704
                 self.test()
                 self.state = 707
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==pythongrammarParser.AS:
+                if _la==Python3Parser.AS:
                     self.state = 705
-                    self.match(pythongrammarParser.AS)
+                    self.match(Python3Parser.AS)
                     self.state = 706
-                    self.match(pythongrammarParser.NAME)
+                    self.match(Python3Parser.NAME)
 
 
 
@@ -4677,27 +4677,27 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def simple_stmt(self):
-            return self.getTypedRuleContext(pythongrammarParser.Simple_stmtContext,0)
+            return self.getTypedRuleContext(Python3Parser.Simple_stmtContext,0)
 
 
         def NEWLINE(self):
-            return self.getToken(pythongrammarParser.NEWLINE, 0)
+            return self.getToken(Python3Parser.NEWLINE, 0)
 
         def INDENT(self):
-            return self.getToken(pythongrammarParser.INDENT, 0)
+            return self.getToken(Python3Parser.INDENT, 0)
 
         def DEDENT(self):
-            return self.getToken(pythongrammarParser.DEDENT, 0)
+            return self.getToken(Python3Parser.DEDENT, 0)
 
         def stmt(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.StmtContext)
+                return self.getTypedRuleContexts(Python3Parser.StmtContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.StmtContext,i)
+                return self.getTypedRuleContext(Python3Parser.StmtContext,i)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_suite
+            return Python3Parser.RULE_suite
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterSuite" ):
@@ -4712,24 +4712,24 @@ class pythongrammarParser ( Parser ):
 
     def suite(self):
 
-        localctx = pythongrammarParser.SuiteContext(self, self._ctx, self.state)
+        localctx = Python3Parser.SuiteContext(self, self._ctx, self.state)
         self.enterRule(localctx, 96, self.RULE_suite)
         self._la = 0 # Token type
         try:
             self.state = 721
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [pythongrammarParser.STRING, pythongrammarParser.NUMBER, pythongrammarParser.RETURN, pythongrammarParser.RAISE, pythongrammarParser.FROM, pythongrammarParser.IMPORT, pythongrammarParser.GLOBAL, pythongrammarParser.NONLOCAL, pythongrammarParser.ASSERT, pythongrammarParser.LAMBDA, pythongrammarParser.NOT, pythongrammarParser.NONE, pythongrammarParser.TRUE, pythongrammarParser.FALSE, pythongrammarParser.YIELD, pythongrammarParser.DEL, pythongrammarParser.PASS, pythongrammarParser.CONTINUE, pythongrammarParser.BREAK, pythongrammarParser.AWAIT, pythongrammarParser.NAME, pythongrammarParser.ELLIPSIS, pythongrammarParser.STAR, pythongrammarParser.OPEN_PAREN, pythongrammarParser.OPEN_BRACK, pythongrammarParser.ADD, pythongrammarParser.MINUS, pythongrammarParser.NOT_OP, pythongrammarParser.OPEN_BRACE]:
+            if token in [Python3Parser.STRING, Python3Parser.NUMBER, Python3Parser.RETURN, Python3Parser.RAISE, Python3Parser.FROM, Python3Parser.IMPORT, Python3Parser.GLOBAL, Python3Parser.NONLOCAL, Python3Parser.ASSERT, Python3Parser.LAMBDA, Python3Parser.NOT, Python3Parser.NONE, Python3Parser.TRUE, Python3Parser.FALSE, Python3Parser.YIELD, Python3Parser.DEL, Python3Parser.PASS, Python3Parser.CONTINUE, Python3Parser.BREAK, Python3Parser.AWAIT, Python3Parser.NAME, Python3Parser.ELLIPSIS, Python3Parser.STAR, Python3Parser.OPEN_PAREN, Python3Parser.OPEN_BRACK, Python3Parser.ADD, Python3Parser.MINUS, Python3Parser.NOT_OP, Python3Parser.OPEN_BRACE]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 711
                 self.simple_stmt()
                 pass
-            elif token in [pythongrammarParser.NEWLINE]:
+            elif token in [Python3Parser.NEWLINE]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 712
-                self.match(pythongrammarParser.NEWLINE)
+                self.match(Python3Parser.NEWLINE)
                 self.state = 713
-                self.match(pythongrammarParser.INDENT)
+                self.match(Python3Parser.INDENT)
                 self.state = 715 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -4739,11 +4739,11 @@ class pythongrammarParser ( Parser ):
                     self.state = 717 
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << pythongrammarParser.STRING) | (1 << pythongrammarParser.NUMBER) | (1 << pythongrammarParser.DEF) | (1 << pythongrammarParser.RETURN) | (1 << pythongrammarParser.RAISE) | (1 << pythongrammarParser.FROM) | (1 << pythongrammarParser.IMPORT) | (1 << pythongrammarParser.GLOBAL) | (1 << pythongrammarParser.NONLOCAL) | (1 << pythongrammarParser.ASSERT) | (1 << pythongrammarParser.IF) | (1 << pythongrammarParser.WHILE) | (1 << pythongrammarParser.FOR) | (1 << pythongrammarParser.TRY) | (1 << pythongrammarParser.WITH) | (1 << pythongrammarParser.LAMBDA) | (1 << pythongrammarParser.NOT) | (1 << pythongrammarParser.NONE) | (1 << pythongrammarParser.TRUE) | (1 << pythongrammarParser.FALSE) | (1 << pythongrammarParser.CLASS) | (1 << pythongrammarParser.YIELD) | (1 << pythongrammarParser.DEL) | (1 << pythongrammarParser.PASS) | (1 << pythongrammarParser.CONTINUE) | (1 << pythongrammarParser.BREAK) | (1 << pythongrammarParser.ASYNC) | (1 << pythongrammarParser.AWAIT) | (1 << pythongrammarParser.NAME) | (1 << pythongrammarParser.ELLIPSIS) | (1 << pythongrammarParser.STAR) | (1 << pythongrammarParser.OPEN_PAREN) | (1 << pythongrammarParser.OPEN_BRACK))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (pythongrammarParser.ADD - 66)) | (1 << (pythongrammarParser.MINUS - 66)) | (1 << (pythongrammarParser.NOT_OP - 66)) | (1 << (pythongrammarParser.OPEN_BRACE - 66)) | (1 << (pythongrammarParser.AT - 66)))) != 0)):
+                    if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Python3Parser.STRING) | (1 << Python3Parser.NUMBER) | (1 << Python3Parser.DEF) | (1 << Python3Parser.RETURN) | (1 << Python3Parser.RAISE) | (1 << Python3Parser.FROM) | (1 << Python3Parser.IMPORT) | (1 << Python3Parser.GLOBAL) | (1 << Python3Parser.NONLOCAL) | (1 << Python3Parser.ASSERT) | (1 << Python3Parser.IF) | (1 << Python3Parser.WHILE) | (1 << Python3Parser.FOR) | (1 << Python3Parser.TRY) | (1 << Python3Parser.WITH) | (1 << Python3Parser.LAMBDA) | (1 << Python3Parser.NOT) | (1 << Python3Parser.NONE) | (1 << Python3Parser.TRUE) | (1 << Python3Parser.FALSE) | (1 << Python3Parser.CLASS) | (1 << Python3Parser.YIELD) | (1 << Python3Parser.DEL) | (1 << Python3Parser.PASS) | (1 << Python3Parser.CONTINUE) | (1 << Python3Parser.BREAK) | (1 << Python3Parser.ASYNC) | (1 << Python3Parser.AWAIT) | (1 << Python3Parser.NAME) | (1 << Python3Parser.ELLIPSIS) | (1 << Python3Parser.STAR) | (1 << Python3Parser.OPEN_PAREN) | (1 << Python3Parser.OPEN_BRACK))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (Python3Parser.ADD - 66)) | (1 << (Python3Parser.MINUS - 66)) | (1 << (Python3Parser.NOT_OP - 66)) | (1 << (Python3Parser.OPEN_BRACE - 66)) | (1 << (Python3Parser.AT - 66)))) != 0)):
                         break
 
                 self.state = 719
-                self.match(pythongrammarParser.DEDENT)
+                self.match(Python3Parser.DEDENT)
                 pass
             else:
                 raise NoViableAltException(self)
@@ -4765,27 +4765,27 @@ class pythongrammarParser ( Parser ):
 
         def or_test(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.Or_testContext)
+                return self.getTypedRuleContexts(Python3Parser.Or_testContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.Or_testContext,i)
+                return self.getTypedRuleContext(Python3Parser.Or_testContext,i)
 
 
         def IF(self):
-            return self.getToken(pythongrammarParser.IF, 0)
+            return self.getToken(Python3Parser.IF, 0)
 
         def ELSE(self):
-            return self.getToken(pythongrammarParser.ELSE, 0)
+            return self.getToken(Python3Parser.ELSE, 0)
 
         def test(self):
-            return self.getTypedRuleContext(pythongrammarParser.TestContext,0)
+            return self.getTypedRuleContext(Python3Parser.TestContext,0)
 
 
         def lambdef(self):
-            return self.getTypedRuleContext(pythongrammarParser.LambdefContext,0)
+            return self.getTypedRuleContext(Python3Parser.LambdefContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_test
+            return Python3Parser.RULE_test
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTest" ):
@@ -4800,33 +4800,33 @@ class pythongrammarParser ( Parser ):
 
     def test(self):
 
-        localctx = pythongrammarParser.TestContext(self, self._ctx, self.state)
+        localctx = Python3Parser.TestContext(self, self._ctx, self.state)
         self.enterRule(localctx, 98, self.RULE_test)
         self._la = 0 # Token type
         try:
             self.state = 732
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [pythongrammarParser.STRING, pythongrammarParser.NUMBER, pythongrammarParser.NOT, pythongrammarParser.NONE, pythongrammarParser.TRUE, pythongrammarParser.FALSE, pythongrammarParser.AWAIT, pythongrammarParser.NAME, pythongrammarParser.ELLIPSIS, pythongrammarParser.OPEN_PAREN, pythongrammarParser.OPEN_BRACK, pythongrammarParser.ADD, pythongrammarParser.MINUS, pythongrammarParser.NOT_OP, pythongrammarParser.OPEN_BRACE]:
+            if token in [Python3Parser.STRING, Python3Parser.NUMBER, Python3Parser.NOT, Python3Parser.NONE, Python3Parser.TRUE, Python3Parser.FALSE, Python3Parser.AWAIT, Python3Parser.NAME, Python3Parser.ELLIPSIS, Python3Parser.OPEN_PAREN, Python3Parser.OPEN_BRACK, Python3Parser.ADD, Python3Parser.MINUS, Python3Parser.NOT_OP, Python3Parser.OPEN_BRACE]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 723
                 self.or_test()
                 self.state = 729
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==pythongrammarParser.IF:
+                if _la==Python3Parser.IF:
                     self.state = 724
-                    self.match(pythongrammarParser.IF)
+                    self.match(Python3Parser.IF)
                     self.state = 725
                     self.or_test()
                     self.state = 726
-                    self.match(pythongrammarParser.ELSE)
+                    self.match(Python3Parser.ELSE)
                     self.state = 727
                     self.test()
 
 
                 pass
-            elif token in [pythongrammarParser.LAMBDA]:
+            elif token in [Python3Parser.LAMBDA]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 731
                 self.lambdef()
@@ -4850,15 +4850,15 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def or_test(self):
-            return self.getTypedRuleContext(pythongrammarParser.Or_testContext,0)
+            return self.getTypedRuleContext(Python3Parser.Or_testContext,0)
 
 
         def lambdef_nocond(self):
-            return self.getTypedRuleContext(pythongrammarParser.Lambdef_nocondContext,0)
+            return self.getTypedRuleContext(Python3Parser.Lambdef_nocondContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_test_nocond
+            return Python3Parser.RULE_test_nocond
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTest_nocond" ):
@@ -4873,18 +4873,18 @@ class pythongrammarParser ( Parser ):
 
     def test_nocond(self):
 
-        localctx = pythongrammarParser.Test_nocondContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Test_nocondContext(self, self._ctx, self.state)
         self.enterRule(localctx, 100, self.RULE_test_nocond)
         try:
             self.state = 736
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [pythongrammarParser.STRING, pythongrammarParser.NUMBER, pythongrammarParser.NOT, pythongrammarParser.NONE, pythongrammarParser.TRUE, pythongrammarParser.FALSE, pythongrammarParser.AWAIT, pythongrammarParser.NAME, pythongrammarParser.ELLIPSIS, pythongrammarParser.OPEN_PAREN, pythongrammarParser.OPEN_BRACK, pythongrammarParser.ADD, pythongrammarParser.MINUS, pythongrammarParser.NOT_OP, pythongrammarParser.OPEN_BRACE]:
+            if token in [Python3Parser.STRING, Python3Parser.NUMBER, Python3Parser.NOT, Python3Parser.NONE, Python3Parser.TRUE, Python3Parser.FALSE, Python3Parser.AWAIT, Python3Parser.NAME, Python3Parser.ELLIPSIS, Python3Parser.OPEN_PAREN, Python3Parser.OPEN_BRACK, Python3Parser.ADD, Python3Parser.MINUS, Python3Parser.NOT_OP, Python3Parser.OPEN_BRACE]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 734
                 self.or_test()
                 pass
-            elif token in [pythongrammarParser.LAMBDA]:
+            elif token in [Python3Parser.LAMBDA]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 735
                 self.lambdef_nocond()
@@ -4908,21 +4908,21 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def LAMBDA(self):
-            return self.getToken(pythongrammarParser.LAMBDA, 0)
+            return self.getToken(Python3Parser.LAMBDA, 0)
 
         def COLON(self):
-            return self.getToken(pythongrammarParser.COLON, 0)
+            return self.getToken(Python3Parser.COLON, 0)
 
         def test(self):
-            return self.getTypedRuleContext(pythongrammarParser.TestContext,0)
+            return self.getTypedRuleContext(Python3Parser.TestContext,0)
 
 
         def varargslist(self):
-            return self.getTypedRuleContext(pythongrammarParser.VarargslistContext,0)
+            return self.getTypedRuleContext(Python3Parser.VarargslistContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_lambdef
+            return Python3Parser.RULE_lambdef
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterLambdef" ):
@@ -4937,23 +4937,23 @@ class pythongrammarParser ( Parser ):
 
     def lambdef(self):
 
-        localctx = pythongrammarParser.LambdefContext(self, self._ctx, self.state)
+        localctx = Python3Parser.LambdefContext(self, self._ctx, self.state)
         self.enterRule(localctx, 102, self.RULE_lambdef)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 738
-            self.match(pythongrammarParser.LAMBDA)
+            self.match(Python3Parser.LAMBDA)
             self.state = 740
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << pythongrammarParser.NAME) | (1 << pythongrammarParser.STAR) | (1 << pythongrammarParser.POWER))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Python3Parser.NAME) | (1 << Python3Parser.STAR) | (1 << Python3Parser.POWER))) != 0):
                 self.state = 739
                 self.varargslist()
 
 
             self.state = 742
-            self.match(pythongrammarParser.COLON)
+            self.match(Python3Parser.COLON)
             self.state = 743
             self.test()
         except RecognitionException as re:
@@ -4972,21 +4972,21 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def LAMBDA(self):
-            return self.getToken(pythongrammarParser.LAMBDA, 0)
+            return self.getToken(Python3Parser.LAMBDA, 0)
 
         def COLON(self):
-            return self.getToken(pythongrammarParser.COLON, 0)
+            return self.getToken(Python3Parser.COLON, 0)
 
         def test_nocond(self):
-            return self.getTypedRuleContext(pythongrammarParser.Test_nocondContext,0)
+            return self.getTypedRuleContext(Python3Parser.Test_nocondContext,0)
 
 
         def varargslist(self):
-            return self.getTypedRuleContext(pythongrammarParser.VarargslistContext,0)
+            return self.getTypedRuleContext(Python3Parser.VarargslistContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_lambdef_nocond
+            return Python3Parser.RULE_lambdef_nocond
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterLambdef_nocond" ):
@@ -5001,23 +5001,23 @@ class pythongrammarParser ( Parser ):
 
     def lambdef_nocond(self):
 
-        localctx = pythongrammarParser.Lambdef_nocondContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Lambdef_nocondContext(self, self._ctx, self.state)
         self.enterRule(localctx, 104, self.RULE_lambdef_nocond)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 745
-            self.match(pythongrammarParser.LAMBDA)
+            self.match(Python3Parser.LAMBDA)
             self.state = 747
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << pythongrammarParser.NAME) | (1 << pythongrammarParser.STAR) | (1 << pythongrammarParser.POWER))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Python3Parser.NAME) | (1 << Python3Parser.STAR) | (1 << Python3Parser.POWER))) != 0):
                 self.state = 746
                 self.varargslist()
 
 
             self.state = 749
-            self.match(pythongrammarParser.COLON)
+            self.match(Python3Parser.COLON)
             self.state = 750
             self.test_nocond()
         except RecognitionException as re:
@@ -5037,19 +5037,19 @@ class pythongrammarParser ( Parser ):
 
         def and_test(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.And_testContext)
+                return self.getTypedRuleContexts(Python3Parser.And_testContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.And_testContext,i)
+                return self.getTypedRuleContext(Python3Parser.And_testContext,i)
 
 
         def OR(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.OR)
+                return self.getTokens(Python3Parser.OR)
             else:
-                return self.getToken(pythongrammarParser.OR, i)
+                return self.getToken(Python3Parser.OR, i)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_or_test
+            return Python3Parser.RULE_or_test
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterOr_test" ):
@@ -5064,7 +5064,7 @@ class pythongrammarParser ( Parser ):
 
     def or_test(self):
 
-        localctx = pythongrammarParser.Or_testContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Or_testContext(self, self._ctx, self.state)
         self.enterRule(localctx, 106, self.RULE_or_test)
         self._la = 0 # Token type
         try:
@@ -5074,9 +5074,9 @@ class pythongrammarParser ( Parser ):
             self.state = 757
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==pythongrammarParser.OR:
+            while _la==Python3Parser.OR:
                 self.state = 753
-                self.match(pythongrammarParser.OR)
+                self.match(Python3Parser.OR)
                 self.state = 754
                 self.and_test()
                 self.state = 759
@@ -5100,19 +5100,19 @@ class pythongrammarParser ( Parser ):
 
         def not_test(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.Not_testContext)
+                return self.getTypedRuleContexts(Python3Parser.Not_testContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.Not_testContext,i)
+                return self.getTypedRuleContext(Python3Parser.Not_testContext,i)
 
 
         def AND(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.AND)
+                return self.getTokens(Python3Parser.AND)
             else:
-                return self.getToken(pythongrammarParser.AND, i)
+                return self.getToken(Python3Parser.AND, i)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_and_test
+            return Python3Parser.RULE_and_test
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterAnd_test" ):
@@ -5127,7 +5127,7 @@ class pythongrammarParser ( Parser ):
 
     def and_test(self):
 
-        localctx = pythongrammarParser.And_testContext(self, self._ctx, self.state)
+        localctx = Python3Parser.And_testContext(self, self._ctx, self.state)
         self.enterRule(localctx, 108, self.RULE_and_test)
         self._la = 0 # Token type
         try:
@@ -5137,9 +5137,9 @@ class pythongrammarParser ( Parser ):
             self.state = 765
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==pythongrammarParser.AND:
+            while _la==Python3Parser.AND:
                 self.state = 761
-                self.match(pythongrammarParser.AND)
+                self.match(Python3Parser.AND)
                 self.state = 762
                 self.not_test()
                 self.state = 767
@@ -5162,18 +5162,18 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def NOT(self):
-            return self.getToken(pythongrammarParser.NOT, 0)
+            return self.getToken(Python3Parser.NOT, 0)
 
         def not_test(self):
-            return self.getTypedRuleContext(pythongrammarParser.Not_testContext,0)
+            return self.getTypedRuleContext(Python3Parser.Not_testContext,0)
 
 
         def comparison(self):
-            return self.getTypedRuleContext(pythongrammarParser.ComparisonContext,0)
+            return self.getTypedRuleContext(Python3Parser.ComparisonContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_not_test
+            return Python3Parser.RULE_not_test
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterNot_test" ):
@@ -5188,20 +5188,20 @@ class pythongrammarParser ( Parser ):
 
     def not_test(self):
 
-        localctx = pythongrammarParser.Not_testContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Not_testContext(self, self._ctx, self.state)
         self.enterRule(localctx, 110, self.RULE_not_test)
         try:
             self.state = 771
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [pythongrammarParser.NOT]:
+            if token in [Python3Parser.NOT]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 768
-                self.match(pythongrammarParser.NOT)
+                self.match(Python3Parser.NOT)
                 self.state = 769
                 self.not_test()
                 pass
-            elif token in [pythongrammarParser.STRING, pythongrammarParser.NUMBER, pythongrammarParser.NONE, pythongrammarParser.TRUE, pythongrammarParser.FALSE, pythongrammarParser.AWAIT, pythongrammarParser.NAME, pythongrammarParser.ELLIPSIS, pythongrammarParser.OPEN_PAREN, pythongrammarParser.OPEN_BRACK, pythongrammarParser.ADD, pythongrammarParser.MINUS, pythongrammarParser.NOT_OP, pythongrammarParser.OPEN_BRACE]:
+            elif token in [Python3Parser.STRING, Python3Parser.NUMBER, Python3Parser.NONE, Python3Parser.TRUE, Python3Parser.FALSE, Python3Parser.AWAIT, Python3Parser.NAME, Python3Parser.ELLIPSIS, Python3Parser.OPEN_PAREN, Python3Parser.OPEN_BRACK, Python3Parser.ADD, Python3Parser.MINUS, Python3Parser.NOT_OP, Python3Parser.OPEN_BRACE]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 770
                 self.comparison()
@@ -5226,20 +5226,20 @@ class pythongrammarParser ( Parser ):
 
         def expr(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.ExprContext)
+                return self.getTypedRuleContexts(Python3Parser.ExprContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.ExprContext,i)
+                return self.getTypedRuleContext(Python3Parser.ExprContext,i)
 
 
         def comp_op(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.Comp_opContext)
+                return self.getTypedRuleContexts(Python3Parser.Comp_opContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.Comp_opContext,i)
+                return self.getTypedRuleContext(Python3Parser.Comp_opContext,i)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_comparison
+            return Python3Parser.RULE_comparison
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterComparison" ):
@@ -5254,7 +5254,7 @@ class pythongrammarParser ( Parser ):
 
     def comparison(self):
 
-        localctx = pythongrammarParser.ComparisonContext(self, self._ctx, self.state)
+        localctx = Python3Parser.ComparisonContext(self, self._ctx, self.state)
         self.enterRule(localctx, 112, self.RULE_comparison)
         self._la = 0 # Token type
         try:
@@ -5264,7 +5264,7 @@ class pythongrammarParser ( Parser ):
             self.state = 779
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 18)) & ~0x3f) == 0 and ((1 << (_la - 18)) & ((1 << (pythongrammarParser.IN - 18)) | (1 << (pythongrammarParser.NOT - 18)) | (1 << (pythongrammarParser.IS - 18)) | (1 << (pythongrammarParser.LESS_THAN - 18)) | (1 << (pythongrammarParser.GREATER_THAN - 18)) | (1 << (pythongrammarParser.EQUALS - 18)) | (1 << (pythongrammarParser.GT_EQ - 18)) | (1 << (pythongrammarParser.LT_EQ - 18)) | (1 << (pythongrammarParser.NOT_EQ_1 - 18)) | (1 << (pythongrammarParser.NOT_EQ_2 - 18)))) != 0):
+            while ((((_la - 18)) & ~0x3f) == 0 and ((1 << (_la - 18)) & ((1 << (Python3Parser.IN - 18)) | (1 << (Python3Parser.NOT - 18)) | (1 << (Python3Parser.IS - 18)) | (1 << (Python3Parser.LESS_THAN - 18)) | (1 << (Python3Parser.GREATER_THAN - 18)) | (1 << (Python3Parser.EQUALS - 18)) | (1 << (Python3Parser.GT_EQ - 18)) | (1 << (Python3Parser.LT_EQ - 18)) | (1 << (Python3Parser.NOT_EQ_1 - 18)) | (1 << (Python3Parser.NOT_EQ_2 - 18)))) != 0):
                 self.state = 774
                 self.comp_op()
                 self.state = 775
@@ -5289,37 +5289,37 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def LESS_THAN(self):
-            return self.getToken(pythongrammarParser.LESS_THAN, 0)
+            return self.getToken(Python3Parser.LESS_THAN, 0)
 
         def GREATER_THAN(self):
-            return self.getToken(pythongrammarParser.GREATER_THAN, 0)
+            return self.getToken(Python3Parser.GREATER_THAN, 0)
 
         def EQUALS(self):
-            return self.getToken(pythongrammarParser.EQUALS, 0)
+            return self.getToken(Python3Parser.EQUALS, 0)
 
         def GT_EQ(self):
-            return self.getToken(pythongrammarParser.GT_EQ, 0)
+            return self.getToken(Python3Parser.GT_EQ, 0)
 
         def LT_EQ(self):
-            return self.getToken(pythongrammarParser.LT_EQ, 0)
+            return self.getToken(Python3Parser.LT_EQ, 0)
 
         def NOT_EQ_1(self):
-            return self.getToken(pythongrammarParser.NOT_EQ_1, 0)
+            return self.getToken(Python3Parser.NOT_EQ_1, 0)
 
         def NOT_EQ_2(self):
-            return self.getToken(pythongrammarParser.NOT_EQ_2, 0)
+            return self.getToken(Python3Parser.NOT_EQ_2, 0)
 
         def IN(self):
-            return self.getToken(pythongrammarParser.IN, 0)
+            return self.getToken(Python3Parser.IN, 0)
 
         def NOT(self):
-            return self.getToken(pythongrammarParser.NOT, 0)
+            return self.getToken(Python3Parser.NOT, 0)
 
         def IS(self):
-            return self.getToken(pythongrammarParser.IS, 0)
+            return self.getToken(Python3Parser.IS, 0)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_comp_op
+            return Python3Parser.RULE_comp_op
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterComp_op" ):
@@ -5334,7 +5334,7 @@ class pythongrammarParser ( Parser ):
 
     def comp_op(self):
 
-        localctx = pythongrammarParser.Comp_opContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Comp_opContext(self, self._ctx, self.state)
         self.enterRule(localctx, 114, self.RULE_comp_op)
         try:
             self.state = 795
@@ -5343,71 +5343,71 @@ class pythongrammarParser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 782
-                self.match(pythongrammarParser.LESS_THAN)
+                self.match(Python3Parser.LESS_THAN)
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 783
-                self.match(pythongrammarParser.GREATER_THAN)
+                self.match(Python3Parser.GREATER_THAN)
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 784
-                self.match(pythongrammarParser.EQUALS)
+                self.match(Python3Parser.EQUALS)
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 785
-                self.match(pythongrammarParser.GT_EQ)
+                self.match(Python3Parser.GT_EQ)
                 pass
 
             elif la_ == 5:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 786
-                self.match(pythongrammarParser.LT_EQ)
+                self.match(Python3Parser.LT_EQ)
                 pass
 
             elif la_ == 6:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 787
-                self.match(pythongrammarParser.NOT_EQ_1)
+                self.match(Python3Parser.NOT_EQ_1)
                 pass
 
             elif la_ == 7:
                 self.enterOuterAlt(localctx, 7)
                 self.state = 788
-                self.match(pythongrammarParser.NOT_EQ_2)
+                self.match(Python3Parser.NOT_EQ_2)
                 pass
 
             elif la_ == 8:
                 self.enterOuterAlt(localctx, 8)
                 self.state = 789
-                self.match(pythongrammarParser.IN)
+                self.match(Python3Parser.IN)
                 pass
 
             elif la_ == 9:
                 self.enterOuterAlt(localctx, 9)
                 self.state = 790
-                self.match(pythongrammarParser.NOT)
+                self.match(Python3Parser.NOT)
                 self.state = 791
-                self.match(pythongrammarParser.IN)
+                self.match(Python3Parser.IN)
                 pass
 
             elif la_ == 10:
                 self.enterOuterAlt(localctx, 10)
                 self.state = 792
-                self.match(pythongrammarParser.IS)
+                self.match(Python3Parser.IS)
                 pass
 
             elif la_ == 11:
                 self.enterOuterAlt(localctx, 11)
                 self.state = 793
-                self.match(pythongrammarParser.IS)
+                self.match(Python3Parser.IS)
                 self.state = 794
-                self.match(pythongrammarParser.NOT)
+                self.match(Python3Parser.NOT)
                 pass
 
 
@@ -5427,14 +5427,14 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def STAR(self):
-            return self.getToken(pythongrammarParser.STAR, 0)
+            return self.getToken(Python3Parser.STAR, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(pythongrammarParser.ExprContext,0)
+            return self.getTypedRuleContext(Python3Parser.ExprContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_star_expr
+            return Python3Parser.RULE_star_expr
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterStar_expr" ):
@@ -5449,12 +5449,12 @@ class pythongrammarParser ( Parser ):
 
     def star_expr(self):
 
-        localctx = pythongrammarParser.Star_exprContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Star_exprContext(self, self._ctx, self.state)
         self.enterRule(localctx, 116, self.RULE_star_expr)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 797
-            self.match(pythongrammarParser.STAR)
+            self.match(Python3Parser.STAR)
             self.state = 798
             self.expr()
         except RecognitionException as re:
@@ -5474,19 +5474,19 @@ class pythongrammarParser ( Parser ):
 
         def xor_expr(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.Xor_exprContext)
+                return self.getTypedRuleContexts(Python3Parser.Xor_exprContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.Xor_exprContext,i)
+                return self.getTypedRuleContext(Python3Parser.Xor_exprContext,i)
 
 
         def OR_OP(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.OR_OP)
+                return self.getTokens(Python3Parser.OR_OP)
             else:
-                return self.getToken(pythongrammarParser.OR_OP, i)
+                return self.getToken(Python3Parser.OR_OP, i)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_expr
+            return Python3Parser.RULE_expr
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterExpr" ):
@@ -5501,7 +5501,7 @@ class pythongrammarParser ( Parser ):
 
     def expr(self):
 
-        localctx = pythongrammarParser.ExprContext(self, self._ctx, self.state)
+        localctx = Python3Parser.ExprContext(self, self._ctx, self.state)
         self.enterRule(localctx, 118, self.RULE_expr)
         self._la = 0 # Token type
         try:
@@ -5511,9 +5511,9 @@ class pythongrammarParser ( Parser ):
             self.state = 805
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==pythongrammarParser.OR_OP:
+            while _la==Python3Parser.OR_OP:
                 self.state = 801
-                self.match(pythongrammarParser.OR_OP)
+                self.match(Python3Parser.OR_OP)
                 self.state = 802
                 self.xor_expr()
                 self.state = 807
@@ -5537,19 +5537,19 @@ class pythongrammarParser ( Parser ):
 
         def and_expr(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.And_exprContext)
+                return self.getTypedRuleContexts(Python3Parser.And_exprContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.And_exprContext,i)
+                return self.getTypedRuleContext(Python3Parser.And_exprContext,i)
 
 
         def XOR(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.XOR)
+                return self.getTokens(Python3Parser.XOR)
             else:
-                return self.getToken(pythongrammarParser.XOR, i)
+                return self.getToken(Python3Parser.XOR, i)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_xor_expr
+            return Python3Parser.RULE_xor_expr
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterXor_expr" ):
@@ -5564,7 +5564,7 @@ class pythongrammarParser ( Parser ):
 
     def xor_expr(self):
 
-        localctx = pythongrammarParser.Xor_exprContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Xor_exprContext(self, self._ctx, self.state)
         self.enterRule(localctx, 120, self.RULE_xor_expr)
         self._la = 0 # Token type
         try:
@@ -5574,9 +5574,9 @@ class pythongrammarParser ( Parser ):
             self.state = 813
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==pythongrammarParser.XOR:
+            while _la==Python3Parser.XOR:
                 self.state = 809
-                self.match(pythongrammarParser.XOR)
+                self.match(Python3Parser.XOR)
                 self.state = 810
                 self.and_expr()
                 self.state = 815
@@ -5600,19 +5600,19 @@ class pythongrammarParser ( Parser ):
 
         def shift_expr(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.Shift_exprContext)
+                return self.getTypedRuleContexts(Python3Parser.Shift_exprContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.Shift_exprContext,i)
+                return self.getTypedRuleContext(Python3Parser.Shift_exprContext,i)
 
 
         def AND_OP(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.AND_OP)
+                return self.getTokens(Python3Parser.AND_OP)
             else:
-                return self.getToken(pythongrammarParser.AND_OP, i)
+                return self.getToken(Python3Parser.AND_OP, i)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_and_expr
+            return Python3Parser.RULE_and_expr
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterAnd_expr" ):
@@ -5627,7 +5627,7 @@ class pythongrammarParser ( Parser ):
 
     def and_expr(self):
 
-        localctx = pythongrammarParser.And_exprContext(self, self._ctx, self.state)
+        localctx = Python3Parser.And_exprContext(self, self._ctx, self.state)
         self.enterRule(localctx, 122, self.RULE_and_expr)
         self._la = 0 # Token type
         try:
@@ -5637,9 +5637,9 @@ class pythongrammarParser ( Parser ):
             self.state = 821
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==pythongrammarParser.AND_OP:
+            while _la==Python3Parser.AND_OP:
                 self.state = 817
-                self.match(pythongrammarParser.AND_OP)
+                self.match(Python3Parser.AND_OP)
                 self.state = 818
                 self.shift_expr()
                 self.state = 823
@@ -5663,25 +5663,25 @@ class pythongrammarParser ( Parser ):
 
         def arith_expr(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.Arith_exprContext)
+                return self.getTypedRuleContexts(Python3Parser.Arith_exprContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.Arith_exprContext,i)
+                return self.getTypedRuleContext(Python3Parser.Arith_exprContext,i)
 
 
         def LEFT_SHIFT(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.LEFT_SHIFT)
+                return self.getTokens(Python3Parser.LEFT_SHIFT)
             else:
-                return self.getToken(pythongrammarParser.LEFT_SHIFT, i)
+                return self.getToken(Python3Parser.LEFT_SHIFT, i)
 
         def RIGHT_SHIFT(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.RIGHT_SHIFT)
+                return self.getTokens(Python3Parser.RIGHT_SHIFT)
             else:
-                return self.getToken(pythongrammarParser.RIGHT_SHIFT, i)
+                return self.getToken(Python3Parser.RIGHT_SHIFT, i)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_shift_expr
+            return Python3Parser.RULE_shift_expr
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterShift_expr" ):
@@ -5696,7 +5696,7 @@ class pythongrammarParser ( Parser ):
 
     def shift_expr(self):
 
-        localctx = pythongrammarParser.Shift_exprContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Shift_exprContext(self, self._ctx, self.state)
         self.enterRule(localctx, 124, self.RULE_shift_expr)
         self._la = 0 # Token type
         try:
@@ -5706,10 +5706,10 @@ class pythongrammarParser ( Parser ):
             self.state = 829
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==pythongrammarParser.LEFT_SHIFT or _la==pythongrammarParser.RIGHT_SHIFT:
+            while _la==Python3Parser.LEFT_SHIFT or _la==Python3Parser.RIGHT_SHIFT:
                 self.state = 825
                 _la = self._input.LA(1)
-                if not(_la==pythongrammarParser.LEFT_SHIFT or _la==pythongrammarParser.RIGHT_SHIFT):
+                if not(_la==Python3Parser.LEFT_SHIFT or _la==Python3Parser.RIGHT_SHIFT):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -5737,25 +5737,25 @@ class pythongrammarParser ( Parser ):
 
         def term(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.TermContext)
+                return self.getTypedRuleContexts(Python3Parser.TermContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.TermContext,i)
+                return self.getTypedRuleContext(Python3Parser.TermContext,i)
 
 
         def ADD(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.ADD)
+                return self.getTokens(Python3Parser.ADD)
             else:
-                return self.getToken(pythongrammarParser.ADD, i)
+                return self.getToken(Python3Parser.ADD, i)
 
         def MINUS(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.MINUS)
+                return self.getTokens(Python3Parser.MINUS)
             else:
-                return self.getToken(pythongrammarParser.MINUS, i)
+                return self.getToken(Python3Parser.MINUS, i)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_arith_expr
+            return Python3Parser.RULE_arith_expr
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterArith_expr" ):
@@ -5770,7 +5770,7 @@ class pythongrammarParser ( Parser ):
 
     def arith_expr(self):
 
-        localctx = pythongrammarParser.Arith_exprContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Arith_exprContext(self, self._ctx, self.state)
         self.enterRule(localctx, 126, self.RULE_arith_expr)
         self._la = 0 # Token type
         try:
@@ -5780,10 +5780,10 @@ class pythongrammarParser ( Parser ):
             self.state = 837
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==pythongrammarParser.ADD or _la==pythongrammarParser.MINUS:
+            while _la==Python3Parser.ADD or _la==Python3Parser.MINUS:
                 self.state = 833
                 _la = self._input.LA(1)
-                if not(_la==pythongrammarParser.ADD or _la==pythongrammarParser.MINUS):
+                if not(_la==Python3Parser.ADD or _la==Python3Parser.MINUS):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -5811,43 +5811,43 @@ class pythongrammarParser ( Parser ):
 
         def factor(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.FactorContext)
+                return self.getTypedRuleContexts(Python3Parser.FactorContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.FactorContext,i)
+                return self.getTypedRuleContext(Python3Parser.FactorContext,i)
 
 
         def STAR(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.STAR)
+                return self.getTokens(Python3Parser.STAR)
             else:
-                return self.getToken(pythongrammarParser.STAR, i)
+                return self.getToken(Python3Parser.STAR, i)
 
         def AT(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.AT)
+                return self.getTokens(Python3Parser.AT)
             else:
-                return self.getToken(pythongrammarParser.AT, i)
+                return self.getToken(Python3Parser.AT, i)
 
         def DIV(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.DIV)
+                return self.getTokens(Python3Parser.DIV)
             else:
-                return self.getToken(pythongrammarParser.DIV, i)
+                return self.getToken(Python3Parser.DIV, i)
 
         def MOD(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.MOD)
+                return self.getTokens(Python3Parser.MOD)
             else:
-                return self.getToken(pythongrammarParser.MOD, i)
+                return self.getToken(Python3Parser.MOD, i)
 
         def IDIV(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.IDIV)
+                return self.getTokens(Python3Parser.IDIV)
             else:
-                return self.getToken(pythongrammarParser.IDIV, i)
+                return self.getToken(Python3Parser.IDIV, i)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_term
+            return Python3Parser.RULE_term
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTerm" ):
@@ -5862,7 +5862,7 @@ class pythongrammarParser ( Parser ):
 
     def term(self):
 
-        localctx = pythongrammarParser.TermContext(self, self._ctx, self.state)
+        localctx = Python3Parser.TermContext(self, self._ctx, self.state)
         self.enterRule(localctx, 128, self.RULE_term)
         self._la = 0 # Token type
         try:
@@ -5872,10 +5872,10 @@ class pythongrammarParser ( Parser ):
             self.state = 845
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & ((1 << (pythongrammarParser.STAR - 51)) | (1 << (pythongrammarParser.DIV - 51)) | (1 << (pythongrammarParser.MOD - 51)) | (1 << (pythongrammarParser.IDIV - 51)) | (1 << (pythongrammarParser.AT - 51)))) != 0):
+            while ((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & ((1 << (Python3Parser.STAR - 51)) | (1 << (Python3Parser.DIV - 51)) | (1 << (Python3Parser.MOD - 51)) | (1 << (Python3Parser.IDIV - 51)) | (1 << (Python3Parser.AT - 51)))) != 0):
                 self.state = 841
                 _la = self._input.LA(1)
-                if not(((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & ((1 << (pythongrammarParser.STAR - 51)) | (1 << (pythongrammarParser.DIV - 51)) | (1 << (pythongrammarParser.MOD - 51)) | (1 << (pythongrammarParser.IDIV - 51)) | (1 << (pythongrammarParser.AT - 51)))) != 0)):
+                if not(((((_la - 51)) & ~0x3f) == 0 and ((1 << (_la - 51)) & ((1 << (Python3Parser.STAR - 51)) | (1 << (Python3Parser.DIV - 51)) | (1 << (Python3Parser.MOD - 51)) | (1 << (Python3Parser.IDIV - 51)) | (1 << (Python3Parser.AT - 51)))) != 0)):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -5902,24 +5902,24 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def factor(self):
-            return self.getTypedRuleContext(pythongrammarParser.FactorContext,0)
+            return self.getTypedRuleContext(Python3Parser.FactorContext,0)
 
 
         def ADD(self):
-            return self.getToken(pythongrammarParser.ADD, 0)
+            return self.getToken(Python3Parser.ADD, 0)
 
         def MINUS(self):
-            return self.getToken(pythongrammarParser.MINUS, 0)
+            return self.getToken(Python3Parser.MINUS, 0)
 
         def NOT_OP(self):
-            return self.getToken(pythongrammarParser.NOT_OP, 0)
+            return self.getToken(Python3Parser.NOT_OP, 0)
 
         def power(self):
-            return self.getTypedRuleContext(pythongrammarParser.PowerContext,0)
+            return self.getTypedRuleContext(Python3Parser.PowerContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_factor
+            return Python3Parser.RULE_factor
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterFactor" ):
@@ -5934,18 +5934,18 @@ class pythongrammarParser ( Parser ):
 
     def factor(self):
 
-        localctx = pythongrammarParser.FactorContext(self, self._ctx, self.state)
+        localctx = Python3Parser.FactorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 130, self.RULE_factor)
         self._la = 0 # Token type
         try:
             self.state = 851
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [pythongrammarParser.ADD, pythongrammarParser.MINUS, pythongrammarParser.NOT_OP]:
+            if token in [Python3Parser.ADD, Python3Parser.MINUS, Python3Parser.NOT_OP]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 848
                 _la = self._input.LA(1)
-                if not(((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (pythongrammarParser.ADD - 66)) | (1 << (pythongrammarParser.MINUS - 66)) | (1 << (pythongrammarParser.NOT_OP - 66)))) != 0)):
+                if not(((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (Python3Parser.ADD - 66)) | (1 << (Python3Parser.MINUS - 66)) | (1 << (Python3Parser.NOT_OP - 66)))) != 0)):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -5953,7 +5953,7 @@ class pythongrammarParser ( Parser ):
                 self.state = 849
                 self.factor()
                 pass
-            elif token in [pythongrammarParser.STRING, pythongrammarParser.NUMBER, pythongrammarParser.NONE, pythongrammarParser.TRUE, pythongrammarParser.FALSE, pythongrammarParser.AWAIT, pythongrammarParser.NAME, pythongrammarParser.ELLIPSIS, pythongrammarParser.OPEN_PAREN, pythongrammarParser.OPEN_BRACK, pythongrammarParser.OPEN_BRACE]:
+            elif token in [Python3Parser.STRING, Python3Parser.NUMBER, Python3Parser.NONE, Python3Parser.TRUE, Python3Parser.FALSE, Python3Parser.AWAIT, Python3Parser.NAME, Python3Parser.ELLIPSIS, Python3Parser.OPEN_PAREN, Python3Parser.OPEN_BRACK, Python3Parser.OPEN_BRACE]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 850
                 self.power()
@@ -5977,18 +5977,18 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def atom_expr(self):
-            return self.getTypedRuleContext(pythongrammarParser.Atom_exprContext,0)
+            return self.getTypedRuleContext(Python3Parser.Atom_exprContext,0)
 
 
         def POWER(self):
-            return self.getToken(pythongrammarParser.POWER, 0)
+            return self.getToken(Python3Parser.POWER, 0)
 
         def factor(self):
-            return self.getTypedRuleContext(pythongrammarParser.FactorContext,0)
+            return self.getTypedRuleContext(Python3Parser.FactorContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_power
+            return Python3Parser.RULE_power
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterPower" ):
@@ -6003,7 +6003,7 @@ class pythongrammarParser ( Parser ):
 
     def power(self):
 
-        localctx = pythongrammarParser.PowerContext(self, self._ctx, self.state)
+        localctx = Python3Parser.PowerContext(self, self._ctx, self.state)
         self.enterRule(localctx, 132, self.RULE_power)
         self._la = 0 # Token type
         try:
@@ -6013,9 +6013,9 @@ class pythongrammarParser ( Parser ):
             self.state = 856
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==pythongrammarParser.POWER:
+            if _la==Python3Parser.POWER:
                 self.state = 854
-                self.match(pythongrammarParser.POWER)
+                self.match(Python3Parser.POWER)
                 self.state = 855
                 self.factor()
 
@@ -6036,21 +6036,21 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def atom(self):
-            return self.getTypedRuleContext(pythongrammarParser.AtomContext,0)
+            return self.getTypedRuleContext(Python3Parser.AtomContext,0)
 
 
         def AWAIT(self):
-            return self.getToken(pythongrammarParser.AWAIT, 0)
+            return self.getToken(Python3Parser.AWAIT, 0)
 
         def trailer(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.TrailerContext)
+                return self.getTypedRuleContexts(Python3Parser.TrailerContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.TrailerContext,i)
+                return self.getTypedRuleContext(Python3Parser.TrailerContext,i)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_atom_expr
+            return Python3Parser.RULE_atom_expr
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterAtom_expr" ):
@@ -6065,7 +6065,7 @@ class pythongrammarParser ( Parser ):
 
     def atom_expr(self):
 
-        localctx = pythongrammarParser.Atom_exprContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Atom_exprContext(self, self._ctx, self.state)
         self.enterRule(localctx, 134, self.RULE_atom_expr)
         self._la = 0 # Token type
         try:
@@ -6073,9 +6073,9 @@ class pythongrammarParser ( Parser ):
             self.state = 859
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==pythongrammarParser.AWAIT:
+            if _la==Python3Parser.AWAIT:
                 self.state = 858
-                self.match(pythongrammarParser.AWAIT)
+                self.match(Python3Parser.AWAIT)
 
 
             self.state = 861
@@ -6083,7 +6083,7 @@ class pythongrammarParser ( Parser ):
             self.state = 865
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << pythongrammarParser.DOT) | (1 << pythongrammarParser.OPEN_PAREN) | (1 << pythongrammarParser.OPEN_BRACK))) != 0):
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Python3Parser.DOT) | (1 << Python3Parser.OPEN_PAREN) | (1 << Python3Parser.OPEN_BRACK))) != 0):
                 self.state = 862
                 self.trailer()
                 self.state = 867
@@ -6106,61 +6106,61 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def OPEN_PAREN(self):
-            return self.getToken(pythongrammarParser.OPEN_PAREN, 0)
+            return self.getToken(Python3Parser.OPEN_PAREN, 0)
 
         def CLOSE_PAREN(self):
-            return self.getToken(pythongrammarParser.CLOSE_PAREN, 0)
+            return self.getToken(Python3Parser.CLOSE_PAREN, 0)
 
         def OPEN_BRACK(self):
-            return self.getToken(pythongrammarParser.OPEN_BRACK, 0)
+            return self.getToken(Python3Parser.OPEN_BRACK, 0)
 
         def CLOSE_BRACK(self):
-            return self.getToken(pythongrammarParser.CLOSE_BRACK, 0)
+            return self.getToken(Python3Parser.CLOSE_BRACK, 0)
 
         def OPEN_BRACE(self):
-            return self.getToken(pythongrammarParser.OPEN_BRACE, 0)
+            return self.getToken(Python3Parser.OPEN_BRACE, 0)
 
         def CLOSE_BRACE(self):
-            return self.getToken(pythongrammarParser.CLOSE_BRACE, 0)
+            return self.getToken(Python3Parser.CLOSE_BRACE, 0)
 
         def NAME(self):
-            return self.getToken(pythongrammarParser.NAME, 0)
+            return self.getToken(Python3Parser.NAME, 0)
 
         def NUMBER(self):
-            return self.getToken(pythongrammarParser.NUMBER, 0)
+            return self.getToken(Python3Parser.NUMBER, 0)
 
         def ELLIPSIS(self):
-            return self.getToken(pythongrammarParser.ELLIPSIS, 0)
+            return self.getToken(Python3Parser.ELLIPSIS, 0)
 
         def NONE(self):
-            return self.getToken(pythongrammarParser.NONE, 0)
+            return self.getToken(Python3Parser.NONE, 0)
 
         def TRUE(self):
-            return self.getToken(pythongrammarParser.TRUE, 0)
+            return self.getToken(Python3Parser.TRUE, 0)
 
         def FALSE(self):
-            return self.getToken(pythongrammarParser.FALSE, 0)
+            return self.getToken(Python3Parser.FALSE, 0)
 
         def yield_expr(self):
-            return self.getTypedRuleContext(pythongrammarParser.Yield_exprContext,0)
+            return self.getTypedRuleContext(Python3Parser.Yield_exprContext,0)
 
 
         def testlist_comp(self):
-            return self.getTypedRuleContext(pythongrammarParser.Testlist_compContext,0)
+            return self.getTypedRuleContext(Python3Parser.Testlist_compContext,0)
 
 
         def dictorsetmaker(self):
-            return self.getTypedRuleContext(pythongrammarParser.DictorsetmakerContext,0)
+            return self.getTypedRuleContext(Python3Parser.DictorsetmakerContext,0)
 
 
         def STRING(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.STRING)
+                return self.getTokens(Python3Parser.STRING)
             else:
-                return self.getToken(pythongrammarParser.STRING, i)
+                return self.getToken(Python3Parser.STRING, i)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_atom
+            return Python3Parser.RULE_atom
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterAtom" ):
@@ -6175,7 +6175,7 @@ class pythongrammarParser ( Parser ):
 
     def atom(self):
 
-        localctx = pythongrammarParser.AtomContext(self, self._ctx, self.state)
+        localctx = Python3Parser.AtomContext(self, self._ctx, self.state)
         self.enterRule(localctx, 136, self.RULE_atom)
         self._la = 0 # Token type
         try:
@@ -6183,92 +6183,92 @@ class pythongrammarParser ( Parser ):
             self.state = 895
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [pythongrammarParser.OPEN_PAREN]:
+            if token in [Python3Parser.OPEN_PAREN]:
                 self.state = 868
-                self.match(pythongrammarParser.OPEN_PAREN)
+                self.match(Python3Parser.OPEN_PAREN)
                 self.state = 871
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
-                if token in [pythongrammarParser.YIELD]:
+                if token in [Python3Parser.YIELD]:
                     self.state = 869
                     self.yield_expr()
                     pass
-                elif token in [pythongrammarParser.STRING, pythongrammarParser.NUMBER, pythongrammarParser.LAMBDA, pythongrammarParser.NOT, pythongrammarParser.NONE, pythongrammarParser.TRUE, pythongrammarParser.FALSE, pythongrammarParser.AWAIT, pythongrammarParser.NAME, pythongrammarParser.ELLIPSIS, pythongrammarParser.STAR, pythongrammarParser.OPEN_PAREN, pythongrammarParser.OPEN_BRACK, pythongrammarParser.ADD, pythongrammarParser.MINUS, pythongrammarParser.NOT_OP, pythongrammarParser.OPEN_BRACE]:
+                elif token in [Python3Parser.STRING, Python3Parser.NUMBER, Python3Parser.LAMBDA, Python3Parser.NOT, Python3Parser.NONE, Python3Parser.TRUE, Python3Parser.FALSE, Python3Parser.AWAIT, Python3Parser.NAME, Python3Parser.ELLIPSIS, Python3Parser.STAR, Python3Parser.OPEN_PAREN, Python3Parser.OPEN_BRACK, Python3Parser.ADD, Python3Parser.MINUS, Python3Parser.NOT_OP, Python3Parser.OPEN_BRACE]:
                     self.state = 870
                     self.testlist_comp()
                     pass
-                elif token in [pythongrammarParser.CLOSE_PAREN]:
+                elif token in [Python3Parser.CLOSE_PAREN]:
                     pass
                 else:
                     pass
                 self.state = 873
-                self.match(pythongrammarParser.CLOSE_PAREN)
+                self.match(Python3Parser.CLOSE_PAREN)
                 pass
-            elif token in [pythongrammarParser.OPEN_BRACK]:
+            elif token in [Python3Parser.OPEN_BRACK]:
                 self.state = 874
-                self.match(pythongrammarParser.OPEN_BRACK)
+                self.match(Python3Parser.OPEN_BRACK)
                 self.state = 876
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << pythongrammarParser.STRING) | (1 << pythongrammarParser.NUMBER) | (1 << pythongrammarParser.LAMBDA) | (1 << pythongrammarParser.NOT) | (1 << pythongrammarParser.NONE) | (1 << pythongrammarParser.TRUE) | (1 << pythongrammarParser.FALSE) | (1 << pythongrammarParser.AWAIT) | (1 << pythongrammarParser.NAME) | (1 << pythongrammarParser.ELLIPSIS) | (1 << pythongrammarParser.STAR) | (1 << pythongrammarParser.OPEN_PAREN) | (1 << pythongrammarParser.OPEN_BRACK))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (pythongrammarParser.ADD - 66)) | (1 << (pythongrammarParser.MINUS - 66)) | (1 << (pythongrammarParser.NOT_OP - 66)) | (1 << (pythongrammarParser.OPEN_BRACE - 66)))) != 0):
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Python3Parser.STRING) | (1 << Python3Parser.NUMBER) | (1 << Python3Parser.LAMBDA) | (1 << Python3Parser.NOT) | (1 << Python3Parser.NONE) | (1 << Python3Parser.TRUE) | (1 << Python3Parser.FALSE) | (1 << Python3Parser.AWAIT) | (1 << Python3Parser.NAME) | (1 << Python3Parser.ELLIPSIS) | (1 << Python3Parser.STAR) | (1 << Python3Parser.OPEN_PAREN) | (1 << Python3Parser.OPEN_BRACK))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (Python3Parser.ADD - 66)) | (1 << (Python3Parser.MINUS - 66)) | (1 << (Python3Parser.NOT_OP - 66)) | (1 << (Python3Parser.OPEN_BRACE - 66)))) != 0):
                     self.state = 875
                     self.testlist_comp()
 
 
                 self.state = 878
-                self.match(pythongrammarParser.CLOSE_BRACK)
+                self.match(Python3Parser.CLOSE_BRACK)
                 pass
-            elif token in [pythongrammarParser.OPEN_BRACE]:
+            elif token in [Python3Parser.OPEN_BRACE]:
                 self.state = 879
-                self.match(pythongrammarParser.OPEN_BRACE)
+                self.match(Python3Parser.OPEN_BRACE)
                 self.state = 881
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << pythongrammarParser.STRING) | (1 << pythongrammarParser.NUMBER) | (1 << pythongrammarParser.LAMBDA) | (1 << pythongrammarParser.NOT) | (1 << pythongrammarParser.NONE) | (1 << pythongrammarParser.TRUE) | (1 << pythongrammarParser.FALSE) | (1 << pythongrammarParser.AWAIT) | (1 << pythongrammarParser.NAME) | (1 << pythongrammarParser.ELLIPSIS) | (1 << pythongrammarParser.STAR) | (1 << pythongrammarParser.OPEN_PAREN) | (1 << pythongrammarParser.POWER) | (1 << pythongrammarParser.OPEN_BRACK))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (pythongrammarParser.ADD - 66)) | (1 << (pythongrammarParser.MINUS - 66)) | (1 << (pythongrammarParser.NOT_OP - 66)) | (1 << (pythongrammarParser.OPEN_BRACE - 66)))) != 0):
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Python3Parser.STRING) | (1 << Python3Parser.NUMBER) | (1 << Python3Parser.LAMBDA) | (1 << Python3Parser.NOT) | (1 << Python3Parser.NONE) | (1 << Python3Parser.TRUE) | (1 << Python3Parser.FALSE) | (1 << Python3Parser.AWAIT) | (1 << Python3Parser.NAME) | (1 << Python3Parser.ELLIPSIS) | (1 << Python3Parser.STAR) | (1 << Python3Parser.OPEN_PAREN) | (1 << Python3Parser.POWER) | (1 << Python3Parser.OPEN_BRACK))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (Python3Parser.ADD - 66)) | (1 << (Python3Parser.MINUS - 66)) | (1 << (Python3Parser.NOT_OP - 66)) | (1 << (Python3Parser.OPEN_BRACE - 66)))) != 0):
                     self.state = 880
                     self.dictorsetmaker()
 
 
                 self.state = 883
-                self.match(pythongrammarParser.CLOSE_BRACE)
+                self.match(Python3Parser.CLOSE_BRACE)
                 pass
-            elif token in [pythongrammarParser.NAME]:
+            elif token in [Python3Parser.NAME]:
                 self.state = 884
-                self.match(pythongrammarParser.NAME)
+                self.match(Python3Parser.NAME)
                 pass
-            elif token in [pythongrammarParser.NUMBER]:
+            elif token in [Python3Parser.NUMBER]:
                 self.state = 885
-                self.match(pythongrammarParser.NUMBER)
+                self.match(Python3Parser.NUMBER)
                 pass
-            elif token in [pythongrammarParser.STRING]:
+            elif token in [Python3Parser.STRING]:
                 self.state = 887 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while True:
                     self.state = 886
-                    self.match(pythongrammarParser.STRING)
+                    self.match(Python3Parser.STRING)
                     self.state = 889 
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if not (_la==pythongrammarParser.STRING):
+                    if not (_la==Python3Parser.STRING):
                         break
 
                 pass
-            elif token in [pythongrammarParser.ELLIPSIS]:
+            elif token in [Python3Parser.ELLIPSIS]:
                 self.state = 891
-                self.match(pythongrammarParser.ELLIPSIS)
+                self.match(Python3Parser.ELLIPSIS)
                 pass
-            elif token in [pythongrammarParser.NONE]:
+            elif token in [Python3Parser.NONE]:
                 self.state = 892
-                self.match(pythongrammarParser.NONE)
+                self.match(Python3Parser.NONE)
                 pass
-            elif token in [pythongrammarParser.TRUE]:
+            elif token in [Python3Parser.TRUE]:
                 self.state = 893
-                self.match(pythongrammarParser.TRUE)
+                self.match(Python3Parser.TRUE)
                 pass
-            elif token in [pythongrammarParser.FALSE]:
+            elif token in [Python3Parser.FALSE]:
                 self.state = 894
-                self.match(pythongrammarParser.FALSE)
+                self.match(Python3Parser.FALSE)
                 pass
             else:
                 raise NoViableAltException(self)
@@ -6290,30 +6290,30 @@ class pythongrammarParser ( Parser ):
 
         def test(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.TestContext)
+                return self.getTypedRuleContexts(Python3Parser.TestContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.TestContext,i)
+                return self.getTypedRuleContext(Python3Parser.TestContext,i)
 
 
         def star_expr(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.Star_exprContext)
+                return self.getTypedRuleContexts(Python3Parser.Star_exprContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.Star_exprContext,i)
+                return self.getTypedRuleContext(Python3Parser.Star_exprContext,i)
 
 
         def comp_for(self):
-            return self.getTypedRuleContext(pythongrammarParser.Comp_forContext,0)
+            return self.getTypedRuleContext(Python3Parser.Comp_forContext,0)
 
 
         def COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.COMMA)
+                return self.getTokens(Python3Parser.COMMA)
             else:
-                return self.getToken(pythongrammarParser.COMMA, i)
+                return self.getToken(Python3Parser.COMMA, i)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_testlist_comp
+            return Python3Parser.RULE_testlist_comp
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTestlist_comp" ):
@@ -6328,7 +6328,7 @@ class pythongrammarParser ( Parser ):
 
     def testlist_comp(self):
 
-        localctx = pythongrammarParser.Testlist_compContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Testlist_compContext(self, self._ctx, self.state)
         self.enterRule(localctx, 138, self.RULE_testlist_comp)
         self._la = 0 # Token type
         try:
@@ -6336,11 +6336,11 @@ class pythongrammarParser ( Parser ):
             self.state = 899
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [pythongrammarParser.STRING, pythongrammarParser.NUMBER, pythongrammarParser.LAMBDA, pythongrammarParser.NOT, pythongrammarParser.NONE, pythongrammarParser.TRUE, pythongrammarParser.FALSE, pythongrammarParser.AWAIT, pythongrammarParser.NAME, pythongrammarParser.ELLIPSIS, pythongrammarParser.OPEN_PAREN, pythongrammarParser.OPEN_BRACK, pythongrammarParser.ADD, pythongrammarParser.MINUS, pythongrammarParser.NOT_OP, pythongrammarParser.OPEN_BRACE]:
+            if token in [Python3Parser.STRING, Python3Parser.NUMBER, Python3Parser.LAMBDA, Python3Parser.NOT, Python3Parser.NONE, Python3Parser.TRUE, Python3Parser.FALSE, Python3Parser.AWAIT, Python3Parser.NAME, Python3Parser.ELLIPSIS, Python3Parser.OPEN_PAREN, Python3Parser.OPEN_BRACK, Python3Parser.ADD, Python3Parser.MINUS, Python3Parser.NOT_OP, Python3Parser.OPEN_BRACE]:
                 self.state = 897
                 self.test()
                 pass
-            elif token in [pythongrammarParser.STAR]:
+            elif token in [Python3Parser.STAR]:
                 self.state = 898
                 self.star_expr()
                 pass
@@ -6350,26 +6350,26 @@ class pythongrammarParser ( Parser ):
             self.state = 915
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [pythongrammarParser.FOR, pythongrammarParser.ASYNC]:
+            if token in [Python3Parser.FOR, Python3Parser.ASYNC]:
                 self.state = 901
                 self.comp_for()
                 pass
-            elif token in [pythongrammarParser.CLOSE_PAREN, pythongrammarParser.COMMA, pythongrammarParser.CLOSE_BRACK]:
+            elif token in [Python3Parser.CLOSE_PAREN, Python3Parser.COMMA, Python3Parser.CLOSE_BRACK]:
                 self.state = 909
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,125,self._ctx)
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 902
-                        self.match(pythongrammarParser.COMMA)
+                        self.match(Python3Parser.COMMA)
                         self.state = 905
                         self._errHandler.sync(self)
                         token = self._input.LA(1)
-                        if token in [pythongrammarParser.STRING, pythongrammarParser.NUMBER, pythongrammarParser.LAMBDA, pythongrammarParser.NOT, pythongrammarParser.NONE, pythongrammarParser.TRUE, pythongrammarParser.FALSE, pythongrammarParser.AWAIT, pythongrammarParser.NAME, pythongrammarParser.ELLIPSIS, pythongrammarParser.OPEN_PAREN, pythongrammarParser.OPEN_BRACK, pythongrammarParser.ADD, pythongrammarParser.MINUS, pythongrammarParser.NOT_OP, pythongrammarParser.OPEN_BRACE]:
+                        if token in [Python3Parser.STRING, Python3Parser.NUMBER, Python3Parser.LAMBDA, Python3Parser.NOT, Python3Parser.NONE, Python3Parser.TRUE, Python3Parser.FALSE, Python3Parser.AWAIT, Python3Parser.NAME, Python3Parser.ELLIPSIS, Python3Parser.OPEN_PAREN, Python3Parser.OPEN_BRACK, Python3Parser.ADD, Python3Parser.MINUS, Python3Parser.NOT_OP, Python3Parser.OPEN_BRACE]:
                             self.state = 903
                             self.test()
                             pass
-                        elif token in [pythongrammarParser.STAR]:
+                        elif token in [Python3Parser.STAR]:
                             self.state = 904
                             self.star_expr()
                             pass
@@ -6383,9 +6383,9 @@ class pythongrammarParser ( Parser ):
                 self.state = 913
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==pythongrammarParser.COMMA:
+                if _la==Python3Parser.COMMA:
                     self.state = 912
-                    self.match(pythongrammarParser.COMMA)
+                    self.match(Python3Parser.COMMA)
 
 
                 pass
@@ -6408,33 +6408,33 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def OPEN_PAREN(self):
-            return self.getToken(pythongrammarParser.OPEN_PAREN, 0)
+            return self.getToken(Python3Parser.OPEN_PAREN, 0)
 
         def CLOSE_PAREN(self):
-            return self.getToken(pythongrammarParser.CLOSE_PAREN, 0)
+            return self.getToken(Python3Parser.CLOSE_PAREN, 0)
 
         def arglist(self):
-            return self.getTypedRuleContext(pythongrammarParser.ArglistContext,0)
+            return self.getTypedRuleContext(Python3Parser.ArglistContext,0)
 
 
         def OPEN_BRACK(self):
-            return self.getToken(pythongrammarParser.OPEN_BRACK, 0)
+            return self.getToken(Python3Parser.OPEN_BRACK, 0)
 
         def subscriptlist(self):
-            return self.getTypedRuleContext(pythongrammarParser.SubscriptlistContext,0)
+            return self.getTypedRuleContext(Python3Parser.SubscriptlistContext,0)
 
 
         def CLOSE_BRACK(self):
-            return self.getToken(pythongrammarParser.CLOSE_BRACK, 0)
+            return self.getToken(Python3Parser.CLOSE_BRACK, 0)
 
         def DOT(self):
-            return self.getToken(pythongrammarParser.DOT, 0)
+            return self.getToken(Python3Parser.DOT, 0)
 
         def NAME(self):
-            return self.getToken(pythongrammarParser.NAME, 0)
+            return self.getToken(Python3Parser.NAME, 0)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_trailer
+            return Python3Parser.RULE_trailer
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTrailer" ):
@@ -6449,43 +6449,43 @@ class pythongrammarParser ( Parser ):
 
     def trailer(self):
 
-        localctx = pythongrammarParser.TrailerContext(self, self._ctx, self.state)
+        localctx = Python3Parser.TrailerContext(self, self._ctx, self.state)
         self.enterRule(localctx, 140, self.RULE_trailer)
         self._la = 0 # Token type
         try:
             self.state = 928
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [pythongrammarParser.OPEN_PAREN]:
+            if token in [Python3Parser.OPEN_PAREN]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 917
-                self.match(pythongrammarParser.OPEN_PAREN)
+                self.match(Python3Parser.OPEN_PAREN)
                 self.state = 919
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << pythongrammarParser.STRING) | (1 << pythongrammarParser.NUMBER) | (1 << pythongrammarParser.LAMBDA) | (1 << pythongrammarParser.NOT) | (1 << pythongrammarParser.NONE) | (1 << pythongrammarParser.TRUE) | (1 << pythongrammarParser.FALSE) | (1 << pythongrammarParser.AWAIT) | (1 << pythongrammarParser.NAME) | (1 << pythongrammarParser.ELLIPSIS) | (1 << pythongrammarParser.STAR) | (1 << pythongrammarParser.OPEN_PAREN) | (1 << pythongrammarParser.POWER) | (1 << pythongrammarParser.OPEN_BRACK))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (pythongrammarParser.ADD - 66)) | (1 << (pythongrammarParser.MINUS - 66)) | (1 << (pythongrammarParser.NOT_OP - 66)) | (1 << (pythongrammarParser.OPEN_BRACE - 66)))) != 0):
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Python3Parser.STRING) | (1 << Python3Parser.NUMBER) | (1 << Python3Parser.LAMBDA) | (1 << Python3Parser.NOT) | (1 << Python3Parser.NONE) | (1 << Python3Parser.TRUE) | (1 << Python3Parser.FALSE) | (1 << Python3Parser.AWAIT) | (1 << Python3Parser.NAME) | (1 << Python3Parser.ELLIPSIS) | (1 << Python3Parser.STAR) | (1 << Python3Parser.OPEN_PAREN) | (1 << Python3Parser.POWER) | (1 << Python3Parser.OPEN_BRACK))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (Python3Parser.ADD - 66)) | (1 << (Python3Parser.MINUS - 66)) | (1 << (Python3Parser.NOT_OP - 66)) | (1 << (Python3Parser.OPEN_BRACE - 66)))) != 0):
                     self.state = 918
                     self.arglist()
 
 
                 self.state = 921
-                self.match(pythongrammarParser.CLOSE_PAREN)
+                self.match(Python3Parser.CLOSE_PAREN)
                 pass
-            elif token in [pythongrammarParser.OPEN_BRACK]:
+            elif token in [Python3Parser.OPEN_BRACK]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 922
-                self.match(pythongrammarParser.OPEN_BRACK)
+                self.match(Python3Parser.OPEN_BRACK)
                 self.state = 923
                 self.subscriptlist()
                 self.state = 924
-                self.match(pythongrammarParser.CLOSE_BRACK)
+                self.match(Python3Parser.CLOSE_BRACK)
                 pass
-            elif token in [pythongrammarParser.DOT]:
+            elif token in [Python3Parser.DOT]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 926
-                self.match(pythongrammarParser.DOT)
+                self.match(Python3Parser.DOT)
                 self.state = 927
-                self.match(pythongrammarParser.NAME)
+                self.match(Python3Parser.NAME)
                 pass
             else:
                 raise NoViableAltException(self)
@@ -6507,19 +6507,19 @@ class pythongrammarParser ( Parser ):
 
         def subscript(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.SubscriptContext)
+                return self.getTypedRuleContexts(Python3Parser.SubscriptContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.SubscriptContext,i)
+                return self.getTypedRuleContext(Python3Parser.SubscriptContext,i)
 
 
         def COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.COMMA)
+                return self.getTokens(Python3Parser.COMMA)
             else:
-                return self.getToken(pythongrammarParser.COMMA, i)
+                return self.getToken(Python3Parser.COMMA, i)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_subscriptlist
+            return Python3Parser.RULE_subscriptlist
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterSubscriptlist" ):
@@ -6534,7 +6534,7 @@ class pythongrammarParser ( Parser ):
 
     def subscriptlist(self):
 
-        localctx = pythongrammarParser.SubscriptlistContext(self, self._ctx, self.state)
+        localctx = Python3Parser.SubscriptlistContext(self, self._ctx, self.state)
         self.enterRule(localctx, 142, self.RULE_subscriptlist)
         self._la = 0 # Token type
         try:
@@ -6547,7 +6547,7 @@ class pythongrammarParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 931
-                    self.match(pythongrammarParser.COMMA)
+                    self.match(Python3Parser.COMMA)
                     self.state = 932
                     self.subscript() 
                 self.state = 937
@@ -6557,9 +6557,9 @@ class pythongrammarParser ( Parser ):
             self.state = 939
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==pythongrammarParser.COMMA:
+            if _la==Python3Parser.COMMA:
                 self.state = 938
-                self.match(pythongrammarParser.COMMA)
+                self.match(Python3Parser.COMMA)
 
 
         except RecognitionException as re:
@@ -6579,20 +6579,20 @@ class pythongrammarParser ( Parser ):
 
         def test(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.TestContext)
+                return self.getTypedRuleContexts(Python3Parser.TestContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.TestContext,i)
+                return self.getTypedRuleContext(Python3Parser.TestContext,i)
 
 
         def COLON(self):
-            return self.getToken(pythongrammarParser.COLON, 0)
+            return self.getToken(Python3Parser.COLON, 0)
 
         def sliceop(self):
-            return self.getTypedRuleContext(pythongrammarParser.SliceopContext,0)
+            return self.getTypedRuleContext(Python3Parser.SliceopContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_subscript
+            return Python3Parser.RULE_subscript
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterSubscript" ):
@@ -6607,7 +6607,7 @@ class pythongrammarParser ( Parser ):
 
     def subscript(self):
 
-        localctx = pythongrammarParser.SubscriptContext(self, self._ctx, self.state)
+        localctx = Python3Parser.SubscriptContext(self, self._ctx, self.state)
         self.enterRule(localctx, 144, self.RULE_subscript)
         self._la = 0 # Token type
         try:
@@ -6625,17 +6625,17 @@ class pythongrammarParser ( Parser ):
                 self.state = 943
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << pythongrammarParser.STRING) | (1 << pythongrammarParser.NUMBER) | (1 << pythongrammarParser.LAMBDA) | (1 << pythongrammarParser.NOT) | (1 << pythongrammarParser.NONE) | (1 << pythongrammarParser.TRUE) | (1 << pythongrammarParser.FALSE) | (1 << pythongrammarParser.AWAIT) | (1 << pythongrammarParser.NAME) | (1 << pythongrammarParser.ELLIPSIS) | (1 << pythongrammarParser.OPEN_PAREN) | (1 << pythongrammarParser.OPEN_BRACK))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (pythongrammarParser.ADD - 66)) | (1 << (pythongrammarParser.MINUS - 66)) | (1 << (pythongrammarParser.NOT_OP - 66)) | (1 << (pythongrammarParser.OPEN_BRACE - 66)))) != 0):
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Python3Parser.STRING) | (1 << Python3Parser.NUMBER) | (1 << Python3Parser.LAMBDA) | (1 << Python3Parser.NOT) | (1 << Python3Parser.NONE) | (1 << Python3Parser.TRUE) | (1 << Python3Parser.FALSE) | (1 << Python3Parser.AWAIT) | (1 << Python3Parser.NAME) | (1 << Python3Parser.ELLIPSIS) | (1 << Python3Parser.OPEN_PAREN) | (1 << Python3Parser.OPEN_BRACK))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (Python3Parser.ADD - 66)) | (1 << (Python3Parser.MINUS - 66)) | (1 << (Python3Parser.NOT_OP - 66)) | (1 << (Python3Parser.OPEN_BRACE - 66)))) != 0):
                     self.state = 942
                     self.test()
 
 
                 self.state = 945
-                self.match(pythongrammarParser.COLON)
+                self.match(Python3Parser.COLON)
                 self.state = 947
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << pythongrammarParser.STRING) | (1 << pythongrammarParser.NUMBER) | (1 << pythongrammarParser.LAMBDA) | (1 << pythongrammarParser.NOT) | (1 << pythongrammarParser.NONE) | (1 << pythongrammarParser.TRUE) | (1 << pythongrammarParser.FALSE) | (1 << pythongrammarParser.AWAIT) | (1 << pythongrammarParser.NAME) | (1 << pythongrammarParser.ELLIPSIS) | (1 << pythongrammarParser.OPEN_PAREN) | (1 << pythongrammarParser.OPEN_BRACK))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (pythongrammarParser.ADD - 66)) | (1 << (pythongrammarParser.MINUS - 66)) | (1 << (pythongrammarParser.NOT_OP - 66)) | (1 << (pythongrammarParser.OPEN_BRACE - 66)))) != 0):
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Python3Parser.STRING) | (1 << Python3Parser.NUMBER) | (1 << Python3Parser.LAMBDA) | (1 << Python3Parser.NOT) | (1 << Python3Parser.NONE) | (1 << Python3Parser.TRUE) | (1 << Python3Parser.FALSE) | (1 << Python3Parser.AWAIT) | (1 << Python3Parser.NAME) | (1 << Python3Parser.ELLIPSIS) | (1 << Python3Parser.OPEN_PAREN) | (1 << Python3Parser.OPEN_BRACK))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (Python3Parser.ADD - 66)) | (1 << (Python3Parser.MINUS - 66)) | (1 << (Python3Parser.NOT_OP - 66)) | (1 << (Python3Parser.OPEN_BRACE - 66)))) != 0):
                     self.state = 946
                     self.test()
 
@@ -6643,7 +6643,7 @@ class pythongrammarParser ( Parser ):
                 self.state = 950
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==pythongrammarParser.COLON:
+                if _la==Python3Parser.COLON:
                     self.state = 949
                     self.sliceop()
 
@@ -6667,14 +6667,14 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def COLON(self):
-            return self.getToken(pythongrammarParser.COLON, 0)
+            return self.getToken(Python3Parser.COLON, 0)
 
         def test(self):
-            return self.getTypedRuleContext(pythongrammarParser.TestContext,0)
+            return self.getTypedRuleContext(Python3Parser.TestContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_sliceop
+            return Python3Parser.RULE_sliceop
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterSliceop" ):
@@ -6689,17 +6689,17 @@ class pythongrammarParser ( Parser ):
 
     def sliceop(self):
 
-        localctx = pythongrammarParser.SliceopContext(self, self._ctx, self.state)
+        localctx = Python3Parser.SliceopContext(self, self._ctx, self.state)
         self.enterRule(localctx, 146, self.RULE_sliceop)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 954
-            self.match(pythongrammarParser.COLON)
+            self.match(Python3Parser.COLON)
             self.state = 956
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << pythongrammarParser.STRING) | (1 << pythongrammarParser.NUMBER) | (1 << pythongrammarParser.LAMBDA) | (1 << pythongrammarParser.NOT) | (1 << pythongrammarParser.NONE) | (1 << pythongrammarParser.TRUE) | (1 << pythongrammarParser.FALSE) | (1 << pythongrammarParser.AWAIT) | (1 << pythongrammarParser.NAME) | (1 << pythongrammarParser.ELLIPSIS) | (1 << pythongrammarParser.OPEN_PAREN) | (1 << pythongrammarParser.OPEN_BRACK))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (pythongrammarParser.ADD - 66)) | (1 << (pythongrammarParser.MINUS - 66)) | (1 << (pythongrammarParser.NOT_OP - 66)) | (1 << (pythongrammarParser.OPEN_BRACE - 66)))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Python3Parser.STRING) | (1 << Python3Parser.NUMBER) | (1 << Python3Parser.LAMBDA) | (1 << Python3Parser.NOT) | (1 << Python3Parser.NONE) | (1 << Python3Parser.TRUE) | (1 << Python3Parser.FALSE) | (1 << Python3Parser.AWAIT) | (1 << Python3Parser.NAME) | (1 << Python3Parser.ELLIPSIS) | (1 << Python3Parser.OPEN_PAREN) | (1 << Python3Parser.OPEN_BRACK))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (Python3Parser.ADD - 66)) | (1 << (Python3Parser.MINUS - 66)) | (1 << (Python3Parser.NOT_OP - 66)) | (1 << (Python3Parser.OPEN_BRACE - 66)))) != 0):
                 self.state = 955
                 self.test()
 
@@ -6721,26 +6721,26 @@ class pythongrammarParser ( Parser ):
 
         def expr(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.ExprContext)
+                return self.getTypedRuleContexts(Python3Parser.ExprContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.ExprContext,i)
+                return self.getTypedRuleContext(Python3Parser.ExprContext,i)
 
 
         def star_expr(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.Star_exprContext)
+                return self.getTypedRuleContexts(Python3Parser.Star_exprContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.Star_exprContext,i)
+                return self.getTypedRuleContext(Python3Parser.Star_exprContext,i)
 
 
         def COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.COMMA)
+                return self.getTokens(Python3Parser.COMMA)
             else:
-                return self.getToken(pythongrammarParser.COMMA, i)
+                return self.getToken(Python3Parser.COMMA, i)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_exprlist
+            return Python3Parser.RULE_exprlist
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterExprlist" ):
@@ -6755,7 +6755,7 @@ class pythongrammarParser ( Parser ):
 
     def exprlist(self):
 
-        localctx = pythongrammarParser.ExprlistContext(self, self._ctx, self.state)
+        localctx = Python3Parser.ExprlistContext(self, self._ctx, self.state)
         self.enterRule(localctx, 148, self.RULE_exprlist)
         self._la = 0 # Token type
         try:
@@ -6763,11 +6763,11 @@ class pythongrammarParser ( Parser ):
             self.state = 960
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [pythongrammarParser.STRING, pythongrammarParser.NUMBER, pythongrammarParser.NONE, pythongrammarParser.TRUE, pythongrammarParser.FALSE, pythongrammarParser.AWAIT, pythongrammarParser.NAME, pythongrammarParser.ELLIPSIS, pythongrammarParser.OPEN_PAREN, pythongrammarParser.OPEN_BRACK, pythongrammarParser.ADD, pythongrammarParser.MINUS, pythongrammarParser.NOT_OP, pythongrammarParser.OPEN_BRACE]:
+            if token in [Python3Parser.STRING, Python3Parser.NUMBER, Python3Parser.NONE, Python3Parser.TRUE, Python3Parser.FALSE, Python3Parser.AWAIT, Python3Parser.NAME, Python3Parser.ELLIPSIS, Python3Parser.OPEN_PAREN, Python3Parser.OPEN_BRACK, Python3Parser.ADD, Python3Parser.MINUS, Python3Parser.NOT_OP, Python3Parser.OPEN_BRACE]:
                 self.state = 958
                 self.expr()
                 pass
-            elif token in [pythongrammarParser.STAR]:
+            elif token in [Python3Parser.STAR]:
                 self.state = 959
                 self.star_expr()
                 pass
@@ -6780,15 +6780,15 @@ class pythongrammarParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 962
-                    self.match(pythongrammarParser.COMMA)
+                    self.match(Python3Parser.COMMA)
                     self.state = 965
                     self._errHandler.sync(self)
                     token = self._input.LA(1)
-                    if token in [pythongrammarParser.STRING, pythongrammarParser.NUMBER, pythongrammarParser.NONE, pythongrammarParser.TRUE, pythongrammarParser.FALSE, pythongrammarParser.AWAIT, pythongrammarParser.NAME, pythongrammarParser.ELLIPSIS, pythongrammarParser.OPEN_PAREN, pythongrammarParser.OPEN_BRACK, pythongrammarParser.ADD, pythongrammarParser.MINUS, pythongrammarParser.NOT_OP, pythongrammarParser.OPEN_BRACE]:
+                    if token in [Python3Parser.STRING, Python3Parser.NUMBER, Python3Parser.NONE, Python3Parser.TRUE, Python3Parser.FALSE, Python3Parser.AWAIT, Python3Parser.NAME, Python3Parser.ELLIPSIS, Python3Parser.OPEN_PAREN, Python3Parser.OPEN_BRACK, Python3Parser.ADD, Python3Parser.MINUS, Python3Parser.NOT_OP, Python3Parser.OPEN_BRACE]:
                         self.state = 963
                         self.expr()
                         pass
-                    elif token in [pythongrammarParser.STAR]:
+                    elif token in [Python3Parser.STAR]:
                         self.state = 964
                         self.star_expr()
                         pass
@@ -6802,9 +6802,9 @@ class pythongrammarParser ( Parser ):
             self.state = 973
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==pythongrammarParser.COMMA:
+            if _la==Python3Parser.COMMA:
                 self.state = 972
-                self.match(pythongrammarParser.COMMA)
+                self.match(Python3Parser.COMMA)
 
 
         except RecognitionException as re:
@@ -6824,19 +6824,19 @@ class pythongrammarParser ( Parser ):
 
         def test(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.TestContext)
+                return self.getTypedRuleContexts(Python3Parser.TestContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.TestContext,i)
+                return self.getTypedRuleContext(Python3Parser.TestContext,i)
 
 
         def COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.COMMA)
+                return self.getTokens(Python3Parser.COMMA)
             else:
-                return self.getToken(pythongrammarParser.COMMA, i)
+                return self.getToken(Python3Parser.COMMA, i)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_testlist
+            return Python3Parser.RULE_testlist
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTestlist" ):
@@ -6851,7 +6851,7 @@ class pythongrammarParser ( Parser ):
 
     def testlist(self):
 
-        localctx = pythongrammarParser.TestlistContext(self, self._ctx, self.state)
+        localctx = Python3Parser.TestlistContext(self, self._ctx, self.state)
         self.enterRule(localctx, 150, self.RULE_testlist)
         self._la = 0 # Token type
         try:
@@ -6864,7 +6864,7 @@ class pythongrammarParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 976
-                    self.match(pythongrammarParser.COMMA)
+                    self.match(Python3Parser.COMMA)
                     self.state = 977
                     self.test() 
                 self.state = 982
@@ -6874,9 +6874,9 @@ class pythongrammarParser ( Parser ):
             self.state = 984
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==pythongrammarParser.COMMA:
+            if _la==Python3Parser.COMMA:
                 self.state = 983
-                self.match(pythongrammarParser.COMMA)
+                self.match(Python3Parser.COMMA)
 
 
         except RecognitionException as re:
@@ -6896,49 +6896,49 @@ class pythongrammarParser ( Parser ):
 
         def test(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.TestContext)
+                return self.getTypedRuleContexts(Python3Parser.TestContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.TestContext,i)
+                return self.getTypedRuleContext(Python3Parser.TestContext,i)
 
 
         def COLON(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.COLON)
+                return self.getTokens(Python3Parser.COLON)
             else:
-                return self.getToken(pythongrammarParser.COLON, i)
+                return self.getToken(Python3Parser.COLON, i)
 
         def POWER(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.POWER)
+                return self.getTokens(Python3Parser.POWER)
             else:
-                return self.getToken(pythongrammarParser.POWER, i)
+                return self.getToken(Python3Parser.POWER, i)
 
         def expr(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.ExprContext)
+                return self.getTypedRuleContexts(Python3Parser.ExprContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.ExprContext,i)
+                return self.getTypedRuleContext(Python3Parser.ExprContext,i)
 
 
         def comp_for(self):
-            return self.getTypedRuleContext(pythongrammarParser.Comp_forContext,0)
+            return self.getTypedRuleContext(Python3Parser.Comp_forContext,0)
 
 
         def star_expr(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.Star_exprContext)
+                return self.getTypedRuleContexts(Python3Parser.Star_exprContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.Star_exprContext,i)
+                return self.getTypedRuleContext(Python3Parser.Star_exprContext,i)
 
 
         def COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.COMMA)
+                return self.getTokens(Python3Parser.COMMA)
             else:
-                return self.getToken(pythongrammarParser.COMMA, i)
+                return self.getToken(Python3Parser.COMMA, i)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_dictorsetmaker
+            return Python3Parser.RULE_dictorsetmaker
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterDictorsetmaker" ):
@@ -6953,7 +6953,7 @@ class pythongrammarParser ( Parser ):
 
     def dictorsetmaker(self):
 
-        localctx = pythongrammarParser.DictorsetmakerContext(self, self._ctx, self.state)
+        localctx = Python3Parser.DictorsetmakerContext(self, self._ctx, self.state)
         self.enterRule(localctx, 152, self.RULE_dictorsetmaker)
         self._la = 0 # Token type
         try:
@@ -6965,17 +6965,17 @@ class pythongrammarParser ( Parser ):
                 self.state = 992
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
-                if token in [pythongrammarParser.STRING, pythongrammarParser.NUMBER, pythongrammarParser.LAMBDA, pythongrammarParser.NOT, pythongrammarParser.NONE, pythongrammarParser.TRUE, pythongrammarParser.FALSE, pythongrammarParser.AWAIT, pythongrammarParser.NAME, pythongrammarParser.ELLIPSIS, pythongrammarParser.OPEN_PAREN, pythongrammarParser.OPEN_BRACK, pythongrammarParser.ADD, pythongrammarParser.MINUS, pythongrammarParser.NOT_OP, pythongrammarParser.OPEN_BRACE]:
+                if token in [Python3Parser.STRING, Python3Parser.NUMBER, Python3Parser.LAMBDA, Python3Parser.NOT, Python3Parser.NONE, Python3Parser.TRUE, Python3Parser.FALSE, Python3Parser.AWAIT, Python3Parser.NAME, Python3Parser.ELLIPSIS, Python3Parser.OPEN_PAREN, Python3Parser.OPEN_BRACK, Python3Parser.ADD, Python3Parser.MINUS, Python3Parser.NOT_OP, Python3Parser.OPEN_BRACE]:
                     self.state = 986
                     self.test()
                     self.state = 987
-                    self.match(pythongrammarParser.COLON)
+                    self.match(Python3Parser.COLON)
                     self.state = 988
                     self.test()
                     pass
-                elif token in [pythongrammarParser.POWER]:
+                elif token in [Python3Parser.POWER]:
                     self.state = 990
-                    self.match(pythongrammarParser.POWER)
+                    self.match(Python3Parser.POWER)
                     self.state = 991
                     self.expr()
                     pass
@@ -6985,32 +6985,32 @@ class pythongrammarParser ( Parser ):
                 self.state = 1012
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
-                if token in [pythongrammarParser.FOR, pythongrammarParser.ASYNC]:
+                if token in [Python3Parser.FOR, Python3Parser.ASYNC]:
                     self.state = 994
                     self.comp_for()
                     pass
-                elif token in [pythongrammarParser.COMMA, pythongrammarParser.CLOSE_BRACE]:
+                elif token in [Python3Parser.COMMA, Python3Parser.CLOSE_BRACE]:
                     self.state = 1006
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,145,self._ctx)
                     while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                         if _alt==1:
                             self.state = 995
-                            self.match(pythongrammarParser.COMMA)
+                            self.match(Python3Parser.COMMA)
                             self.state = 1002
                             self._errHandler.sync(self)
                             token = self._input.LA(1)
-                            if token in [pythongrammarParser.STRING, pythongrammarParser.NUMBER, pythongrammarParser.LAMBDA, pythongrammarParser.NOT, pythongrammarParser.NONE, pythongrammarParser.TRUE, pythongrammarParser.FALSE, pythongrammarParser.AWAIT, pythongrammarParser.NAME, pythongrammarParser.ELLIPSIS, pythongrammarParser.OPEN_PAREN, pythongrammarParser.OPEN_BRACK, pythongrammarParser.ADD, pythongrammarParser.MINUS, pythongrammarParser.NOT_OP, pythongrammarParser.OPEN_BRACE]:
+                            if token in [Python3Parser.STRING, Python3Parser.NUMBER, Python3Parser.LAMBDA, Python3Parser.NOT, Python3Parser.NONE, Python3Parser.TRUE, Python3Parser.FALSE, Python3Parser.AWAIT, Python3Parser.NAME, Python3Parser.ELLIPSIS, Python3Parser.OPEN_PAREN, Python3Parser.OPEN_BRACK, Python3Parser.ADD, Python3Parser.MINUS, Python3Parser.NOT_OP, Python3Parser.OPEN_BRACE]:
                                 self.state = 996
                                 self.test()
                                 self.state = 997
-                                self.match(pythongrammarParser.COLON)
+                                self.match(Python3Parser.COLON)
                                 self.state = 998
                                 self.test()
                                 pass
-                            elif token in [pythongrammarParser.POWER]:
+                            elif token in [Python3Parser.POWER]:
                                 self.state = 1000
-                                self.match(pythongrammarParser.POWER)
+                                self.match(Python3Parser.POWER)
                                 self.state = 1001
                                 self.expr()
                                 pass
@@ -7024,9 +7024,9 @@ class pythongrammarParser ( Parser ):
                     self.state = 1010
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==pythongrammarParser.COMMA:
+                    if _la==Python3Parser.COMMA:
                         self.state = 1009
-                        self.match(pythongrammarParser.COMMA)
+                        self.match(Python3Parser.COMMA)
 
 
                     pass
@@ -7039,11 +7039,11 @@ class pythongrammarParser ( Parser ):
                 self.state = 1016
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
-                if token in [pythongrammarParser.STRING, pythongrammarParser.NUMBER, pythongrammarParser.LAMBDA, pythongrammarParser.NOT, pythongrammarParser.NONE, pythongrammarParser.TRUE, pythongrammarParser.FALSE, pythongrammarParser.AWAIT, pythongrammarParser.NAME, pythongrammarParser.ELLIPSIS, pythongrammarParser.OPEN_PAREN, pythongrammarParser.OPEN_BRACK, pythongrammarParser.ADD, pythongrammarParser.MINUS, pythongrammarParser.NOT_OP, pythongrammarParser.OPEN_BRACE]:
+                if token in [Python3Parser.STRING, Python3Parser.NUMBER, Python3Parser.LAMBDA, Python3Parser.NOT, Python3Parser.NONE, Python3Parser.TRUE, Python3Parser.FALSE, Python3Parser.AWAIT, Python3Parser.NAME, Python3Parser.ELLIPSIS, Python3Parser.OPEN_PAREN, Python3Parser.OPEN_BRACK, Python3Parser.ADD, Python3Parser.MINUS, Python3Parser.NOT_OP, Python3Parser.OPEN_BRACE]:
                     self.state = 1014
                     self.test()
                     pass
-                elif token in [pythongrammarParser.STAR]:
+                elif token in [Python3Parser.STAR]:
                     self.state = 1015
                     self.star_expr()
                     pass
@@ -7053,26 +7053,26 @@ class pythongrammarParser ( Parser ):
                 self.state = 1032
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
-                if token in [pythongrammarParser.FOR, pythongrammarParser.ASYNC]:
+                if token in [Python3Parser.FOR, Python3Parser.ASYNC]:
                     self.state = 1018
                     self.comp_for()
                     pass
-                elif token in [pythongrammarParser.COMMA, pythongrammarParser.CLOSE_BRACE]:
+                elif token in [Python3Parser.COMMA, Python3Parser.CLOSE_BRACE]:
                     self.state = 1026
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,150,self._ctx)
                     while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                         if _alt==1:
                             self.state = 1019
-                            self.match(pythongrammarParser.COMMA)
+                            self.match(Python3Parser.COMMA)
                             self.state = 1022
                             self._errHandler.sync(self)
                             token = self._input.LA(1)
-                            if token in [pythongrammarParser.STRING, pythongrammarParser.NUMBER, pythongrammarParser.LAMBDA, pythongrammarParser.NOT, pythongrammarParser.NONE, pythongrammarParser.TRUE, pythongrammarParser.FALSE, pythongrammarParser.AWAIT, pythongrammarParser.NAME, pythongrammarParser.ELLIPSIS, pythongrammarParser.OPEN_PAREN, pythongrammarParser.OPEN_BRACK, pythongrammarParser.ADD, pythongrammarParser.MINUS, pythongrammarParser.NOT_OP, pythongrammarParser.OPEN_BRACE]:
+                            if token in [Python3Parser.STRING, Python3Parser.NUMBER, Python3Parser.LAMBDA, Python3Parser.NOT, Python3Parser.NONE, Python3Parser.TRUE, Python3Parser.FALSE, Python3Parser.AWAIT, Python3Parser.NAME, Python3Parser.ELLIPSIS, Python3Parser.OPEN_PAREN, Python3Parser.OPEN_BRACK, Python3Parser.ADD, Python3Parser.MINUS, Python3Parser.NOT_OP, Python3Parser.OPEN_BRACE]:
                                 self.state = 1020
                                 self.test()
                                 pass
-                            elif token in [pythongrammarParser.STAR]:
+                            elif token in [Python3Parser.STAR]:
                                 self.state = 1021
                                 self.star_expr()
                                 pass
@@ -7086,9 +7086,9 @@ class pythongrammarParser ( Parser ):
                     self.state = 1030
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==pythongrammarParser.COMMA:
+                    if _la==Python3Parser.COMMA:
                         self.state = 1029
-                        self.match(pythongrammarParser.COMMA)
+                        self.match(Python3Parser.COMMA)
 
 
                     pass
@@ -7114,30 +7114,30 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def CLASS(self):
-            return self.getToken(pythongrammarParser.CLASS, 0)
+            return self.getToken(Python3Parser.CLASS, 0)
 
         def NAME(self):
-            return self.getToken(pythongrammarParser.NAME, 0)
+            return self.getToken(Python3Parser.NAME, 0)
 
         def COLON(self):
-            return self.getToken(pythongrammarParser.COLON, 0)
+            return self.getToken(Python3Parser.COLON, 0)
 
         def suite(self):
-            return self.getTypedRuleContext(pythongrammarParser.SuiteContext,0)
+            return self.getTypedRuleContext(Python3Parser.SuiteContext,0)
 
 
         def OPEN_PAREN(self):
-            return self.getToken(pythongrammarParser.OPEN_PAREN, 0)
+            return self.getToken(Python3Parser.OPEN_PAREN, 0)
 
         def CLOSE_PAREN(self):
-            return self.getToken(pythongrammarParser.CLOSE_PAREN, 0)
+            return self.getToken(Python3Parser.CLOSE_PAREN, 0)
 
         def arglist(self):
-            return self.getTypedRuleContext(pythongrammarParser.ArglistContext,0)
+            return self.getTypedRuleContext(Python3Parser.ArglistContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_classdef
+            return Python3Parser.RULE_classdef
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterClassdef" ):
@@ -7152,35 +7152,35 @@ class pythongrammarParser ( Parser ):
 
     def classdef(self):
 
-        localctx = pythongrammarParser.ClassdefContext(self, self._ctx, self.state)
+        localctx = Python3Parser.ClassdefContext(self, self._ctx, self.state)
         self.enterRule(localctx, 154, self.RULE_classdef)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1036
-            self.match(pythongrammarParser.CLASS)
+            self.match(Python3Parser.CLASS)
             self.state = 1037
-            self.match(pythongrammarParser.NAME)
+            self.match(Python3Parser.NAME)
             self.state = 1043
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==pythongrammarParser.OPEN_PAREN:
+            if _la==Python3Parser.OPEN_PAREN:
                 self.state = 1038
-                self.match(pythongrammarParser.OPEN_PAREN)
+                self.match(Python3Parser.OPEN_PAREN)
                 self.state = 1040
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << pythongrammarParser.STRING) | (1 << pythongrammarParser.NUMBER) | (1 << pythongrammarParser.LAMBDA) | (1 << pythongrammarParser.NOT) | (1 << pythongrammarParser.NONE) | (1 << pythongrammarParser.TRUE) | (1 << pythongrammarParser.FALSE) | (1 << pythongrammarParser.AWAIT) | (1 << pythongrammarParser.NAME) | (1 << pythongrammarParser.ELLIPSIS) | (1 << pythongrammarParser.STAR) | (1 << pythongrammarParser.OPEN_PAREN) | (1 << pythongrammarParser.POWER) | (1 << pythongrammarParser.OPEN_BRACK))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (pythongrammarParser.ADD - 66)) | (1 << (pythongrammarParser.MINUS - 66)) | (1 << (pythongrammarParser.NOT_OP - 66)) | (1 << (pythongrammarParser.OPEN_BRACE - 66)))) != 0):
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Python3Parser.STRING) | (1 << Python3Parser.NUMBER) | (1 << Python3Parser.LAMBDA) | (1 << Python3Parser.NOT) | (1 << Python3Parser.NONE) | (1 << Python3Parser.TRUE) | (1 << Python3Parser.FALSE) | (1 << Python3Parser.AWAIT) | (1 << Python3Parser.NAME) | (1 << Python3Parser.ELLIPSIS) | (1 << Python3Parser.STAR) | (1 << Python3Parser.OPEN_PAREN) | (1 << Python3Parser.POWER) | (1 << Python3Parser.OPEN_BRACK))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (Python3Parser.ADD - 66)) | (1 << (Python3Parser.MINUS - 66)) | (1 << (Python3Parser.NOT_OP - 66)) | (1 << (Python3Parser.OPEN_BRACE - 66)))) != 0):
                     self.state = 1039
                     self.arglist()
 
 
                 self.state = 1042
-                self.match(pythongrammarParser.CLOSE_PAREN)
+                self.match(Python3Parser.CLOSE_PAREN)
 
 
             self.state = 1045
-            self.match(pythongrammarParser.COLON)
+            self.match(Python3Parser.COLON)
             self.state = 1046
             self.suite()
         except RecognitionException as re:
@@ -7200,19 +7200,19 @@ class pythongrammarParser ( Parser ):
 
         def argument(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.ArgumentContext)
+                return self.getTypedRuleContexts(Python3Parser.ArgumentContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.ArgumentContext,i)
+                return self.getTypedRuleContext(Python3Parser.ArgumentContext,i)
 
 
         def COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(pythongrammarParser.COMMA)
+                return self.getTokens(Python3Parser.COMMA)
             else:
-                return self.getToken(pythongrammarParser.COMMA, i)
+                return self.getToken(Python3Parser.COMMA, i)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_arglist
+            return Python3Parser.RULE_arglist
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterArglist" ):
@@ -7227,7 +7227,7 @@ class pythongrammarParser ( Parser ):
 
     def arglist(self):
 
-        localctx = pythongrammarParser.ArglistContext(self, self._ctx, self.state)
+        localctx = Python3Parser.ArglistContext(self, self._ctx, self.state)
         self.enterRule(localctx, 156, self.RULE_arglist)
         self._la = 0 # Token type
         try:
@@ -7240,7 +7240,7 @@ class pythongrammarParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 1049
-                    self.match(pythongrammarParser.COMMA)
+                    self.match(Python3Parser.COMMA)
                     self.state = 1050
                     self.argument() 
                 self.state = 1055
@@ -7250,9 +7250,9 @@ class pythongrammarParser ( Parser ):
             self.state = 1057
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==pythongrammarParser.COMMA:
+            if _la==Python3Parser.COMMA:
                 self.state = 1056
-                self.match(pythongrammarParser.COMMA)
+                self.match(Python3Parser.COMMA)
 
 
         except RecognitionException as re:
@@ -7272,26 +7272,26 @@ class pythongrammarParser ( Parser ):
 
         def test(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(pythongrammarParser.TestContext)
+                return self.getTypedRuleContexts(Python3Parser.TestContext)
             else:
-                return self.getTypedRuleContext(pythongrammarParser.TestContext,i)
+                return self.getTypedRuleContext(Python3Parser.TestContext,i)
 
 
         def ASSIGN(self):
-            return self.getToken(pythongrammarParser.ASSIGN, 0)
+            return self.getToken(Python3Parser.ASSIGN, 0)
 
         def POWER(self):
-            return self.getToken(pythongrammarParser.POWER, 0)
+            return self.getToken(Python3Parser.POWER, 0)
 
         def STAR(self):
-            return self.getToken(pythongrammarParser.STAR, 0)
+            return self.getToken(Python3Parser.STAR, 0)
 
         def comp_for(self):
-            return self.getTypedRuleContext(pythongrammarParser.Comp_forContext,0)
+            return self.getTypedRuleContext(Python3Parser.Comp_forContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_argument
+            return Python3Parser.RULE_argument
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterArgument" ):
@@ -7306,7 +7306,7 @@ class pythongrammarParser ( Parser ):
 
     def argument(self):
 
-        localctx = pythongrammarParser.ArgumentContext(self, self._ctx, self.state)
+        localctx = Python3Parser.ArgumentContext(self, self._ctx, self.state)
         self.enterRule(localctx, 158, self.RULE_argument)
         self._la = 0 # Token type
         try:
@@ -7320,7 +7320,7 @@ class pythongrammarParser ( Parser ):
                 self.state = 1061
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==pythongrammarParser.FOR or _la==pythongrammarParser.ASYNC:
+                if _la==Python3Parser.FOR or _la==Python3Parser.ASYNC:
                     self.state = 1060
                     self.comp_for()
 
@@ -7331,21 +7331,21 @@ class pythongrammarParser ( Parser ):
                 self.state = 1063
                 self.test()
                 self.state = 1064
-                self.match(pythongrammarParser.ASSIGN)
+                self.match(Python3Parser.ASSIGN)
                 self.state = 1065
                 self.test()
                 pass
 
             elif la_ == 3:
                 self.state = 1067
-                self.match(pythongrammarParser.POWER)
+                self.match(Python3Parser.POWER)
                 self.state = 1068
                 self.test()
                 pass
 
             elif la_ == 4:
                 self.state = 1069
-                self.match(pythongrammarParser.STAR)
+                self.match(Python3Parser.STAR)
                 self.state = 1070
                 self.test()
                 pass
@@ -7367,15 +7367,15 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def comp_for(self):
-            return self.getTypedRuleContext(pythongrammarParser.Comp_forContext,0)
+            return self.getTypedRuleContext(Python3Parser.Comp_forContext,0)
 
 
         def comp_if(self):
-            return self.getTypedRuleContext(pythongrammarParser.Comp_ifContext,0)
+            return self.getTypedRuleContext(Python3Parser.Comp_ifContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_comp_iter
+            return Python3Parser.RULE_comp_iter
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterComp_iter" ):
@@ -7390,18 +7390,18 @@ class pythongrammarParser ( Parser ):
 
     def comp_iter(self):
 
-        localctx = pythongrammarParser.Comp_iterContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Comp_iterContext(self, self._ctx, self.state)
         self.enterRule(localctx, 160, self.RULE_comp_iter)
         try:
             self.state = 1075
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [pythongrammarParser.FOR, pythongrammarParser.ASYNC]:
+            if token in [Python3Parser.FOR, Python3Parser.ASYNC]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1073
                 self.comp_for()
                 pass
-            elif token in [pythongrammarParser.IF]:
+            elif token in [Python3Parser.IF]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1074
                 self.comp_if()
@@ -7425,28 +7425,28 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def FOR(self):
-            return self.getToken(pythongrammarParser.FOR, 0)
+            return self.getToken(Python3Parser.FOR, 0)
 
         def exprlist(self):
-            return self.getTypedRuleContext(pythongrammarParser.ExprlistContext,0)
+            return self.getTypedRuleContext(Python3Parser.ExprlistContext,0)
 
 
         def IN(self):
-            return self.getToken(pythongrammarParser.IN, 0)
+            return self.getToken(Python3Parser.IN, 0)
 
         def or_test(self):
-            return self.getTypedRuleContext(pythongrammarParser.Or_testContext,0)
+            return self.getTypedRuleContext(Python3Parser.Or_testContext,0)
 
 
         def ASYNC(self):
-            return self.getToken(pythongrammarParser.ASYNC, 0)
+            return self.getToken(Python3Parser.ASYNC, 0)
 
         def comp_iter(self):
-            return self.getTypedRuleContext(pythongrammarParser.Comp_iterContext,0)
+            return self.getTypedRuleContext(Python3Parser.Comp_iterContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_comp_for
+            return Python3Parser.RULE_comp_for
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterComp_for" ):
@@ -7461,7 +7461,7 @@ class pythongrammarParser ( Parser ):
 
     def comp_for(self):
 
-        localctx = pythongrammarParser.Comp_forContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Comp_forContext(self, self._ctx, self.state)
         self.enterRule(localctx, 162, self.RULE_comp_for)
         self._la = 0 # Token type
         try:
@@ -7469,23 +7469,23 @@ class pythongrammarParser ( Parser ):
             self.state = 1078
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==pythongrammarParser.ASYNC:
+            if _la==Python3Parser.ASYNC:
                 self.state = 1077
-                self.match(pythongrammarParser.ASYNC)
+                self.match(Python3Parser.ASYNC)
 
 
             self.state = 1080
-            self.match(pythongrammarParser.FOR)
+            self.match(Python3Parser.FOR)
             self.state = 1081
             self.exprlist()
             self.state = 1082
-            self.match(pythongrammarParser.IN)
+            self.match(Python3Parser.IN)
             self.state = 1083
             self.or_test()
             self.state = 1085
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << pythongrammarParser.IF) | (1 << pythongrammarParser.FOR) | (1 << pythongrammarParser.ASYNC))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Python3Parser.IF) | (1 << Python3Parser.FOR) | (1 << Python3Parser.ASYNC))) != 0):
                 self.state = 1084
                 self.comp_iter()
 
@@ -7506,18 +7506,18 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def IF(self):
-            return self.getToken(pythongrammarParser.IF, 0)
+            return self.getToken(Python3Parser.IF, 0)
 
         def test_nocond(self):
-            return self.getTypedRuleContext(pythongrammarParser.Test_nocondContext,0)
+            return self.getTypedRuleContext(Python3Parser.Test_nocondContext,0)
 
 
         def comp_iter(self):
-            return self.getTypedRuleContext(pythongrammarParser.Comp_iterContext,0)
+            return self.getTypedRuleContext(Python3Parser.Comp_iterContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_comp_if
+            return Python3Parser.RULE_comp_if
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterComp_if" ):
@@ -7532,19 +7532,19 @@ class pythongrammarParser ( Parser ):
 
     def comp_if(self):
 
-        localctx = pythongrammarParser.Comp_ifContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Comp_ifContext(self, self._ctx, self.state)
         self.enterRule(localctx, 164, self.RULE_comp_if)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1087
-            self.match(pythongrammarParser.IF)
+            self.match(Python3Parser.IF)
             self.state = 1088
             self.test_nocond()
             self.state = 1090
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << pythongrammarParser.IF) | (1 << pythongrammarParser.FOR) | (1 << pythongrammarParser.ASYNC))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Python3Parser.IF) | (1 << Python3Parser.FOR) | (1 << Python3Parser.ASYNC))) != 0):
                 self.state = 1089
                 self.comp_iter()
 
@@ -7565,10 +7565,10 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def NAME(self):
-            return self.getToken(pythongrammarParser.NAME, 0)
+            return self.getToken(Python3Parser.NAME, 0)
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_encoding_decl
+            return Python3Parser.RULE_encoding_decl
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterEncoding_decl" ):
@@ -7583,12 +7583,12 @@ class pythongrammarParser ( Parser ):
 
     def encoding_decl(self):
 
-        localctx = pythongrammarParser.Encoding_declContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Encoding_declContext(self, self._ctx, self.state)
         self.enterRule(localctx, 166, self.RULE_encoding_decl)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1092
-            self.match(pythongrammarParser.NAME)
+            self.match(Python3Parser.NAME)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -7605,14 +7605,14 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def YIELD(self):
-            return self.getToken(pythongrammarParser.YIELD, 0)
+            return self.getToken(Python3Parser.YIELD, 0)
 
         def yield_arg(self):
-            return self.getTypedRuleContext(pythongrammarParser.Yield_argContext,0)
+            return self.getTypedRuleContext(Python3Parser.Yield_argContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_yield_expr
+            return Python3Parser.RULE_yield_expr
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterYield_expr" ):
@@ -7627,17 +7627,17 @@ class pythongrammarParser ( Parser ):
 
     def yield_expr(self):
 
-        localctx = pythongrammarParser.Yield_exprContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Yield_exprContext(self, self._ctx, self.state)
         self.enterRule(localctx, 168, self.RULE_yield_expr)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1094
-            self.match(pythongrammarParser.YIELD)
+            self.match(Python3Parser.YIELD)
             self.state = 1096
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << pythongrammarParser.STRING) | (1 << pythongrammarParser.NUMBER) | (1 << pythongrammarParser.FROM) | (1 << pythongrammarParser.LAMBDA) | (1 << pythongrammarParser.NOT) | (1 << pythongrammarParser.NONE) | (1 << pythongrammarParser.TRUE) | (1 << pythongrammarParser.FALSE) | (1 << pythongrammarParser.AWAIT) | (1 << pythongrammarParser.NAME) | (1 << pythongrammarParser.ELLIPSIS) | (1 << pythongrammarParser.OPEN_PAREN) | (1 << pythongrammarParser.OPEN_BRACK))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (pythongrammarParser.ADD - 66)) | (1 << (pythongrammarParser.MINUS - 66)) | (1 << (pythongrammarParser.NOT_OP - 66)) | (1 << (pythongrammarParser.OPEN_BRACE - 66)))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Python3Parser.STRING) | (1 << Python3Parser.NUMBER) | (1 << Python3Parser.FROM) | (1 << Python3Parser.LAMBDA) | (1 << Python3Parser.NOT) | (1 << Python3Parser.NONE) | (1 << Python3Parser.TRUE) | (1 << Python3Parser.FALSE) | (1 << Python3Parser.AWAIT) | (1 << Python3Parser.NAME) | (1 << Python3Parser.ELLIPSIS) | (1 << Python3Parser.OPEN_PAREN) | (1 << Python3Parser.OPEN_BRACK))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (Python3Parser.ADD - 66)) | (1 << (Python3Parser.MINUS - 66)) | (1 << (Python3Parser.NOT_OP - 66)) | (1 << (Python3Parser.OPEN_BRACE - 66)))) != 0):
                 self.state = 1095
                 self.yield_arg()
 
@@ -7658,18 +7658,18 @@ class pythongrammarParser ( Parser ):
             self.parser = parser
 
         def FROM(self):
-            return self.getToken(pythongrammarParser.FROM, 0)
+            return self.getToken(Python3Parser.FROM, 0)
 
         def test(self):
-            return self.getTypedRuleContext(pythongrammarParser.TestContext,0)
+            return self.getTypedRuleContext(Python3Parser.TestContext,0)
 
 
         def testlist(self):
-            return self.getTypedRuleContext(pythongrammarParser.TestlistContext,0)
+            return self.getTypedRuleContext(Python3Parser.TestlistContext,0)
 
 
         def getRuleIndex(self):
-            return pythongrammarParser.RULE_yield_arg
+            return Python3Parser.RULE_yield_arg
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterYield_arg" ):
@@ -7684,20 +7684,20 @@ class pythongrammarParser ( Parser ):
 
     def yield_arg(self):
 
-        localctx = pythongrammarParser.Yield_argContext(self, self._ctx, self.state)
+        localctx = Python3Parser.Yield_argContext(self, self._ctx, self.state)
         self.enterRule(localctx, 170, self.RULE_yield_arg)
         try:
             self.state = 1101
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [pythongrammarParser.FROM]:
+            if token in [Python3Parser.FROM]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1098
-                self.match(pythongrammarParser.FROM)
+                self.match(Python3Parser.FROM)
                 self.state = 1099
                 self.test()
                 pass
-            elif token in [pythongrammarParser.STRING, pythongrammarParser.NUMBER, pythongrammarParser.LAMBDA, pythongrammarParser.NOT, pythongrammarParser.NONE, pythongrammarParser.TRUE, pythongrammarParser.FALSE, pythongrammarParser.AWAIT, pythongrammarParser.NAME, pythongrammarParser.ELLIPSIS, pythongrammarParser.OPEN_PAREN, pythongrammarParser.OPEN_BRACK, pythongrammarParser.ADD, pythongrammarParser.MINUS, pythongrammarParser.NOT_OP, pythongrammarParser.OPEN_BRACE]:
+            elif token in [Python3Parser.STRING, Python3Parser.NUMBER, Python3Parser.LAMBDA, Python3Parser.NOT, Python3Parser.NONE, Python3Parser.TRUE, Python3Parser.FALSE, Python3Parser.AWAIT, Python3Parser.NAME, Python3Parser.ELLIPSIS, Python3Parser.OPEN_PAREN, Python3Parser.OPEN_BRACK, Python3Parser.ADD, Python3Parser.MINUS, Python3Parser.NOT_OP, Python3Parser.OPEN_BRACE]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1100
                 self.testlist()

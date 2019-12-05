@@ -1,15 +1,5 @@
 // Generated from Python3.g4 by ANTLR 4.7.2
 
-from antlr4.Token import CommonToken
-import re
-import importlib
-
-# Allow languages to extend the lexer and parser, by loading the parser dynamically
-module_path = __name__[:-5]
-language_name = __name__.split('.')[-1]
-language_name = language_name[:-5]  # Remove Lexer from name
-LanguageParser = getattr(importlib.import_module('{}Parser'.format(module_path)), '{}Parser'.format(language_name))
-
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -27,21 +17,21 @@ public class Python3Lexer extends Lexer {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		STRING=1, NUMBER=2, INTEGER=3, DEF=4, RETURN=5, RAISE=6, FROM=7, IMPORT=8, 
-		AS=9, GLOBAL=10, NONLOCAL=11, ASSERT=12, IF=13, ELIF=14, ELSE=15, WHILE=16, 
-		FOR=17, IN=18, TRY=19, FINALLY=20, WITH=21, EXCEPT=22, LAMBDA=23, OR=24, 
-		AND=25, NOT=26, IS=27, NONE=28, TRUE=29, FALSE=30, CLASS=31, YIELD=32, 
-		DEL=33, PASS=34, CONTINUE=35, BREAK=36, ASYNC=37, AWAIT=38, NEWLINE=39, 
-		NAME=40, STRING_LITERAL=41, BYTES_LITERAL=42, DECIMAL_INTEGER=43, OCT_INTEGER=44, 
-		HEX_INTEGER=45, BIN_INTEGER=46, FLOAT_NUMBER=47, IMAG_NUMBER=48, DOT=49, 
-		ELLIPSIS=50, STAR=51, OPEN_PAREN=52, CLOSE_PAREN=53, COMMA=54, COLON=55, 
-		SEMI_COLON=56, POWER=57, ASSIGN=58, OPEN_BRACK=59, CLOSE_BRACK=60, OR_OP=61, 
-		XOR=62, AND_OP=63, LEFT_SHIFT=64, RIGHT_SHIFT=65, ADD=66, MINUS=67, DIV=68, 
-		MOD=69, IDIV=70, NOT_OP=71, OPEN_BRACE=72, CLOSE_BRACE=73, LESS_THAN=74, 
-		GREATER_THAN=75, EQUALS=76, GT_EQ=77, LT_EQ=78, NOT_EQ_1=79, NOT_EQ_2=80, 
-		AT=81, ARROW=82, ADD_ASSIGN=83, SUB_ASSIGN=84, MULT_ASSIGN=85, AT_ASSIGN=86, 
-		DIV_ASSIGN=87, MOD_ASSIGN=88, AND_ASSIGN=89, OR_ASSIGN=90, XOR_ASSIGN=91, 
-		LEFT_SHIFT_ASSIGN=92, RIGHT_SHIFT_ASSIGN=93, POWER_ASSIGN=94, IDIV_ASSIGN=95, 
+		STRING=1, NUMBER=2, INTEGER=3, DEF=4, RETURN=5, RAISE=6, FROM=7, IMPORT=8,
+		AS=9, GLOBAL=10, NONLOCAL=11, ASSERT=12, IF=13, ELIF=14, ELSE=15, WHILE=16,
+		FOR=17, IN=18, TRY=19, FINALLY=20, WITH=21, EXCEPT=22, LAMBDA=23, OR=24,
+		AND=25, NOT=26, IS=27, NONE=28, TRUE=29, FALSE=30, CLASS=31, YIELD=32,
+		DEL=33, PASS=34, CONTINUE=35, BREAK=36, ASYNC=37, AWAIT=38, NEWLINE=39,
+		NAME=40, STRING_LITERAL=41, BYTES_LITERAL=42, DECIMAL_INTEGER=43, OCT_INTEGER=44,
+		HEX_INTEGER=45, BIN_INTEGER=46, FLOAT_NUMBER=47, IMAG_NUMBER=48, DOT=49,
+		ELLIPSIS=50, STAR=51, OPEN_PAREN=52, CLOSE_PAREN=53, COMMA=54, COLON=55,
+		SEMI_COLON=56, POWER=57, ASSIGN=58, OPEN_BRACK=59, CLOSE_BRACK=60, OR_OP=61,
+		XOR=62, AND_OP=63, LEFT_SHIFT=64, RIGHT_SHIFT=65, ADD=66, MINUS=67, DIV=68,
+		MOD=69, IDIV=70, NOT_OP=71, OPEN_BRACE=72, CLOSE_BRACE=73, LESS_THAN=74,
+		GREATER_THAN=75, EQUALS=76, GT_EQ=77, LT_EQ=78, NOT_EQ_1=79, NOT_EQ_2=80,
+		AT=81, ARROW=82, ADD_ASSIGN=83, SUB_ASSIGN=84, MULT_ASSIGN=85, AT_ASSIGN=86,
+		DIV_ASSIGN=87, MOD_ASSIGN=88, AND_ASSIGN=89, OR_ASSIGN=90, XOR_ASSIGN=91,
+		LEFT_SHIFT_ASSIGN=92, RIGHT_SHIFT_ASSIGN=93, POWER_ASSIGN=94, IDIV_ASSIGN=95,
 		SKIP_=96, UNKNOWN_CHAR=97;
 	public static String[] channelNames = {
 		"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
@@ -53,26 +43,26 @@ public class Python3Lexer extends Lexer {
 
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"STRING", "NUMBER", "INTEGER", "DEF", "RETURN", "RAISE", "FROM", "IMPORT", 
-			"AS", "GLOBAL", "NONLOCAL", "ASSERT", "IF", "ELIF", "ELSE", "WHILE", 
-			"FOR", "IN", "TRY", "FINALLY", "WITH", "EXCEPT", "LAMBDA", "OR", "AND", 
-			"NOT", "IS", "NONE", "TRUE", "FALSE", "CLASS", "YIELD", "DEL", "PASS", 
-			"CONTINUE", "BREAK", "ASYNC", "AWAIT", "NEWLINE", "NAME", "STRING_LITERAL", 
-			"BYTES_LITERAL", "DECIMAL_INTEGER", "OCT_INTEGER", "HEX_INTEGER", "BIN_INTEGER", 
-			"FLOAT_NUMBER", "IMAG_NUMBER", "DOT", "ELLIPSIS", "STAR", "OPEN_PAREN", 
-			"CLOSE_PAREN", "COMMA", "COLON", "SEMI_COLON", "POWER", "ASSIGN", "OPEN_BRACK", 
-			"CLOSE_BRACK", "OR_OP", "XOR", "AND_OP", "LEFT_SHIFT", "RIGHT_SHIFT", 
-			"ADD", "MINUS", "DIV", "MOD", "IDIV", "NOT_OP", "OPEN_BRACE", "CLOSE_BRACE", 
-			"LESS_THAN", "GREATER_THAN", "EQUALS", "GT_EQ", "LT_EQ", "NOT_EQ_1", 
-			"NOT_EQ_2", "AT", "ARROW", "ADD_ASSIGN", "SUB_ASSIGN", "MULT_ASSIGN", 
-			"AT_ASSIGN", "DIV_ASSIGN", "MOD_ASSIGN", "AND_ASSIGN", "OR_ASSIGN", "XOR_ASSIGN", 
-			"LEFT_SHIFT_ASSIGN", "RIGHT_SHIFT_ASSIGN", "POWER_ASSIGN", "IDIV_ASSIGN", 
-			"SKIP_", "UNKNOWN_CHAR", "SHORT_STRING", "LONG_STRING", "LONG_STRING_ITEM", 
-			"LONG_STRING_CHAR", "STRING_ESCAPE_SEQ", "NON_ZERO_DIGIT", "DIGIT", "OCT_DIGIT", 
-			"HEX_DIGIT", "BIN_DIGIT", "POINT_FLOAT", "EXPONENT_FLOAT", "INT_PART", 
-			"FRACTION", "EXPONENT", "SHORT_BYTES", "LONG_BYTES", "LONG_BYTES_ITEM", 
-			"SHORT_BYTES_CHAR_NO_SINGLE_QUOTE", "SHORT_BYTES_CHAR_NO_DOUBLE_QUOTE", 
-			"LONG_BYTES_CHAR", "BYTES_ESCAPE_SEQ", "SPACES", "COMMENT", "LINE_JOINING", 
+			"STRING", "NUMBER", "INTEGER", "DEF", "RETURN", "RAISE", "FROM", "IMPORT",
+			"AS", "GLOBAL", "NONLOCAL", "ASSERT", "IF", "ELIF", "ELSE", "WHILE",
+			"FOR", "IN", "TRY", "FINALLY", "WITH", "EXCEPT", "LAMBDA", "OR", "AND",
+			"NOT", "IS", "NONE", "TRUE", "FALSE", "CLASS", "YIELD", "DEL", "PASS",
+			"CONTINUE", "BREAK", "ASYNC", "AWAIT", "NEWLINE", "NAME", "STRING_LITERAL",
+			"BYTES_LITERAL", "DECIMAL_INTEGER", "OCT_INTEGER", "HEX_INTEGER", "BIN_INTEGER",
+			"FLOAT_NUMBER", "IMAG_NUMBER", "DOT", "ELLIPSIS", "STAR", "OPEN_PAREN",
+			"CLOSE_PAREN", "COMMA", "COLON", "SEMI_COLON", "POWER", "ASSIGN", "OPEN_BRACK",
+			"CLOSE_BRACK", "OR_OP", "XOR", "AND_OP", "LEFT_SHIFT", "RIGHT_SHIFT",
+			"ADD", "MINUS", "DIV", "MOD", "IDIV", "NOT_OP", "OPEN_BRACE", "CLOSE_BRACE",
+			"LESS_THAN", "GREATER_THAN", "EQUALS", "GT_EQ", "LT_EQ", "NOT_EQ_1",
+			"NOT_EQ_2", "AT", "ARROW", "ADD_ASSIGN", "SUB_ASSIGN", "MULT_ASSIGN",
+			"AT_ASSIGN", "DIV_ASSIGN", "MOD_ASSIGN", "AND_ASSIGN", "OR_ASSIGN", "XOR_ASSIGN",
+			"LEFT_SHIFT_ASSIGN", "RIGHT_SHIFT_ASSIGN", "POWER_ASSIGN", "IDIV_ASSIGN",
+			"SKIP_", "UNKNOWN_CHAR", "SHORT_STRING", "LONG_STRING", "LONG_STRING_ITEM",
+			"LONG_STRING_CHAR", "STRING_ESCAPE_SEQ", "NON_ZERO_DIGIT", "DIGIT", "OCT_DIGIT",
+			"HEX_DIGIT", "BIN_DIGIT", "POINT_FLOAT", "EXPONENT_FLOAT", "INT_PART",
+			"FRACTION", "EXPONENT", "SHORT_BYTES", "LONG_BYTES", "LONG_BYTES_ITEM",
+			"SHORT_BYTES_CHAR_NO_SINGLE_QUOTE", "SHORT_BYTES_CHAR_NO_DOUBLE_QUOTE",
+			"LONG_BYTES_CHAR", "BYTES_ESCAPE_SEQ", "SPACES", "COMMENT", "LINE_JOINING",
 			"ID_START", "ID_CONTINUE"
 		};
 	}
@@ -80,36 +70,36 @@ public class Python3Lexer extends Lexer {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, null, null, null, "'def'", "'return'", "'raise'", "'from'", "'import'", 
-			"'as'", "'global'", "'nonlocal'", "'assert'", "'if'", "'elif'", "'else'", 
-			"'while'", "'for'", "'in'", "'try'", "'finally'", "'with'", "'except'", 
-			"'lambda'", "'or'", "'and'", "'not'", "'is'", "'None'", "'True'", "'False'", 
-			"'class'", "'yield'", "'del'", "'pass'", "'continue'", "'break'", "'async'", 
-			"'await'", null, null, null, null, null, null, null, null, null, null, 
-			"'.'", "'...'", "'*'", "'('", "')'", "','", "':'", "';'", "'**'", "'='", 
-			"'['", "']'", "'|'", "'^'", "'&'", "'<<'", "'>>'", "'+'", "'-'", "'/'", 
-			"'%'", "'//'", "'~'", "'{'", "'}'", "'<'", "'>'", "'=='", "'>='", "'<='", 
-			"'<>'", "'!='", "'@'", "'->'", "'+='", "'-='", "'*='", "'@='", "'/='", 
+			null, null, null, null, "'def'", "'return'", "'raise'", "'from'", "'import'",
+			"'as'", "'global'", "'nonlocal'", "'assert'", "'if'", "'elif'", "'else'",
+			"'while'", "'for'", "'in'", "'try'", "'finally'", "'with'", "'except'",
+			"'lambda'", "'or'", "'and'", "'not'", "'is'", "'None'", "'True'", "'False'",
+			"'class'", "'yield'", "'del'", "'pass'", "'continue'", "'break'", "'async'",
+			"'await'", null, null, null, null, null, null, null, null, null, null,
+			"'.'", "'...'", "'*'", "'('", "')'", "','", "':'", "';'", "'**'", "'='",
+			"'['", "']'", "'|'", "'^'", "'&'", "'<<'", "'>>'", "'+'", "'-'", "'/'",
+			"'%'", "'//'", "'~'", "'{'", "'}'", "'<'", "'>'", "'=='", "'>='", "'<='",
+			"'<>'", "'!='", "'@'", "'->'", "'+='", "'-='", "'*='", "'@='", "'/='",
 			"'%='", "'&='", "'|='", "'^='", "'<<='", "'>>='", "'**='", "'//='"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, "STRING", "NUMBER", "INTEGER", "DEF", "RETURN", "RAISE", "FROM", 
-			"IMPORT", "AS", "GLOBAL", "NONLOCAL", "ASSERT", "IF", "ELIF", "ELSE", 
-			"WHILE", "FOR", "IN", "TRY", "FINALLY", "WITH", "EXCEPT", "LAMBDA", "OR", 
-			"AND", "NOT", "IS", "NONE", "TRUE", "FALSE", "CLASS", "YIELD", "DEL", 
-			"PASS", "CONTINUE", "BREAK", "ASYNC", "AWAIT", "NEWLINE", "NAME", "STRING_LITERAL", 
-			"BYTES_LITERAL", "DECIMAL_INTEGER", "OCT_INTEGER", "HEX_INTEGER", "BIN_INTEGER", 
-			"FLOAT_NUMBER", "IMAG_NUMBER", "DOT", "ELLIPSIS", "STAR", "OPEN_PAREN", 
-			"CLOSE_PAREN", "COMMA", "COLON", "SEMI_COLON", "POWER", "ASSIGN", "OPEN_BRACK", 
-			"CLOSE_BRACK", "OR_OP", "XOR", "AND_OP", "LEFT_SHIFT", "RIGHT_SHIFT", 
-			"ADD", "MINUS", "DIV", "MOD", "IDIV", "NOT_OP", "OPEN_BRACE", "CLOSE_BRACE", 
-			"LESS_THAN", "GREATER_THAN", "EQUALS", "GT_EQ", "LT_EQ", "NOT_EQ_1", 
-			"NOT_EQ_2", "AT", "ARROW", "ADD_ASSIGN", "SUB_ASSIGN", "MULT_ASSIGN", 
-			"AT_ASSIGN", "DIV_ASSIGN", "MOD_ASSIGN", "AND_ASSIGN", "OR_ASSIGN", "XOR_ASSIGN", 
-			"LEFT_SHIFT_ASSIGN", "RIGHT_SHIFT_ASSIGN", "POWER_ASSIGN", "IDIV_ASSIGN", 
+			null, "STRING", "NUMBER", "INTEGER", "DEF", "RETURN", "RAISE", "FROM",
+			"IMPORT", "AS", "GLOBAL", "NONLOCAL", "ASSERT", "IF", "ELIF", "ELSE",
+			"WHILE", "FOR", "IN", "TRY", "FINALLY", "WITH", "EXCEPT", "LAMBDA", "OR",
+			"AND", "NOT", "IS", "NONE", "TRUE", "FALSE", "CLASS", "YIELD", "DEL",
+			"PASS", "CONTINUE", "BREAK", "ASYNC", "AWAIT", "NEWLINE", "NAME", "STRING_LITERAL",
+			"BYTES_LITERAL", "DECIMAL_INTEGER", "OCT_INTEGER", "HEX_INTEGER", "BIN_INTEGER",
+			"FLOAT_NUMBER", "IMAG_NUMBER", "DOT", "ELLIPSIS", "STAR", "OPEN_PAREN",
+			"CLOSE_PAREN", "COMMA", "COLON", "SEMI_COLON", "POWER", "ASSIGN", "OPEN_BRACK",
+			"CLOSE_BRACK", "OR_OP", "XOR", "AND_OP", "LEFT_SHIFT", "RIGHT_SHIFT",
+			"ADD", "MINUS", "DIV", "MOD", "IDIV", "NOT_OP", "OPEN_BRACE", "CLOSE_BRACE",
+			"LESS_THAN", "GREATER_THAN", "EQUALS", "GT_EQ", "LT_EQ", "NOT_EQ_1",
+			"NOT_EQ_2", "AT", "ARROW", "ADD_ASSIGN", "SUB_ASSIGN", "MULT_ASSIGN",
+			"AT_ASSIGN", "DIV_ASSIGN", "MOD_ASSIGN", "AND_ASSIGN", "OR_ASSIGN", "XOR_ASSIGN",
+			"LEFT_SHIFT_ASSIGN", "RIGHT_SHIFT_ASSIGN", "POWER_ASSIGN", "IDIV_ASSIGN",
 			"SKIP_", "UNKNOWN_CHAR"
 		};
 	}
@@ -318,7 +308,7 @@ public class Python3Lexer extends Lexer {
 			        while self.indents and self.indents[-1] > indent:
 			            self.emitToken(self.createDedent())
 			            self.indents.pop()
-			    
+
 			break;
 		}
 	}

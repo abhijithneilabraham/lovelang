@@ -1,5 +1,4 @@
 // Generated from Python3.g4 by ANTLR 4.7.2
-
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -17,21 +16,21 @@ public class Python3Lexer extends Lexer {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		STRING=1, NUMBER=2, INTEGER=3, DEF=4, RETURN=5, RAISE=6, FROM=7, IMPORT=8,
-		AS=9, GLOBAL=10, NONLOCAL=11, ASSERT=12, IF=13, ELIF=14, ELSE=15, WHILE=16,
-		FOR=17, IN=18, TRY=19, FINALLY=20, WITH=21, EXCEPT=22, LAMBDA=23, OR=24,
-		AND=25, NOT=26, IS=27, NONE=28, TRUE=29, FALSE=30, CLASS=31, YIELD=32,
-		DEL=33, PASS=34, CONTINUE=35, BREAK=36, ASYNC=37, AWAIT=38, NEWLINE=39,
-		NAME=40, STRING_LITERAL=41, BYTES_LITERAL=42, DECIMAL_INTEGER=43, OCT_INTEGER=44,
-		HEX_INTEGER=45, BIN_INTEGER=46, FLOAT_NUMBER=47, IMAG_NUMBER=48, DOT=49,
-		ELLIPSIS=50, STAR=51, OPEN_PAREN=52, CLOSE_PAREN=53, COMMA=54, COLON=55,
-		SEMI_COLON=56, POWER=57, ASSIGN=58, OPEN_BRACK=59, CLOSE_BRACK=60, OR_OP=61,
-		XOR=62, AND_OP=63, LEFT_SHIFT=64, RIGHT_SHIFT=65, ADD=66, MINUS=67, DIV=68,
-		MOD=69, IDIV=70, NOT_OP=71, OPEN_BRACE=72, CLOSE_BRACE=73, LESS_THAN=74,
-		GREATER_THAN=75, EQUALS=76, GT_EQ=77, LT_EQ=78, NOT_EQ_1=79, NOT_EQ_2=80,
-		AT=81, ARROW=82, ADD_ASSIGN=83, SUB_ASSIGN=84, MULT_ASSIGN=85, AT_ASSIGN=86,
-		DIV_ASSIGN=87, MOD_ASSIGN=88, AND_ASSIGN=89, OR_ASSIGN=90, XOR_ASSIGN=91,
-		LEFT_SHIFT_ASSIGN=92, RIGHT_SHIFT_ASSIGN=93, POWER_ASSIGN=94, IDIV_ASSIGN=95,
+		STRING=1, NUMBER=2, INTEGER=3, DEF=4, RETURN=5, RAISE=6, FROM=7, IMPORT=8, 
+		AS=9, GLOBAL=10, NONLOCAL=11, ASSERT=12, IF=13, ELIF=14, ELSE=15, WHILE=16, 
+		FOR=17, IN=18, TRY=19, FINALLY=20, WITH=21, EXCEPT=22, LAMBDA=23, OR=24, 
+		AND=25, NOT=26, IS=27, NONE=28, TRUE=29, FALSE=30, CLASS=31, YIELD=32, 
+		DEL=33, PASS=34, CONTINUE=35, BREAK=36, ASYNC=37, AWAIT=38, NEWLINE=39, 
+		NAME=40, STRING_LITERAL=41, BYTES_LITERAL=42, DECIMAL_INTEGER=43, OCT_INTEGER=44, 
+		HEX_INTEGER=45, BIN_INTEGER=46, FLOAT_NUMBER=47, IMAG_NUMBER=48, DOT=49, 
+		ELLIPSIS=50, STAR=51, OPEN_PAREN=52, CLOSE_PAREN=53, COMMA=54, COLON=55, 
+		SEMI_COLON=56, POWER=57, ASSIGN=58, OPEN_BRACK=59, CLOSE_BRACK=60, OR_OP=61, 
+		XOR=62, AND_OP=63, LEFT_SHIFT=64, RIGHT_SHIFT=65, ADD=66, MINUS=67, DIV=68, 
+		MOD=69, IDIV=70, NOT_OP=71, OPEN_BRACE=72, CLOSE_BRACE=73, LESS_THAN=74, 
+		GREATER_THAN=75, EQUALS=76, GT_EQ=77, LT_EQ=78, NOT_EQ_1=79, NOT_EQ_2=80, 
+		AT=81, ARROW=82, ADD_ASSIGN=83, SUB_ASSIGN=84, MULT_ASSIGN=85, AT_ASSIGN=86, 
+		DIV_ASSIGN=87, MOD_ASSIGN=88, AND_ASSIGN=89, OR_ASSIGN=90, XOR_ASSIGN=91, 
+		LEFT_SHIFT_ASSIGN=92, RIGHT_SHIFT_ASSIGN=93, POWER_ASSIGN=94, IDIV_ASSIGN=95, 
 		SKIP_=96, UNKNOWN_CHAR=97;
 	public static String[] channelNames = {
 		"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
@@ -43,26 +42,26 @@ public class Python3Lexer extends Lexer {
 
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"STRING", "NUMBER", "INTEGER", "DEF", "RETURN", "RAISE", "FROM", "IMPORT",
-			"AS", "GLOBAL", "NONLOCAL", "ASSERT", "IF", "ELIF", "ELSE", "WHILE",
-			"FOR", "IN", "TRY", "FINALLY", "WITH", "EXCEPT", "LAMBDA", "OR", "AND",
-			"NOT", "IS", "NONE", "TRUE", "FALSE", "CLASS", "YIELD", "DEL", "PASS",
-			"CONTINUE", "BREAK", "ASYNC", "AWAIT", "NEWLINE", "NAME", "STRING_LITERAL",
-			"BYTES_LITERAL", "DECIMAL_INTEGER", "OCT_INTEGER", "HEX_INTEGER", "BIN_INTEGER",
-			"FLOAT_NUMBER", "IMAG_NUMBER", "DOT", "ELLIPSIS", "STAR", "OPEN_PAREN",
-			"CLOSE_PAREN", "COMMA", "COLON", "SEMI_COLON", "POWER", "ASSIGN", "OPEN_BRACK",
-			"CLOSE_BRACK", "OR_OP", "XOR", "AND_OP", "LEFT_SHIFT", "RIGHT_SHIFT",
-			"ADD", "MINUS", "DIV", "MOD", "IDIV", "NOT_OP", "OPEN_BRACE", "CLOSE_BRACE",
-			"LESS_THAN", "GREATER_THAN", "EQUALS", "GT_EQ", "LT_EQ", "NOT_EQ_1",
-			"NOT_EQ_2", "AT", "ARROW", "ADD_ASSIGN", "SUB_ASSIGN", "MULT_ASSIGN",
-			"AT_ASSIGN", "DIV_ASSIGN", "MOD_ASSIGN", "AND_ASSIGN", "OR_ASSIGN", "XOR_ASSIGN",
-			"LEFT_SHIFT_ASSIGN", "RIGHT_SHIFT_ASSIGN", "POWER_ASSIGN", "IDIV_ASSIGN",
-			"SKIP_", "UNKNOWN_CHAR", "SHORT_STRING", "LONG_STRING", "LONG_STRING_ITEM",
-			"LONG_STRING_CHAR", "STRING_ESCAPE_SEQ", "NON_ZERO_DIGIT", "DIGIT", "OCT_DIGIT",
-			"HEX_DIGIT", "BIN_DIGIT", "POINT_FLOAT", "EXPONENT_FLOAT", "INT_PART",
-			"FRACTION", "EXPONENT", "SHORT_BYTES", "LONG_BYTES", "LONG_BYTES_ITEM",
-			"SHORT_BYTES_CHAR_NO_SINGLE_QUOTE", "SHORT_BYTES_CHAR_NO_DOUBLE_QUOTE",
-			"LONG_BYTES_CHAR", "BYTES_ESCAPE_SEQ", "SPACES", "COMMENT", "LINE_JOINING",
+			"STRING", "NUMBER", "INTEGER", "DEF", "RETURN", "RAISE", "FROM", "IMPORT", 
+			"AS", "GLOBAL", "NONLOCAL", "ASSERT", "IF", "ELIF", "ELSE", "WHILE", 
+			"FOR", "IN", "TRY", "FINALLY", "WITH", "EXCEPT", "LAMBDA", "OR", "AND", 
+			"NOT", "IS", "NONE", "TRUE", "FALSE", "CLASS", "YIELD", "DEL", "PASS", 
+			"CONTINUE", "BREAK", "ASYNC", "AWAIT", "NEWLINE", "NAME", "STRING_LITERAL", 
+			"BYTES_LITERAL", "DECIMAL_INTEGER", "OCT_INTEGER", "HEX_INTEGER", "BIN_INTEGER", 
+			"FLOAT_NUMBER", "IMAG_NUMBER", "DOT", "ELLIPSIS", "STAR", "OPEN_PAREN", 
+			"CLOSE_PAREN", "COMMA", "COLON", "SEMI_COLON", "POWER", "ASSIGN", "OPEN_BRACK", 
+			"CLOSE_BRACK", "OR_OP", "XOR", "AND_OP", "LEFT_SHIFT", "RIGHT_SHIFT", 
+			"ADD", "MINUS", "DIV", "MOD", "IDIV", "NOT_OP", "OPEN_BRACE", "CLOSE_BRACE", 
+			"LESS_THAN", "GREATER_THAN", "EQUALS", "GT_EQ", "LT_EQ", "NOT_EQ_1", 
+			"NOT_EQ_2", "AT", "ARROW", "ADD_ASSIGN", "SUB_ASSIGN", "MULT_ASSIGN", 
+			"AT_ASSIGN", "DIV_ASSIGN", "MOD_ASSIGN", "AND_ASSIGN", "OR_ASSIGN", "XOR_ASSIGN", 
+			"LEFT_SHIFT_ASSIGN", "RIGHT_SHIFT_ASSIGN", "POWER_ASSIGN", "IDIV_ASSIGN", 
+			"SKIP_", "UNKNOWN_CHAR", "SHORT_STRING", "LONG_STRING", "LONG_STRING_ITEM", 
+			"LONG_STRING_CHAR", "STRING_ESCAPE_SEQ", "NON_ZERO_DIGIT", "DIGIT", "OCT_DIGIT", 
+			"HEX_DIGIT", "BIN_DIGIT", "POINT_FLOAT", "EXPONENT_FLOAT", "INT_PART", 
+			"FRACTION", "EXPONENT", "SHORT_BYTES", "LONG_BYTES", "LONG_BYTES_ITEM", 
+			"SHORT_BYTES_CHAR_NO_SINGLE_QUOTE", "SHORT_BYTES_CHAR_NO_DOUBLE_QUOTE", 
+			"LONG_BYTES_CHAR", "BYTES_ESCAPE_SEQ", "SPACES", "COMMENT", "LINE_JOINING", 
 			"ID_START", "ID_CONTINUE"
 		};
 	}
@@ -70,36 +69,36 @@ public class Python3Lexer extends Lexer {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, null, null, null, "'def'", "'return'", "'raise'", "'from'", "'import'",
-			"'as'", "'global'", "'nonlocal'", "'assert'", "'if'", "'elif'", "'else'",
-			"'while'", "'for'", "'in'", "'try'", "'finally'", "'with'", "'except'",
-			"'lambda'", "'or'", "'and'", "'not'", "'is'", "'None'", "'True'", "'False'",
-			"'class'", "'yield'", "'del'", "'pass'", "'continue'", "'break'", "'async'",
-			"'await'", null, null, null, null, null, null, null, null, null, null,
-			"'.'", "'...'", "'*'", "'('", "')'", "','", "':'", "';'", "'**'", "'='",
-			"'['", "']'", "'|'", "'^'", "'&'", "'<<'", "'>>'", "'+'", "'-'", "'/'",
-			"'%'", "'//'", "'~'", "'{'", "'}'", "'<'", "'>'", "'=='", "'>='", "'<='",
-			"'<>'", "'!='", "'@'", "'->'", "'+='", "'-='", "'*='", "'@='", "'/='",
+			null, null, null, null, "'def'", "'return'", "'raise'", "'from'", "'import'", 
+			"'as'", "'global'", "'nonlocal'", "'assert'", "'if'", "'elif'", "'else'", 
+			"'while'", "'for'", "'in'", "'try'", "'finally'", "'with'", "'except'", 
+			"'lambda'", "'or'", "'and'", "'not'", "'is'", "'None'", "'True'", "'False'", 
+			"'class'", "'yield'", "'del'", "'pass'", "'continue'", "'break'", "'async'", 
+			"'await'", null, null, null, null, null, null, null, null, null, null, 
+			"'.'", "'...'", "'*'", "'('", "')'", "','", "':'", "';'", "'**'", "'='", 
+			"'['", "']'", "'|'", "'^'", "'&'", "'<<'", "'>>'", "'+'", "'-'", "'/'", 
+			"'%'", "'//'", "'~'", "'{'", "'}'", "'<'", "'>'", "'=='", "'>='", "'<='", 
+			"'<>'", "'!='", "'@'", "'->'", "'+='", "'-='", "'*='", "'@='", "'/='", 
 			"'%='", "'&='", "'|='", "'^='", "'<<='", "'>>='", "'**='", "'//='"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, "STRING", "NUMBER", "INTEGER", "DEF", "RETURN", "RAISE", "FROM",
-			"IMPORT", "AS", "GLOBAL", "NONLOCAL", "ASSERT", "IF", "ELIF", "ELSE",
-			"WHILE", "FOR", "IN", "TRY", "FINALLY", "WITH", "EXCEPT", "LAMBDA", "OR",
-			"AND", "NOT", "IS", "NONE", "TRUE", "FALSE", "CLASS", "YIELD", "DEL",
-			"PASS", "CONTINUE", "BREAK", "ASYNC", "AWAIT", "NEWLINE", "NAME", "STRING_LITERAL",
-			"BYTES_LITERAL", "DECIMAL_INTEGER", "OCT_INTEGER", "HEX_INTEGER", "BIN_INTEGER",
-			"FLOAT_NUMBER", "IMAG_NUMBER", "DOT", "ELLIPSIS", "STAR", "OPEN_PAREN",
-			"CLOSE_PAREN", "COMMA", "COLON", "SEMI_COLON", "POWER", "ASSIGN", "OPEN_BRACK",
-			"CLOSE_BRACK", "OR_OP", "XOR", "AND_OP", "LEFT_SHIFT", "RIGHT_SHIFT",
-			"ADD", "MINUS", "DIV", "MOD", "IDIV", "NOT_OP", "OPEN_BRACE", "CLOSE_BRACE",
-			"LESS_THAN", "GREATER_THAN", "EQUALS", "GT_EQ", "LT_EQ", "NOT_EQ_1",
-			"NOT_EQ_2", "AT", "ARROW", "ADD_ASSIGN", "SUB_ASSIGN", "MULT_ASSIGN",
-			"AT_ASSIGN", "DIV_ASSIGN", "MOD_ASSIGN", "AND_ASSIGN", "OR_ASSIGN", "XOR_ASSIGN",
-			"LEFT_SHIFT_ASSIGN", "RIGHT_SHIFT_ASSIGN", "POWER_ASSIGN", "IDIV_ASSIGN",
+			null, "STRING", "NUMBER", "INTEGER", "DEF", "RETURN", "RAISE", "FROM", 
+			"IMPORT", "AS", "GLOBAL", "NONLOCAL", "ASSERT", "IF", "ELIF", "ELSE", 
+			"WHILE", "FOR", "IN", "TRY", "FINALLY", "WITH", "EXCEPT", "LAMBDA", "OR", 
+			"AND", "NOT", "IS", "NONE", "TRUE", "FALSE", "CLASS", "YIELD", "DEL", 
+			"PASS", "CONTINUE", "BREAK", "ASYNC", "AWAIT", "NEWLINE", "NAME", "STRING_LITERAL", 
+			"BYTES_LITERAL", "DECIMAL_INTEGER", "OCT_INTEGER", "HEX_INTEGER", "BIN_INTEGER", 
+			"FLOAT_NUMBER", "IMAG_NUMBER", "DOT", "ELLIPSIS", "STAR", "OPEN_PAREN", 
+			"CLOSE_PAREN", "COMMA", "COLON", "SEMI_COLON", "POWER", "ASSIGN", "OPEN_BRACK", 
+			"CLOSE_BRACK", "OR_OP", "XOR", "AND_OP", "LEFT_SHIFT", "RIGHT_SHIFT", 
+			"ADD", "MINUS", "DIV", "MOD", "IDIV", "NOT_OP", "OPEN_BRACE", "CLOSE_BRACE", 
+			"LESS_THAN", "GREATER_THAN", "EQUALS", "GT_EQ", "LT_EQ", "NOT_EQ_1", 
+			"NOT_EQ_2", "AT", "ARROW", "ADD_ASSIGN", "SUB_ASSIGN", "MULT_ASSIGN", 
+			"AT_ASSIGN", "DIV_ASSIGN", "MOD_ASSIGN", "AND_ASSIGN", "OR_ASSIGN", "XOR_ASSIGN", 
+			"LEFT_SHIFT_ASSIGN", "RIGHT_SHIFT_ASSIGN", "POWER_ASSIGN", "IDIV_ASSIGN", 
 			"SKIP_", "UNKNOWN_CHAR"
 		};
 	}
@@ -138,96 +137,93 @@ public class Python3Lexer extends Lexer {
 	}
 
 
-	@property
-	def tokens(self):
-	    try:
-	        return self._tokens
-	    except AttributeError:
-	        self._tokens = []
-	        return self._tokens
+	  // A queue where extra tokens are pushed on (see the NEWLINE lexer rule).
+	  private java.util.LinkedList<Token> tokens = new java.util.LinkedList<>();
+	  // The stack that keeps track of the indentation level.
+	  private java.util.Stack<Integer> indents = new java.util.Stack<>();
+	  // The amount of opened braces, brackets and parenthesis.
+	  private int opened = 0;
+	  // The most recently produced token.
+	  private Token lastToken = null;
+	  @Override
+	  public void emit(Token t) {
+	    super.setToken(t);
+	    tokens.offer(t);
+	  }
 
-	@property
-	def indents(self):
-	    try:
-	        return self._indents
-	    except AttributeError:
-	        self._indents = []
-	        return self._indents
+	  @Override
+	  public Token nextToken() {
+	    // Check if the end-of-file is ahead and there are still some DEDENTS expected.
+	    if (_input.LA(1) == EOF && !this.indents.isEmpty()) {
+	      // Remove any trailing EOF tokens from our buffer.
+	      for (int i = tokens.size() - 1; i >= 0; i--) {
+	        if (tokens.get(i).getType() == EOF) {
+	          tokens.remove(i);
+	        }
+	      }
 
-	@property
-	def opened(self):
-	    try:
-	        return self._opened
-	    except AttributeError:
-	        self._opened = 0
-	        return self._opened
+	      // First emit an extra line break that serves as the end of the statement.
+	      this.emit(commonToken(Python3Parser.NEWLINE, "\n"));
 
-	@opened.setter
-	def opened(self, value):
-	    self._opened = value
+	      // Now emit as much DEDENT tokens as needed.
+	      while (!indents.isEmpty()) {
+	        this.emit(createDedent());
+	        indents.pop();
+	      }
 
-	@property
-	def lastToken(self):
-	    try:
-	        return self._lastToken
-	    except AttributeError:
-	        self._lastToken = None
-	        return self._lastToken
+	      // Put the EOF back on the token stream.
+	      this.emit(commonToken(Python3Parser.EOF, "<EOF>"));
+	    }
 
-	@lastToken.setter
-	def lastToken(self, value):
-	    self._lastToken = value
+	    Token next = super.nextToken();
 
-	def reset(self):
-	    super().reset()
-	    self.tokens = []
-	    self.indents = []
-	    self.opened = 0
-	    self.lastToken = None
+	    if (next.getChannel() == Token.DEFAULT_CHANNEL) {
+	      // Keep track of the last token on the default channel.
+	      this.lastToken = next;
+	    }
 
-	def emitToken(self, t):
-	    super().emitToken(t)
-	    self.tokens.append(t)
+	    return tokens.isEmpty() ? next : tokens.poll();
+	  }
 
-	def nextToken(self):
-	    if self._input.LA(1) == Token.EOF and self.indents:
-	        for i in range(len(self.tokens)-1,-1,-1):
-	            if self.tokens[i].type == Token.EOF:
-	                self.tokens.pop(i)
+	  private Token createDedent() {
+	    CommonToken dedent = commonToken(Python3Parser.DEDENT, "");
+	    dedent.setLine(this.lastToken.getLine());
+	    return dedent;
+	  }
 
-	        self.emitToken(self.commonToken(LanguageParser.NEWLINE, '\n'))
-	        while self.indents:
-	            self.emitToken(self.createDedent())
-	            self.indents.pop()
+	  private CommonToken commonToken(int type, String text) {
+	    int stop = this.getCharIndex() - 1;
+	    int start = text.isEmpty() ? stop : stop - text.length() + 1;
+	    return new CommonToken(this._tokenFactorySourcePair, type, DEFAULT_TOKEN_CHANNEL, start, stop);
+	  }
 
-	        self.emitToken(self.commonToken(LanguageParser.EOF, "<EOF>"))
-	    next = super().nextToken()
-	    if next.channel == Token.DEFAULT_CHANNEL:
-	        self.lastToken = next
-	    return next if not self.tokens else self.tokens.pop(0)
+	  // Calculates the indentation of the provided spaces, taking the
+	  // following rules into account:
+	  //
+	  // "Tabs are replaced (from left to right) by one to eight spaces
+	  //  such that the total number of characters up to and including
+	  //  the replacement is a multiple of eight [...]"
+	  //
+	  //  -- https://docs.python.org/3.1/reference/lexical_analysis.html#indentation
+	  static int getIndentationCount(String spaces) {
+	    int count = 0;
+	    for (char ch : spaces.toCharArray()) {
+	      switch (ch) {
+	        case '\t':
+	          count += 8 - (count % 8);
+	          break;
+	        default:
+	          // A normal space char.
+	          count++;
+	      }
+	    }
 
-	def createDedent(self):
-	    dedent = self.commonToken(LanguageParser.DEDENT, "")
-	    dedent.line = self.lastToken.line
-	    return dedent
+	    return count;
+	  }
 
-	def commonToken(self, type, text, indent=0):
-	    stop = self.getCharIndex()-1-indent
-	    start = (stop - len(text) + 1) if text else stop
-	    return CommonToken(self._tokenFactorySourcePair, type, super().DEFAULT_TOKEN_CHANNEL, start, stop)
-
-	@staticmethod
-	def getIndentationCount(spaces):
-	    count = 0
-	    for ch in spaces:
-	        if ch == '\t':
-	            count += 8 - (count % 8)
-	        else:
-	            count += 1
-	    return count
-
-	def atStartOfInput(self):
-	    return Lexer.column.fget(self) == 0 and Lexer.line.fget(self) == 1
+	  boolean atStartOfInput() {
+	    return super.getCharPositionInLine() == 0 && super.getLine() == 1;
+	  }
 
 
 	public Python3Lexer(CharStream input) {
@@ -283,74 +279,77 @@ public class Python3Lexer extends Lexer {
 		switch (actionIndex) {
 		case 0:
 
-			tempt = Lexer.text.fget(self)
-			newLine = re.sub("[^\r\n\f]+", "", tempt)
-			spaces = re.sub("[\r\n\f]+", "", tempt)
-			la_char = ""
-			try:
-			    la = self._input.LA(1)
-			    la_char = chr(la)       # Python does not compare char to ints directly
-			except ValueError:          # End of file
-			    pass
-
-			if self.opened > 0 or la_char == '\r' or la_char == '\n' or la_char == '\f' or la_char == '#':
-			    self.skip()
-			else:
-			    indent = self.getIndentationCount(spaces)
-			    previous = self.indents[-1] if self.indents else 0
-			    self.emitToken(self.commonToken(self.NEWLINE, newLine, indent=indent))      # NEWLINE is actually the '\n' char
-			    if indent == previous:
-			        self.skip()
-			    elif indent > previous:
-			        self.indents.append(indent)
-			        self.emitToken(self.commonToken(LanguageParser.INDENT, spaces))
-			    else:
-			        while self.indents and self.indents[-1] > indent:
-			            self.emitToken(self.createDedent())
-			            self.indents.pop()
-
+			     String newLine = getText().replaceAll("[^\r\n\f]+", "");
+			     String spaces = getText().replaceAll("[\r\n\f]+", "");
+			     int next = _input.LA(1);
+			     if (opened > 0 || next == '\r' || next == '\n' || next == '\f' || next == '#') {
+			       // If we're inside a list or on a blank line, ignore all indents,
+			       // dedents and line breaks.
+			       skip();
+			     }
+			     else {
+			       emit(commonToken(NEWLINE, newLine));
+			       int indent = getIndentationCount(spaces);
+			       int previous = indents.isEmpty() ? 0 : indents.peek();
+			       if (indent == previous) {
+			         // skip indents of the same size as the present indent-size
+			         skip();
+			       }
+			       else if (indent > previous) {
+			         indents.push(indent);
+			         emit(commonToken(Python3Parser.INDENT, spaces));
+			       }
+			       else {
+			         // Possibly emit more than 1 DEDENT token.
+			         while(!indents.isEmpty() && indents.peek() > indent) {
+			           this.emit(createDedent());
+			           indents.pop();
+			         }
+			       }
+			     }
+			   
 			break;
 		}
 	}
 	private void OPEN_PAREN_action(RuleContext _localctx, int actionIndex) {
 		switch (actionIndex) {
 		case 1:
-			self.opened += 1
+			opened++;
 			break;
 		}
 	}
 	private void CLOSE_PAREN_action(RuleContext _localctx, int actionIndex) {
 		switch (actionIndex) {
 		case 2:
-			self.opened -= 1
+			opened--;
 			break;
 		}
 	}
 	private void OPEN_BRACK_action(RuleContext _localctx, int actionIndex) {
 		switch (actionIndex) {
 		case 3:
-			self.opened += 1
+			opened++;
 			break;
 		}
 	}
 	private void CLOSE_BRACK_action(RuleContext _localctx, int actionIndex) {
 		switch (actionIndex) {
 		case 4:
-			self.opened -= 1
+			opened--;
 			break;
 		}
 	}
 	private void OPEN_BRACE_action(RuleContext _localctx, int actionIndex) {
 		switch (actionIndex) {
 		case 5:
-			self.opened += 1
+			opened++;
 			break;
 		}
 	}
 	private void CLOSE_BRACE_action(RuleContext _localctx, int actionIndex) {
 		switch (actionIndex) {
 		case 6:
-			self.opened -= 1
+			opened--;
 			break;
 		}
 	}
@@ -365,7 +364,7 @@ public class Python3Lexer extends Lexer {
 	private boolean NEWLINE_sempred(RuleContext _localctx, int predIndex) {
 		switch (predIndex) {
 		case 0:
-			return self.atStartOfInput();
+			return atStartOfInput();
 		}
 		return true;
 	}

@@ -30,117 +30,99 @@
  */
 grammar Python3;
 
-// An ANTLR4 grammar for Python 3, for Python3 target
 // All comments that start with "///" are copy-pasted from
-// The Python Language Reference: https://docs.python.org/3.3/reference/grammar.html
+// The Python Language Reference
 
 tokens { INDENT, DEDENT }
 
-//Note the indentation of code inside
-
-@lexer::header{
-from antlr4.Token import CommonToken
-import re
-import importlib
-
-# Allow languages to extend the lexer and parser, by loading the parser dynamically
-module_path = __name__[:-5]
-language_name = __name__.split('.')[-1]
-language_name = language_name[:-5]  # Remove Lexer from name
-LanguageParser = getattr(importlib.import_module('{}Parser'.format(module_path)), '{}Parser'.format(language_name))
-}
-
 @lexer::members {
-@property
-def tokens(self):
-    try:
-        return self._tokens
-    except AttributeError:
-        self._tokens = []
-        return self._tokens
+  // A queue where extra tokens are pushed on (see the NEWLINE lexer rule).
+  private java.util.LinkedList<Token> tokens = new java.util.LinkedList<>();
+  // The stack that keeps track of the indentation level.
+  private java.util.Stack<Integer> indents = new java.util.Stack<>();
+  // The amount of opened braces, brackets and parenthesis.
+  private int opened = 0;
+  // The most recently produced token.
+  private Token lastToken = null;
+  @Override
+  public void emit(Token t) {
+    super.setToken(t);
+    tokens.offer(t);
+  }
 
-@property
-def indents(self):
-    try:
-        return self._indents
-    except AttributeError:
-        self._indents = []
-        return self._indents
+  @Override
+  public Token nextToken() {
+    // Check if the end-of-file is ahead and there are still some DEDENTS expected.
+    if (_input.LA(1) == EOF && !this.indents.isEmpty()) {
+      // Remove any trailing EOF tokens from our buffer.
+      for (int i = tokens.size() - 1; i >= 0; i--) {
+        if (tokens.get(i).getType() == EOF) {
+          tokens.remove(i);
+        }
+      }
 
-@property
-def opened(self):
-    try:
-        return self._opened
-    except AttributeError:
-        self._opened = 0
-        return self._opened
+      // First emit an extra line break that serves as the end of the statement.
+      this.emit(commonToken(Python3Parser.NEWLINE, "\n"));
 
-@opened.setter
-def opened(self, value):
-    self._opened = value
+      // Now emit as much DEDENT tokens as needed.
+      while (!indents.isEmpty()) {
+        this.emit(createDedent());
+        indents.pop();
+      }
 
-@property
-def lastToken(self):
-    try:
-        return self._lastToken
-    except AttributeError:
-        self._lastToken = None
-        return self._lastToken
+      // Put the EOF back on the token stream.
+      this.emit(commonToken(Python3Parser.EOF, "<EOF>"));
+    }
 
-@lastToken.setter
-def lastToken(self, value):
-    self._lastToken = value
+    Token next = super.nextToken();
 
-def reset(self):
-    super().reset()
-    self.tokens = []
-    self.indents = []
-    self.opened = 0
-    self.lastToken = None
+    if (next.getChannel() == Token.DEFAULT_CHANNEL) {
+      // Keep track of the last token on the default channel.
+      this.lastToken = next;
+    }
 
-def emitToken(self, t):
-    super().emitToken(t)
-    self.tokens.append(t)
+    return tokens.isEmpty() ? next : tokens.poll();
+  }
 
-def nextToken(self):
-    if self._input.LA(1) == Token.EOF and self.indents:
-        for i in range(len(self.tokens)-1,-1,-1):
-            if self.tokens[i].type == Token.EOF:
-                self.tokens.pop(i)
+  private Token createDedent() {
+    CommonToken dedent = commonToken(Python3Parser.DEDENT, "");
+    dedent.setLine(this.lastToken.getLine());
+    return dedent;
+  }
 
-        self.emitToken(self.commonToken(LanguageParser.NEWLINE, '\n'))
-        while self.indents:
-            self.emitToken(self.createDedent())
-            self.indents.pop()
+  private CommonToken commonToken(int type, String text) {
+    int stop = this.getCharIndex() - 1;
+    int start = text.isEmpty() ? stop : stop - text.length() + 1;
+    return new CommonToken(this._tokenFactorySourcePair, type, DEFAULT_TOKEN_CHANNEL, start, stop);
+  }
 
-        self.emitToken(self.commonToken(LanguageParser.EOF, "<EOF>"))
-    next = super().nextToken()
-    if next.channel == Token.DEFAULT_CHANNEL:
-        self.lastToken = next
-    return next if not self.tokens else self.tokens.pop(0)
+  // Calculates the indentation of the provided spaces, taking the
+  // following rules into account:
+  //
+  // "Tabs are replaced (from left to right) by one to eight spaces
+  //  such that the total number of characters up to and including
+  //  the replacement is a multiple of eight [...]"
+  //
+  //  -- https://docs.python.org/3.1/reference/lexical_analysis.html#indentation
+  static int getIndentationCount(String spaces) {
+    int count = 0;
+    for (char ch : spaces.toCharArray()) {
+      switch (ch) {
+        case '\t':
+          count += 8 - (count % 8);
+          break;
+        default:
+          // A normal space char.
+          count++;
+      }
+    }
 
-def createDedent(self):
-    dedent = self.commonToken(LanguageParser.DEDENT, "")
-    dedent.line = self.lastToken.line
-    return dedent
+    return count;
+  }
 
-def commonToken(self, type, text, indent=0):
-    stop = self.getCharIndex()-1-indent
-    start = (stop - len(text) + 1) if text else stop
-    return CommonToken(self._tokenFactorySourcePair, type, super().DEFAULT_TOKEN_CHANNEL, start, stop)
-
-@staticmethod
-def getIndentationCount(spaces):
-    count = 0
-    for ch in spaces:
-        if ch == '\t':
-            count += 8 - (count % 8)
-        else:
-            count += 1
-    return count
-
-def atStartOfInput(self):
-    return Lexer.column.fget(self) == 0 and Lexer.line.fget(self) == 1
+  boolean atStartOfInput() {
+    return super.getCharPositionInLine() == 0 && super.getLine() == 1;
+  }
 }
 
 /*
@@ -346,73 +328,87 @@ ASYNC : 'async';
 AWAIT : 'await';
 
 NEWLINE
- : ( {self.atStartOfInput()}?   SPACES
+ : ( {atStartOfInput()}?   SPACES
    | ( '\r'? '\n' | '\r' | '\f' ) SPACES?
    )
    {
-tempt = Lexer.text.fget(self)
-newLine = re.sub("[^\r\n\f]+", "", tempt)
-spaces = re.sub("[\r\n\f]+", "", tempt)
-la_char = ""
-try:
-    la = self._input.LA(1)
-    la_char = chr(la)       # Python does not compare char to ints directly
-except ValueError:          # End of file
-    pass
-
-if self.opened > 0 or la_char == '\r' or la_char == '\n' or la_char == '\f' or la_char == '#':
-    self.skip()
-else:
-    indent = self.getIndentationCount(spaces)
-    previous = self.indents[-1] if self.indents else 0
-    self.emitToken(self.commonToken(self.NEWLINE, newLine, indent=indent))      # NEWLINE is actually the '\n' char
-    if indent == previous:
-        self.skip()
-    elif indent > previous:
-        self.indents.append(indent)
-        self.emitToken(self.commonToken(LanguageParser.INDENT, spaces))
-    else:
-        while self.indents and self.indents[-1] > indent:
-            self.emitToken(self.createDedent())
-            self.indents.pop()
-    }
+     String newLine = getText().replaceAll("[^\r\n\f]+", "");
+     String spaces = getText().replaceAll("[\r\n\f]+", "");
+     int next = _input.LA(1);
+     if (opened > 0 || next == '\r' || next == '\n' || next == '\f' || next == '#') {
+       // If we're inside a list or on a blank line, ignore all indents,
+       // dedents and line breaks.
+       skip();
+     }
+     else {
+       emit(commonToken(NEWLINE, newLine));
+       int indent = getIndentationCount(spaces);
+       int previous = indents.isEmpty() ? 0 : indents.peek();
+       if (indent == previous) {
+         // skip indents of the same size as the present indent-size
+         skip();
+       }
+       else if (indent > previous) {
+         indents.push(indent);
+         emit(commonToken(Python3Parser.INDENT, spaces));
+       }
+       else {
+         // Possibly emit more than 1 DEDENT token.
+         while(!indents.isEmpty() && indents.peek() > indent) {
+           this.emit(createDedent());
+           indents.pop();
+         }
+       }
+     }
+   }
  ;
 
-
+/// identifier   ::=  id_start id_continue*
 NAME
  : ID_START ID_CONTINUE*
  ;
 
+/// stringliteral   ::=  [stringprefix](shortstring | longstring)
+/// stringprefix    ::=  "r" | "u" | "R" | "U" | "f" | "F"
+///                      | "fr" | "Fr" | "fR" | "FR" | "rf" | "rF" | "Rf" | "RF"
 STRING_LITERAL
  : ( [rR] | [uU] | [fF] | ( [fF] [rR] ) | ( [rR] [fF] ) )? ( SHORT_STRING | LONG_STRING )
  ;
 
+/// bytesliteral   ::=  bytesprefix(shortbytes | longbytes)
+/// bytesprefix    ::=  "b" | "B" | "br" | "Br" | "bR" | "BR" | "rb" | "rB" | "Rb" | "RB"
 BYTES_LITERAL
  : ( [bB] | ( [bB] [rR] ) | ( [rR] [bB] ) ) ( SHORT_BYTES | LONG_BYTES )
  ;
 
+/// decimalinteger ::=  nonzerodigit digit* | "0"+
 DECIMAL_INTEGER
  : NON_ZERO_DIGIT DIGIT*
  | '0'+
  ;
 
+/// octinteger     ::=  "0" ("o" | "O") octdigit+
 OCT_INTEGER
  : '0' [oO] OCT_DIGIT+
  ;
 
+/// hexinteger     ::=  "0" ("x" | "X") hexdigit+
 HEX_INTEGER
  : '0' [xX] HEX_DIGIT+
  ;
 
+/// bininteger     ::=  "0" ("b" | "B") bindigit+
 BIN_INTEGER
  : '0' [bB] BIN_DIGIT+
  ;
 
+/// floatnumber   ::=  pointfloat | exponentfloat
 FLOAT_NUMBER
  : POINT_FLOAT
  | EXPONENT_FLOAT
  ;
 
+/// imagnumber ::=  (floatnumber | intpart) ("j" | "J")
 IMAG_NUMBER
  : ( FLOAT_NUMBER | INT_PART ) [jJ]
  ;
@@ -420,15 +416,15 @@ IMAG_NUMBER
 DOT : '.';
 ELLIPSIS : '...';
 STAR : '*';
-OPEN_PAREN : '(' {self.opened += 1};
-CLOSE_PAREN : ')' {self.opened -= 1};
+OPEN_PAREN : '(' {opened++;};
+CLOSE_PAREN : ')' {opened--;};
 COMMA : ',';
 COLON : ':';
 SEMI_COLON : ';';
 POWER : '**';
 ASSIGN : '=';
-OPEN_BRACK : '[' {self.opened += 1};
-CLOSE_BRACK : ']' {self.opened -= 1};
+OPEN_BRACK : '[' {opened++;};
+CLOSE_BRACK : ']' {opened--;};
 OR_OP : '|';
 XOR : '^';
 AND_OP : '&';
@@ -440,8 +436,8 @@ DIV : '/';
 MOD : '%';
 IDIV : '//';
 NOT_OP : '~';
-OPEN_BRACE : '{' {self.opened += 1};
-CLOSE_BRACE : '}' {self.opened -= 1};
+OPEN_BRACE : '{' {opened++;};
+CLOSE_BRACE : '}' {opened--;};
 LESS_THAN : '<';
 GREATER_THAN : '>';
 EQUALS : '==';
@@ -484,7 +480,6 @@ fragment SHORT_STRING
  : '\'' ( STRING_ESCAPE_SEQ | ~[\\\r\n\f'] )* '\''
  | '"' ( STRING_ESCAPE_SEQ | ~[\\\r\n\f"] )* '"'
  ;
-
 /// longstring      ::=  "'''" longstringitem* "'''" | '"""' longstringitem* '"""'
 fragment LONG_STRING
  : '\'\'\'' LONG_STRING_ITEM*? '\'\'\''
@@ -615,7 +610,7 @@ fragment COMMENT
  ;
 
 fragment LINE_JOINING
- : '\\' SPACES? ( '\r'? '\n' | '\r' | '\f' )
+ : '\\' SPACES? ( '\r'? '\n' | '\r' | '\f')
  ;
 
 /// id_start     ::=  <all characters in general categories Lu, Ll, Lt, Lm, Lo, Nl, the underscore, and characters with the Other_ID_Start property>

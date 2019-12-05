@@ -28,7 +28,7 @@
  *                https://github.com/bkiers/python3-parser
  * Developed by : Bart Kiers, bart@big-o.nl
  */
-grammar Python3;
+grammar pythongrammar;
 
 // All comments that start with "///" are copy-pasted from
 // The Python Language Reference
